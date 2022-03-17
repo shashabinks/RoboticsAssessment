@@ -1,0 +1,61 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  info [
+    "Copyright (C) 2006 Laboratory of Intelligent Systems (LIS), EPFL"
+    "Thanks to jean-christophe.zufferey@epfl.ch"
+  ]
+}
+Viewpoint {
+  orientation 0.3636630907783213 -0.020569194663963623 -0.9313034224335452 3.1227581417140398
+  position 2.1817385677028454 0.6319746112479212 1.9113677952649946
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  rotation 0 0 1 -1.5708
+  floorSize 0.9 0.9
+  floorTileSize 0.9 0.9
+  floorAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "C:/Users/Shahin/Downloads/136-1363392_plus-white-transparent-plus-icon.png"
+      ]
+    }
+    roughness 0.2
+    metalness 0
+  }
+  wallHeight 0.05
+}
+DEF OBSTACLE3 Solid {
+  translation -0.250604 -0.31759 0.025
+  rotation 0 0 1 13.7261
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.501961 0.501961 0.501961
+        roughness 0.5
+        metalness 0
+      }
+      geometry DEF BOX3 Box {
+        size 0.05 0.2 0.05
+      }
+    }
+  ]
+  name "gray box"
+  boundingObject USE BOX3
+}
+DEF EPUCK E-puck {
+  hidden position_0_0 37.29551020549853
+  hidden position_0_1 37.14798010962517
+  hidden rotation_1 0 -1 0 0.40360163757898854
+  hidden rotation_2 0 -1 0 0.5511317334523451
+  translation -0.19117975221014463 -0.1153237847368918 -6.412274148208386e-05
+  rotation -0.0004896121895039573 0.0005516228021925992 0.9999997279960571 1.4518306759176591
+  controller "line_follower"
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
