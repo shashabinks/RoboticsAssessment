@@ -39,12 +39,24 @@ int main(int argc, char **argv) {
    * Perform simulation steps of TIME_STEP milliseconds
    * and leave the loop when the simulation is over
    */
+   
+  WbNodeRef robot_node = wb_supervisor_node_get_from_def("EPUCK");
+  
+  WbFieldRef trans_field = wb_supervisor_node_get_field(robot_node, "translation");
+  
+  const double INITIAL[3] = { 0.031, 0.334, -0.00404 };
+  wb_supervisor_field_set_sf_vec3f(trans_field, INITIAL);
+  wb_supervisor_node_reset_physics(robot_node);
+  
   
   
   while (wb_robot_step(TIME_STEP) != -1) {
-    WbNodeRef node = wb_supervisor_node_get_from_def("e-puck.");
+    const double *values = wb_supervisor_field_get_sf_vec3f(trans_field);
+    printf("MY_ROBOT is at position: %g %g %g\n", values[0], values[1], values[2]);
     
-    printf("\n%d\n",i);
+    
+    
+    
   };
 
   /* Enter your cleanup code here */
