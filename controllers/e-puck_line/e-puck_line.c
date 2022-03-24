@@ -122,6 +122,20 @@ void LineFollowingModule(void) {
   lfm_speed[RIGHT] = LFM_FORWARD_SPEED + LFM_K_GS_SPEED * DeltaS;
 }
 
+
+bool collisionDetectionModule(void){
+  
+  // feedback loop: step simulation until an exit event is received
+
+
+  // detect obsctacles
+  bool right_obstacle = ps_value[0] > 80.0 || ps_value[1] > 80.0 || ps_value[2] > 80.0;
+  bool left_obstacle = ps_value[5] > 80.0 || ps_value[6] > 80.0 || ps_value[7] > 80.0;
+    
+  
+  return right_obstacle || left_obstacle;  // EXIT_SUCCESS
+}
+
 ////////////////////////////////////////////
 // OAM - Obstacle Avoidance Module
 //
@@ -497,9 +511,10 @@ int main() {
     // *** END OF SUBSUMPTION ARCHITECTURE ***
 
     // Debug display
-    printf(" HELLOW OAM %d side %d   \n", oam_active, oam_side);
-    printf("a: %hu\n",  gs_value[1]);
-
+    //printf(" HELLOW OAM %d side %d   \n", oam_active, oam_side);
+    printf(collisionDetectionModule() ? "true" : "false");
+    
+    
     // Set wheel speeds
     wb_motor_set_velocity(left_motor, 0.00628 * speed[LEFT]);
     wb_motor_set_velocity(right_motor, 0.00628 * speed[RIGHT]);
