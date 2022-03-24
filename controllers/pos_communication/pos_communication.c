@@ -19,6 +19,9 @@
  */
 #define TIME_STEP 64
 
+WbNodeRef epucks[2];
+double start_translations[2][3];
+
 /*
  * This is the main program.
  * The arguments of the main function can be specified by the
@@ -39,23 +42,33 @@ int main(int argc, char **argv) {
    * Perform simulation steps of TIME_STEP milliseconds
    * and leave the loop when the simulation is over
    */
-   
-  WbNodeRef robot_node = wb_supervisor_node_get_from_def("EPUCK");
+  char name[20];
+  for(int i=0;i<2;i++){
+    sprintf(name, "EPUCK%d", i);
+    epucks[i] = wb_supervisor_node_get_from_def(name);
+  }
   
-  WbFieldRef trans_field = wb_supervisor_node_get_field(robot_node, "translation");
   
-  const double INITIAL[3] = { 0.031, 0.334, -0.00404 };
-  wb_supervisor_field_set_sf_vec3f(trans_field, INITIAL);
-  wb_supervisor_node_reset_physics(robot_node);
+  start_translations[0][0] = 0.031;
+  start_translations[0][1] = 0.334;
+  start_translations[0][2] = -0.00404;
+  start_translations[1][0] = -0.38;
+  start_translations[1][1] = 0.0068;
+  start_translations[1][2] = -0.00189;
+  
+  
+  for(int i=0;i<2;i++){
+ 
+    WbFieldRef trans_field = wb_supervisor_node_get_field(epucks[i], "translation");
+    const double t[3] = {start_translations[i][0], start_translations[i][1], start_translations[i][2]};
+    wb_supervisor_field_set_sf_vec3f(trans_field, t);
+  }
+  
   
   
   
   while (wb_robot_step(TIME_STEP) != -1) {
-    const double *values = wb_supervisor_field_get_sf_vec3f(trans_field);
-    printf("MY_ROBOT is at position: %g %g %g\n", values[0], values[1], values[2]);
-    
-    
-    
+   
     
   };
 
