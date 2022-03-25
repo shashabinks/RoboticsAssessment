@@ -4,7 +4,12 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/Program Files/Webots/include/controller/c"
+                "C:/Program Files/Webots/include/controller/c",
+                "C:/Program Files/Webots/lib/controller/",
+                "C:/Program Files/Webots/msys64/mingw64/bin/",
+                "C:/Program Files/Webots/msys64/mingw64/bin/cpp",
+                "C:/Program Files/Webots/lib/controller/python39"
+
                 
             ],
             "defines": [
