@@ -22,6 +22,13 @@
 WbNodeRef epucks[2];
 double start_translations[2][3];
 
+
+struct coords{
+  float x;
+  float y;
+};
+
+struct coords start_pos = {-1.38f, -0.875f};
 /*
  * This is the main program.
  * The arguments of the main function can be specified by the
