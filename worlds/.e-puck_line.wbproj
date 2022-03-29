@@ -5,7 +5,7 @@ sceneTreePerspectives: 000000ff0000000100000002000000c0000000fa01000000020100000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 3 "controllers/e-puck_line/e-puck_line.c" "controllers/pos_communication/pos_communication.c" "controllers/bot_controller/bot_controller.py" "controllers/epuck_controller/epuck_controller.py"
+textFiles: 1 "controllers/e-puck_line/e-puck_line.c" "controllers/bot_controller/bot_controller.py" "controllers/epuck_controller/epuck_controller.py"
 globalOptionalRendering: LightSensorRays
 consoles: Console:All:All
 renderingDevicePerspectives: e-puck(1):camera;1;1;0;0
