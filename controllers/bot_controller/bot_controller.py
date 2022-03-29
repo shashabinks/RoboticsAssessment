@@ -3,7 +3,8 @@
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
 from re import S
-from webots.controller import Supervisor, Emitter
+from sys import set_coroutine_origin_tracking_depth
+from webots.controller import Supervisor, Emitter, Robot
 import struct
 from a_star import a_star
 
@@ -36,19 +37,21 @@ end = (origin[0] + (6 * square_dist), origin[1] + (3 * square_dist))
 
 path = a_star(map_squares, start, end, origin, square_dist)
 
-print(path)
+
 
 for i in range(num_epucks):
     epucks.append(supervisor.getFromDef(f"EPUCK{i}"))
 
-emitter.setChannel(channel=-1)
-emitter.setRange(range=-1)
 
 
 
 #epucks[0].getField("translation").setSFVec3f([start_cord[0], start_cord[1], 0])
 #epucks[1].getField("translation").setSFVec3f([start_cord[0] + (6 * 0.25), start_cord[1] + (3 * 0.25), 0])
 
+
+
+epucks[0].getField("translation").setSFVec3f([origin[0], origin[1], 0])
+epucks[0].getField("customData").setSFString(str(path))
 # get the time step of the current world.
 timestep = int(supervisor.getBasicTimeStep())
 
@@ -59,8 +62,6 @@ timestep = int(supervisor.getBasicTimeStep())
 #  ds.enable(timestep)
 
 # 1. ID, 2. instruction 3. optional: array of cords 
-message0 = struct.pack("chd", "0", "move", "[1, 2]")
-emitter.send(message0)
 
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller

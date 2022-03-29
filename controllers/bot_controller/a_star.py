@@ -56,10 +56,13 @@ def a_star(map_squares, start_pos, end_pos, origin, square_dist):
 
         for new_position in [(0, -1), (0, 1), (-1, 0), (1, 0), (-1, -1), (-1, 1), (1, -1), (1, 1)]:
 
-            node_position = (current_node.position[0] + (new_position[0] * 0.25), current_node.position[1] + (new_position[1] * 0.25))
+            new_x =  current_node.position[0] + (new_position[0] * 0.25)
+            new_y =  current_node.position[1] + (new_position[1] * 0.25)
 
-            if node_position[0] < origin[0] or node_position[0] > (origin[0] + (square_dist * 12)) or node_position[1] < origin[1] or node_position[1] > (origin[1] + (square_dist * 8)):
-                continue
+
+           
+            node_position = (new_x, new_y)
+
 
             if node_position not in map_squares:
                 continue
