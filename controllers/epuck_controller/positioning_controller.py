@@ -1,20 +1,21 @@
 from cartesian import *
-from epuck_controller import robot
+
 import math
 
 GPS_SAMPLE_PERIOD = 1
 COMPASS_SAMPLE_PERIOD = 1
 
-gps, compass = None, None 
+global gps, compass
 
-def positioningControllerInit(time_step):
+
+def positioningControllerInit(time_step, robot):
     gps = robot.getDevice("gps")
     compass = robot.getDevice("compass")
 
     gps.enable(GPS_SAMPLE_PERIOD)
     compass.enable(COMPASS_SAMPLE_PERIOD)
 
-def getRobotBearing():
+def getRobotBearing(compass):
     north = compass.getValues()
     rad = math.atan2(north[0],north[2])
     bearing = (rad - 1.5708) / math.pi * 180.0
@@ -24,12 +25,12 @@ def getRobotBearing():
 
 def positioningControllerGetRobotCoordinate():
 
-	return convertVec3ftoVec2f(gps.getValues());
+	return convertVec3ftoVec2f(gps.getValues())
 
 
 def positioningControllerGetRobotHeading():
 
-	return cartesianConvertCompassBearingToHeading(getRobotBearing());
+	return cartesianConvertCompassBearingToHeading(getRobotBearing(compass))
 
 
 def positioningControllerCalcDistanceToDestination(destinationCoordinate):

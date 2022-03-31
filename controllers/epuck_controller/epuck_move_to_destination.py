@@ -1,7 +1,5 @@
 
-from controllers.epuck_controller.cartesian import cartesianIsThetaEqual
-from controllers.epuck_controller.motor_controller import motorControllerInit, motorMoveForward, motorRotateLeft, motorRotateRight, motorStop
-from epuck_controller import *
+from motor_controller import *
 from positioning_controller import *
 from cartesian import *
 
@@ -14,7 +12,7 @@ ROBOT_ANGULAR_SPEED_IN_DEGREES = 278.237392796
 time_step = 0.0
 
 
-def getTimeStep():
+def getTimeStep(robot):
 
     time_step = -1
 
@@ -24,22 +22,22 @@ def getTimeStep():
     
     return time_step
 
-def step():
+def step(robot):
 
     if robot.step(time_step) == -1:
         exit()
 
 
-def init():
+def init_robot(robot):
 
-    time_step = getTimeStep()
+    time_step = getTimeStep(robot)
 
-    motorControllerInit(time_step)
+    motorControllerInit(time_step, robot)
 
-    positioningControllerInit(time_step)
+    positioningControllerInit(time_step, robot)
 
 
-def rotateHeading(thetaDot):
+def rotateHeading(thetaDot, robot):
 
     if(not(cartesianIsThetaEqual(thetaDot,0))):
 
@@ -53,10 +51,10 @@ def rotateHeading(thetaDot):
         start_time = int(robot.getBasicTimeStep())
 
         while(int(robot.getBasicTimeStep()) < start_time + duration):
-            step()
+            step(robot)
 
 
-def moveForward(distance):
+def moveForward(distance, robot):
 
     duration = distance/TANGENSIAL_SPEED
 
@@ -71,7 +69,9 @@ def moveForward(distance):
     step()
 
 
-def moveToDestination(destinationCoordinate):
+def moveToDestination(destinationCoordinate, robot):
+    
+
     currentCoordinate = cartesianConvertCompassBearingToHeading(getRobotBearing())
 
     if cartesianIsCoordinateEqual(cartesianConvertCompassBearingToHeading(), destinationCoordinate): return 
@@ -79,18 +79,18 @@ def moveToDestination(destinationCoordinate):
 
     thetaDotToDestination = positioningControllerCalcThetaDotToDestination(destinationCoordinate)
 
-    rotateHeading(thetaDotToDestination)
+    rotateHeading(thetaDotToDestination, robot)
 
 
     distanceToDestination = positioningControllerCalcDistanceToDestination(destinationCoordinate)
 
-    moveForward(distanceToDestination)
+    moveForward(distanceToDestination, robot)
 
     currentCoordinate = positioningControllerGetRobotCoordinate()
 
 
 if __name__ == "__main__":
-    init()
+    init_robot()
     destinationCoordinate = ()
 
     moveToDestination(destinationCoordinate)

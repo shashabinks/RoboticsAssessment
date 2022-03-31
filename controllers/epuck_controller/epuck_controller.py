@@ -2,8 +2,9 @@
 
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
-from numpy import double
+#from numpy import double
 from webots.controller import Robot, Motor, Receiver
+from epuck_move_to_destination import init_robot,moveToDestination
 
 import struct
 import ast
@@ -26,12 +27,18 @@ path_counter = 0
 #  ds = robot.getDevice('dsname')
 #  ds.enable(timestep)
 
+init_robot(robot)
+
+destinationCoordinate = [0.5,0.5]
+
+
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
 while robot.step(timestep) != -1:
     if(len(robotPath) == 0):
         path = robot.getCustomData()
         robotPath = ast.literal_eval(robot.getCustomData())
+        moveToDestination(destinationCoordinate, robot)
 
     
         
