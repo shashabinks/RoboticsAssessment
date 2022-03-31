@@ -1,3 +1,4 @@
+from msilib.schema import Class
 from cartesian import *
 
 import math
@@ -5,43 +6,47 @@ import math
 GPS_SAMPLE_PERIOD = 1
 COMPASS_SAMPLE_PERIOD = 1
 
-global gps, compass
+
+class Positioning_controller:
+
+    def __init__(self, robot):
+        self.robot = robot
+        self.gps = robot.getDevice("gps")
+        self.compass = robot.getDevice("compass")
+
+        self.gps.enable(GPS_SAMPLE_PERIOD)
+        self.compass.enable(COMPASS_SAMPLE_PERIOD)
+    
+
+        
+
+    def getRobotBearing(self):
+        north = self.compass.getValues()
+        rad = math.atan2(north[0],north[2])
+        bearing = (rad - 1.5708) / math.pi * 180.0
+        if bearing < 0.0: bearing = bearing + 360.0
+
+        return bearing
+
+    def positioningControllerGetRobotCoordinate(self):
+
+        return convertVec3ftoVec2f(self.gps.getValues())
 
 
-def positioningControllerInit(time_step, robot):
-    gps = robot.getDevice("gps")
-    compass = robot.getDevice("compass")
+    def positioningControllerGetRobotHeading(self):
 
-    gps.enable(GPS_SAMPLE_PERIOD)
-    compass.enable(COMPASS_SAMPLE_PERIOD)
-
-def getRobotBearing(compass):
-    north = compass.getValues()
-    rad = math.atan2(north[0],north[2])
-    bearing = (rad - 1.5708) / math.pi * 180.0
-    if bearing < 0.0: bearing = bearing + 360.0
-
-    return bearing
-
-def positioningControllerGetRobotCoordinate():
-
-	return convertVec3ftoVec2f(gps.getValues())
+        return cartesianConvertCompassBearingToHeading(self.getRobotBearing())
 
 
-def positioningControllerGetRobotHeading():
+    def positioningControllerCalcDistanceToDestination(self, destinationCoordinate):
 
-	return cartesianConvertCompassBearingToHeading(getRobotBearing(compass))
-
-
-def positioningControllerCalcDistanceToDestination(destinationCoordinate):
-
-	currentCoordinate = positioningControllerGetRobotCoordinate()
-	return cartesianCalcDistance(currentCoordinate, destinationCoordinate)
+        currentCoordinate = self.positioningControllerGetRobotCoordinate()
+        return cartesianCalcDistance(currentCoordinate, destinationCoordinate)
 
 
-def positioningControllerCalcThetaDotToDestination(destinationCoordinate):
+    def positioningControllerCalcThetaDotToDestination(self, destinationCoordinate):
 
-	currentCoordinate = positioningControllerGetRobotCoordinate()
-	robotHeading = positioningControllerGetRobotHeading()
-	destinationTheta = cartesianCalcDestinationThetaInDegrees(currentCoordinate, destinationCoordinate)
-	return cartesianCalcThetaDot(robotHeading, destinationTheta)
+        currentCoordinate = self.positioningControllerGetRobotCoordinate()
+        robotHeading = self.positioningControllerGetRobotHeading()
+        destinationTheta = cartesianCalcDestinationThetaInDegrees(currentCoordinate, destinationCoordinate)
+        return cartesianCalcThetaDot(robotHeading, destinationTheta)

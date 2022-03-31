@@ -4,7 +4,7 @@
 #  from controller import Robot, Motor, DistanceSensor
 #from numpy import double
 from webots.controller import Robot, Motor, Receiver
-from epuck_move_to_destination import init_robot,moveToDestination
+from epuck_move_to_destination import Epuck_move
 
 import struct
 import ast
@@ -13,10 +13,7 @@ import ast
 robotPath = []
 # create the Robot instance.
 robot = Robot()
-
-left_motor = robot.getDevice("left wheel motor")
-right_motor = robot.getDevice("right wheel motor")
-
+epuck_move = Epuck_move(robot)
 
 
 
@@ -30,18 +27,23 @@ path_counter = 0
 #  ds = robot.getDevice('dsname')
 #  ds.enable(timestep)
 
-init_robot(robot)
 
 destinationCoordinate = [0.5,0.5]
 
-
+done = False
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
 while robot.step(timestep) != -1:
+
+    print(str(int(robot.getBasicTimeStep())))
+
     if(len(robotPath) == 0):
         path = robot.getCustomData()
         robotPath = ast.literal_eval(robot.getCustomData())
-        moveToDestination(destinationCoordinate, robot)
+    
+    if not done:
+        epuck_move.moveToDestination([-1.4 + (6 * 0.25), -0.875 + (3 * 0.25)])
+        done = True
 
     
     

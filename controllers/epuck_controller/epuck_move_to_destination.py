@@ -9,91 +9,87 @@ ROBOT_ROTATIONAL_SPEED = 0.772881647
 
 ROBOT_ANGULAR_SPEED_IN_DEGREES = 278.237392796
 
-time_step = 0.0
+
+class Epuck_move:
+    def __init__(self, robot):
+        self.robot = robot
+        self.time_step = self.getTimeStep()
+        self.motor_controller = Motor_Controller(self.robot, self.time_step)
+        self.positioning_controll = Positioning_controller(self.robot)
 
 
-def getTimeStep(robot):
+    def getTimeStep(self):
+        self.time_step = int(self.robot.getBasicTimeStep())
+        return self.time_step
 
-    time_step = -1
+    def step(self):
+        if self.robot.step(self.time_step) == -1:
+            exit()
 
-    if time_step == -1:
+    def rotateHeading(self, thetaDot):
 
-        time_step = int(robot.getBasicTimeStep())
-    
-    return time_step
+        if(not(cartesianIsThetaEqual(thetaDot,0))):
 
-def step(robot):
+            duration = abs(thetaDot) / ROBOT_ANGULAR_SPEED_IN_DEGREES
 
-    if robot.step(time_step) == -1:
-        exit()
+            print(f"duration to face the dest: {duration}")
 
+            if thetaDot > 0: self.motor_controller.motorRotateLeft()
+            elif thetaDot < 0: self.motor_controller.motorRotateRight()
 
-def init_robot(robot):
+            start_time = int(self.robot.getBasicTimeStep())
+            print("start time: " + str(start_time))
+            print("duration: " + str(duration))
 
-    time_step = getTimeStep(robot)
+            while(int(self.robot.getBasicTimeStep()) < start_time + duration):
+                #print(int(self.robot.getBasicTimeStep()))
+                self.step()
 
-    motorControllerInit(time_step, robot)
+            self.motor_controller.motorStop()
+            
 
-    positioningControllerInit(time_step, robot)
+    def moveForward(self, distance):
 
+        duration = distance/TANGENSIAL_SPEED
 
-def rotateHeading(thetaDot, robot):
+        self.motor_controller.motorMoveForward()
 
-    if(not(cartesianIsThetaEqual(thetaDot,0))):
+        start_time = int(self.robot.getBasicTimeStep())
 
-        duration = abs(thetaDot) / ROBOT_ANGULAR_SPEED_IN_DEGREES
+        while(int(self.robot.getBasicTimeStep()) < start_time + duration):
+                self.step()
 
-        print(f"duration to face the dest: {duration}")
-
-        if thetaDot > 0: motorRotateLeft()
-        elif thetaDot < 0: motorRotateRight()
-
-        start_time = int(robot.getBasicTimeStep())
-
-        while(int(robot.getBasicTimeStep()) < start_time + duration):
-            step(robot)
-
-
-def moveForward(distance, robot):
-
-    duration = distance/TANGENSIAL_SPEED
-
-    motorMoveForward()
-
-    start_time = int(robot.getBasicTimeStep())
-
-    while(int(robot.getBasicTimeStep()) < start_time + duration):
-            step()
-
-    motorStop()
-    step()
+        self.motor_controller.motorStop()
+        self.step()
 
 
-def moveToDestination(destinationCoordinate, robot):
-    
+    def moveToDestination(self, destinationCoordinate):
+        
 
-    currentCoordinate = cartesianConvertCompassBearingToHeading(getRobotBearing())
+        currentCoordinate = self.positioning_controll.positioningControllerGetRobotCoordinate()
 
-    if cartesianIsCoordinateEqual(cartesianConvertCompassBearingToHeading(), destinationCoordinate): return 
-
-
-    thetaDotToDestination = positioningControllerCalcThetaDotToDestination(destinationCoordinate)
-
-    rotateHeading(thetaDotToDestination, robot)
+        print(currentCoordinate)
+        print(destinationCoordinate)
+        if cartesianIsCoordinateEqual(currentCoordinate, destinationCoordinate): return 
 
 
-    distanceToDestination = positioningControllerCalcDistanceToDestination(destinationCoordinate)
+        thetaDotToDestination = self.positioning_controll.positioningControllerCalcThetaDotToDestination(destinationCoordinate)
 
-    moveForward(distanceToDestination, robot)
-
-    currentCoordinate = positioningControllerGetRobotCoordinate()
+        self.rotateHeading(thetaDotToDestination)
 
 
-if __name__ == "__main__":
+        distanceToDestination = self.positioning_controll.positioningControllerCalcDistanceToDestination(destinationCoordinate)
+
+        self.moveForward(distanceToDestination)
+
+        currentCoordinate = self.positioning_controll.positioningControllerGetRobotCoordinate()
+
+
+"""if __name__ == "__main__":
     init_robot()
     destinationCoordinate = ()
 
-    moveToDestination(destinationCoordinate)
+    moveToDestination(destinationCoordinate)"""
 
     
     

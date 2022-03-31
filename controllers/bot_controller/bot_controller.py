@@ -97,7 +97,8 @@ for i in range(num_epucks):
     epuck_ref.getField("translation").setSFVec3f([start_cord[0], start_cord[1], 0])
         
     #generate path using a-star
-    path = a_star(map_nodes, start_cord, end_cord, origin, node_dist)
+    #path = a_star(map_nodes, start_cord, end_cord, origin, node_dist)
+    path = []
 
     #create custom data array and send to epuck
     data = [str(epucks[i]), str(path)]
