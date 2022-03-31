@@ -1,12 +1,11 @@
 from json.encoder import INFINITY
 from webots.controller import Robot, Motor, Receiver
 
-MAX_SPEED = 6.28
+MAX_SPEED = 5.6
 
 class Motor_Controller:
-    def __init__(self, robot, time_step):
+    def __init__(self, robot):
         self.robot = robot
-        self.time_step = time_step
         self.left_motor = self.robot.getDevice("left wheel motor")
         self.right_motor = self.robot.getDevice("right wheel motor")
 

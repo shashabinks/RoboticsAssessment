@@ -4,7 +4,7 @@ import positioning_controller
 
 COORDINATE_MATCHING_ACCURACY =  0.01
 
-THETA_MATCHING_ACCURACY = 1
+THETA_MATCHING_ACCURACY = 5
 
 
 def convertVec3ftoVec2f(coordinate3f):

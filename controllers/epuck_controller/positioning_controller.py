@@ -48,5 +48,8 @@ class Positioning_controller:
 
         currentCoordinate = self.positioningControllerGetRobotCoordinate()
         robotHeading = self.positioningControllerGetRobotHeading()
+        
+        
         destinationTheta = cartesianCalcDestinationThetaInDegrees(currentCoordinate, destinationCoordinate)
+       
         return cartesianCalcThetaDot(robotHeading, destinationTheta)

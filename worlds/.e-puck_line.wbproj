@@ -8,5 +8,4 @@ orthographicViewHeight: 1
 textFiles: 0 "controllers/e-puck_line/e-puck_line.c" "controllers/epuck_controller/epuck_controller.py"
 globalOptionalRendering: LightSensorRays
 consoles: Console:All:All
-renderingDevicePerspectives: e-puck(1):camera;1;1;0;0
 renderingDevicePerspectives: e-puck:camera;1;1;0;0
