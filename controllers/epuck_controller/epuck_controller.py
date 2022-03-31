@@ -37,10 +37,7 @@ while robot.step(timestep) != -1:
         
     
     
-    Motor.setPosition(left_motor, );
-    Motor.setPosition(right_motor, 5.0);
-    Motor.setVelocity(left_motor, 5.0);
-    Motor.setVelocity(right_motor, 5.0);
+    
 
     
     
