@@ -7,20 +7,61 @@ from sys import set_coroutine_origin_tracking_depth
 from webots.controller import Supervisor, Emitter, Robot
 import struct
 from a_star import a_star
+import random
 
 
-num_epucks = 2
+#number of epucks
+num_epucks = 1
 
+#origin cordinates
 origin = (-1.4, -0.875)
-square_dist = 0.25
-epucks = []
 
-map_squares = []
+#distance between each square
+node_dist = 0.25
 
-for x in range(12):
-    for y in range(8):
-        cords = (origin[0] + (square_dist * x), origin[1] + (square_dist * y))
-        map_squares.append(cords)
+#map size
+max_x = 11
+max_y = 7
+
+#epuck id : priority
+epucks = {}
+
+#cords of map nodes
+map_nodes = []
+
+def generate_random_start_end(num_points):
+    used_nodes = []
+
+    generated_points = {}
+
+    for i in range(num_points):
+        start_cord = (random.randint(0, max_x), random.randint(0, max_y))
+        while start_cord in used_nodes:
+            start_cord = (random.randint(0, max_x), random.randint(0, max_y))
+
+        used_nodes.append(start_cord)    
+
+        end_cord = (random.randint(0, max_x), random.randint(0, max_y))
+        while end_cord in used_nodes:
+            end_cord = (random.randint(0, max_x), random.randint(0, max_y))
+
+        used_nodes.append(end_cord) 
+
+
+        generated_points[(origin[0] + (start_cord[0] * node_dist), origin[1] + (start_cord[1] * node_dist))] = (origin[0] + (end_cord[0] * node_dist), origin[1] + (end_cord[1] * node_dist))
+
+    return generated_points
+
+
+
+
+
+
+def populate_map_nodes():
+    for x in range(max_x):
+        for y in range(max_y):
+            cords = (origin[0] + (node_dist * x), origin[1] + (node_dist * y))
+            map_nodes.append(cords)
 
 
 
@@ -31,27 +72,41 @@ supervisor = Supervisor()
 emitter = Emitter(name="robot")
 
 
+#path = a_star(map_squares, start, end, origin, square_dist)
 
-start = (origin[0], origin[1])
-end = (origin[0] + (6 * square_dist), origin[1] + (3 * square_dist))
+#generate random start and end locations
+start_end_points = generate_random_start_end(5)
+populate_map_nodes()
 
-path = a_star(map_squares, start, end, origin, square_dist)
-
-
-
+priorites = [i for i in range(num_epucks)]
+print(priorites)
+#find epuck references, generate paths, assign priorities
 for i in range(num_epucks):
-    epucks.append(supervisor.getFromDef(f"EPUCK{i}"))
+    priority_idx = random.randint(0, len(priorites)-1)
+    epucks[i] = priorites[priority_idx]
+    priorites.remove(priority_idx)
+
+    #pick random start and end pair
+    start_end__pair = random.choice(list(start_end_points))
+    start_cord = start_end__pair
+    end_cord = start_end_points[start_cord]
+
+    del start_end_points[start_end__pair]
+    #move robot to start pos
+    epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
+    epuck_ref.getField("translation").setSFVec3f([start_cord[0], start_cord[1], 0])
+        
+    #generate path using a-star
+    path = a_star(map_nodes, start_cord, end_cord, origin, node_dist)
+
+    #create custom data array and send to epuck
+    data = [str(epucks[i]), str(path)]
+
+    print("data: " + str(data))
+
+    epuck_ref.getField("customData").setSFString(str(data))
 
 
-
-
-#epucks[0].getField("translation").setSFVec3f([start_cord[0], start_cord[1], 0])
-#epucks[1].getField("translation").setSFVec3f([start_cord[0] + (6 * 0.25), start_cord[1] + (3 * 0.25), 0])
-
-
-
-epucks[0].getField("translation").setSFVec3f([origin[0], origin[1], 0])
-epucks[0].getField("customData").setSFString(str(path))
 # get the time step of the current world.
 timestep = int(supervisor.getBasicTimeStep())
 
