@@ -4,20 +4,20 @@ import positioning_controller
 
 COORDINATE_MATCHING_ACCURACY =  0.01
 
-THETA_MATCHING_ACCURACY = 5
+THETA_MATCHING_ACCURACY = 1
 
 
 def convertVec3ftoVec2f(coordinate3f):
     coordinate2f = [0.0, 0.0]
     coordinate2f[0] = coordinate3f[0];
-    coordinate2f[1] = -coordinate3f[2];
+    coordinate2f[1] = coordinate3f[1];
     return coordinate2f;
 
 def convertVec2ftoVec3f(coordinate2f):
     coordinate3f = [0.0, 0.0, 0.0]
     coordinate3f[0] = coordinate2f[0];
-    coordinate3f[2] = -coordinate2f[2];
-    return coordinate2f;
+    coordinate3f[2] = -coordinate2f[1];
+    return coordinate3f;
 
 
 
@@ -49,7 +49,7 @@ def cartesianIsCoordinateVectorEqual(coordinate1, coordinate2):
 
 def cartesianIsThetaEqual(theta1, theta2):
 
-    if (abs(theta1- theta2) < THETA_MATCHING_ACCURACY):
+    if (abs(theta1 - theta2) < THETA_MATCHING_ACCURACY):
         return True 
     else:
         return False
@@ -60,8 +60,8 @@ def cartesianCalcDestinationThetaInDegrees(curr, dest):
 def cartesianCalcThetaDot(heading,destinationTheta):
     theta_dot = destinationTheta - heading
 
-    if (theta_dot > 180): theta_dot = -(360-theta_dot)
-    elif (theta_dot < -180): theta_dot = (360+theta_dot)
+    if (theta_dot > 180.0): theta_dot = -(360.0-theta_dot)
+    elif (theta_dot < -180.0): theta_dot = (360.0+theta_dot)
 
     return theta_dot
 

@@ -3,7 +3,7 @@
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
 #from numpy import double
-from webots.controller import Robot, Motor, Receiver
+from webots.controller import Robot, Motor, Receiver, Supervisor
 from epuck_move_to_destination import Epuck_move
 
 import struct
@@ -13,7 +13,7 @@ import math
 
 robotPath = []
 # create the Robot instance.
-robot = Robot()
+robot = Supervisor()
 epuck_move = Epuck_move(robot)
 
 
@@ -43,7 +43,6 @@ def getRobotBearing():
 # - perform simulation steps until Webots is stopping the controller
 while robot.step(timestep) != -1:
 
-    
 
     if(len(robotPath) == 0):
         path = robot.getCustomData()

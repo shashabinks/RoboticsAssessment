@@ -27,6 +27,7 @@ class Epuck_move:
         self.forward_start = None
 
         self.rotation_theta = None
+        self.robot_start_rotation = None
 
 
 
@@ -38,11 +39,13 @@ class Epuck_move:
                 self.rotation_duration = abs(thetaDot) / ROBOT_ANGULAR_SPEED_IN_DEGREES
                 self.rotation_start = self.robot.getTime()
 
+            
+
             if self.robot.getTime() > self.rotation_start + self.rotation_duration: 
                 self.rotation_done = True
                 return
 
-            print("currentTime: " + str(self.robot.getTime()), " theta: " + str(thetaDot))
+            print("currentTime: " + str(self.robot.getTime()) + " duration: " + str(self.rotation_duration) + " theta: " + str(thetaDot))
 
             if thetaDot > 0: self.motor_controller.motorRotateLeft()
             elif thetaDot < 0: self.motor_controller.motorRotateRight()
@@ -70,6 +73,11 @@ class Epuck_move:
         
         if self.destination_set == False:
             self.destination_set = True
+            self.rotation_theta = self.positioning_controll.positioningControllerCalcThetaDotToDestination(destinationCoordinate)
+            epuck_ref = self.robot.getFromDef("EPUCK0")
+            #https://stackoverflow.com/questions/7846775/how-to-gradually-rotate-an-object-to-face-another-turning-the-shortest-distance
+            self.robot_start_rotation = epuck_ref.getField("rotation").getSFRotation()
+            print(self.robot_start_rotation)
             
             
 
@@ -89,8 +97,8 @@ class Epuck_move:
         
 
         if not self.rotation_done:
-            thetadot = self.positioning_controll.positioningControllerCalcThetaDotToDestination(destinationCoordinate)
-            self.rotateHeading(thetadot)
+            
+            self.rotateHeading(self.rotation_theta)
 
 
     
