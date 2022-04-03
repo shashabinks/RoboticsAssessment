@@ -56,17 +56,32 @@ class Epuck_move:
         print("curr: " + str(current_rotation) + " target: " + str(self.correct_rotation))
         if abs(current_rotation - self.correct_rotation) > 0.05:
 
-            #fixed
+            #TODO radian signs are not wrapping around correctly, find a way to track the sign ourselves and update the current rotation sign accordingly
+            #graph of what it should be https://uk.mathworks.com/help/map/ref/wraptopi.html
+            #example of bug: curr is current rotation, target is correct_rotation, rotation direction is left in this case
+            #curr: -0.3457148179076146 target: 2.356386591841484
+            #curr: -0.28947520829371687 target: 2.356386591841484
+            #curr: -0.23324916427643316 target: 2.356386591841484
+            #curr: -0.17703626284140572 target: 2.356386591841484
+            #curr: -0.12083618676476426 target: 2.356386591841484
+            #curr: -0.06464871323623367 target: 2.356386591841484
+            #curr: -0.008473705794251885 target: 2.356386591841484
+            #curr: -0.04768870377706946 target: 2.356386591841484
+            #curr: -0.10383955011457946 target: 2.356386591841484
+            #curr: -0.16219249933397784 target: 2.356386591841484
+
+            #chosen direction fixed
             if self.rotation_dir is None:
                 self.rotation_dir = self.get_move_dir(self.correct_rotation, current_rotation)
 
             if self.rotation_dir is 1:
-                self.motor_controller.motorRotateLeft()
+                self.motor_controller.motorRotateRight()
 
             else:
-                self.motor_controller.motorRotateRight()
+                self.motor_controller.motorRotateLeft()
         
         else:
+            self.motor_controller.motorStop()
             self.rotation_done = True
             
 
