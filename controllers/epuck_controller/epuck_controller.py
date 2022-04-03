@@ -14,7 +14,7 @@ import math
 robotPath = []
 # create the Robot instance.
 robot = Supervisor()
-epuck_move = Epuck_move(robot)
+epuck_move = Epuck_move(robot, 2.5, 5.6)
 
 
 

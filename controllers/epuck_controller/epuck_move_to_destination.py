@@ -1,19 +1,19 @@
 
+
+from numpy import arctan2
 from motor_controller import *
 from positioning_controller import *
 from cartesian import *
 
-TANGENSIAL_SPEED = 0.12874
 
-ROBOT_ROTATIONAL_SPEED = 0.772881647
-
-ROBOT_ANGULAR_SPEED_IN_DEGREES = 278.237392796
 
 
 class Epuck_move:
-    def __init__(self, robot):
+    def __init__(self, robot, rot_speed, forward_speed):
         self.robot = robot
-        self.motor_controller = Motor_Controller(self.robot)
+        self.rot_speed = rot_speed
+        self.forward_speed = forward_speed
+        self.motor_controller = Motor_Controller(self.robot, rot_speed, forward_speed)
         self.positioning_controll = Positioning_controller(self.robot)
         self.destination_set = False
 
@@ -25,30 +25,46 @@ class Epuck_move:
 
         self.rotation_start = None
         self.forward_start = None
+        self.rotation_dir = None
 
-        self.rotation_theta = None
-        self.robot_start_rotation = None
+        self.correct_rotation = None
+        
 
+    def get_move_dir(self, correct_rotation, current_rotation):
+        
+        move_dir = 0
 
+        behind_me = current_rotation - (math.pi/2)
 
-    def rotateHeading(self, thetaDot):
+        if behind_me < 0:
+            behind_me = behind_me + math.pi;
 
-        if(not(cartesianIsThetaEqual(thetaDot,0))):
+        if abs(correct_rotation - behind_me) < 0.05:
+            move_dir = 1
 
-            if self.rotation_duration == None:
-                self.rotation_duration = abs(thetaDot) / ROBOT_ANGULAR_SPEED_IN_DEGREES
-                self.rotation_start = self.robot.getTime()
+        elif (correct_rotation > behind_me and correct_rotation < current_rotation) or (current_rotation < math.pi/2 and (correct_rotation > behind_me or correct_rotation < current_rotation)):
+            move_dir = -1
+        
+        elif (correct_rotation < behind_me and correct_rotation > current_rotation) or (current_rotation > math.pi/2 and (correct_rotation < behind_me or correct_rotation > current_rotation)):
+            move_dir = 1
+        
+        return move_dir
 
-            
+    def rotateHeading(self):
+        
+        current_rotation = self.robot.getSelf().getField("rotation").getSFRotation()[3]
+        print("curr: " + str(current_rotation) + " target: " + str(self.correct_rotation))
+        if abs(current_rotation - self.correct_rotation) > 0.05:
 
-            if self.robot.getTime() > self.rotation_start + self.rotation_duration: 
-                self.rotation_done = True
-                return
+            #fixed
+            if self.rotation_dir is None:
+                self.rotation_dir = self.get_move_dir(self.correct_rotation, current_rotation)
 
-            print("currentTime: " + str(self.robot.getTime()) + " duration: " + str(self.rotation_duration) + " theta: " + str(thetaDot))
+            if self.rotation_dir is 1:
+                self.motor_controller.motorRotateLeft()
 
-            if thetaDot > 0: self.motor_controller.motorRotateLeft()
-            elif thetaDot < 0: self.motor_controller.motorRotateRight()
+            else:
+                self.motor_controller.motorRotateRight()
         
         else:
             self.rotation_done = True
@@ -57,7 +73,8 @@ class Epuck_move:
     def moveForward(self, distance):
 
         if self.forward_duration == None:
-            self.forward_duration = distance/TANGENSIAL_SPEED
+            tangelnsial_speed = 0.0205 * self.forward_speed
+            self.forward_duration = distance/tangelnsial_speed
             self.forward_start = self.robot.getTime()
 
         if self.robot.getTime() > self.forward_start + self.forward_duration:
@@ -68,16 +85,28 @@ class Epuck_move:
         print("currentTime: " + str(self.robot.getTime()), " start + duration: " + str(self.forward_start + self.forward_duration) + " forward: " + str(self.forward_duration))
         self.motor_controller.motorMoveForward()
 
+    def calculate_rotation(self, current_cords, destination_cords):
+
+        angle = arctan2(destination_cords[1] - current_cords[1], destination_cords[0] - current_cords[0])
+
+        return angle
 
     def moveToDestination(self, destinationCoordinate):
         
         if self.destination_set == False:
+            epuck_ref = self.robot.getSelf()
             self.destination_set = True
-            self.rotation_theta = self.positioning_controll.positioningControllerCalcThetaDotToDestination(destinationCoordinate)
-            epuck_ref = self.robot.getFromDef("EPUCK0")
+        
+            self.correct_rotation = self.calculate_rotation(epuck_ref.getField("translation").getSFVec3f()[0:2], destinationCoordinate)
+            
+
+            
+            
+            
             #https://stackoverflow.com/questions/7846775/how-to-gradually-rotate-an-object-to-face-another-turning-the-shortest-distance
-            self.robot_start_rotation = epuck_ref.getField("rotation").getSFRotation()
-            print(self.robot_start_rotation)
+            
+            
+            
             
             
 
@@ -86,19 +115,25 @@ class Epuck_move:
         
         if cartesianIsCoordinateEqual(currentCoordinate, destinationCoordinate):
             self.destination_set = False
+
             self.rotation_done = False
             self.forward_done = False
 
             self.rotation_duration = None
             self.forward_duration = None
-            self.rotation_theta = None
+
+            self.rotation_start = None
+            self.forward_start = None
+            self.rotation_dir = None
+
+            self.correct_rotation = None
             return True
 
         
 
         if not self.rotation_done:
             
-            self.rotateHeading(self.rotation_theta)
+            self.rotateHeading()
 
 
     

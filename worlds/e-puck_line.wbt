@@ -36,12 +36,8 @@ DEF OBSTACLE3 Solid {
   boundingObject USE BOX3
 }
 DEF EPUCK0 E-puck {
-  hidden position_0_0 3174.7818884278095
-  hidden position_0_1 2975.1468390725213
-  hidden rotation_1 0 -1 0 4.509877005061295
-  hidden rotation_2 0 -1 0 3.0829965306027014
-  translation 1.2334074017686119 0.29061754402114953 -6.412153086640844e-05
-  rotation -0.00022703999285827843 -0.00010660399664668743 0.9999999685442144 -2.7790553071795863
+  translation 1.35004 -0.374301 0
+  rotation 0 0 1 -2.7790553071795863
   controller "epuck_controller"
   customData "['0', '[]']"
   supervisor TRUE
