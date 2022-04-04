@@ -48,6 +48,11 @@ while robot.step(timestep) != -1:
         path = robot.getCustomData()
         robotPath = ast.literal_eval(robot.getCustomData())
     
+    #current_rotation = robot.getSelf().getField("rotation").getSFRotation()[3]
+
+    #wrap_rotation = (current_rotation + math.pi) % (2 * math.pi) - math.pi
+    
+    #print(str(wrap_rotation))
     done = epuck_move.moveToDestination([-1.4 + (6 * 0.25), -0.875 + (3 * 0.25)])
     
     

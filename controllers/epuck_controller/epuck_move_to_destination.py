@@ -1,6 +1,6 @@
 
 
-from numpy import arctan2
+from numpy import arctan2, unwrap
 from motor_controller import *
 from positioning_controller import *
 from cartesian import *
@@ -37,7 +37,7 @@ class Epuck_move:
         behind_me = current_rotation - (math.pi/2)
 
         if behind_me < 0:
-            behind_me = behind_me + math.pi;
+            behind_me = behind_me + math.pi
 
         if abs(correct_rotation - behind_me) < 0.05:
             move_dir = 1
@@ -52,9 +52,14 @@ class Epuck_move:
 
     def rotateHeading(self):
         
+        # this is from the properties of the robot itself
         current_rotation = self.robot.getSelf().getField("rotation").getSFRotation()[3]
+
+        wrap_rotation = (current_rotation + math.pi) % (2 * math.pi) - math.pi
+
+
         print("curr: " + str(current_rotation) + " target: " + str(self.correct_rotation))
-        if abs(current_rotation - self.correct_rotation) > 0.05:
+        if abs(wrap_rotation - self.correct_rotation) > 0.05:
 
             #TODO radian signs are not wrapping around correctly, find a way to track the sign ourselves and update the current rotation sign accordingly
             #graph of what it should be https://uk.mathworks.com/help/map/ref/wraptopi.html
