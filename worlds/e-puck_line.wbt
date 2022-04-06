@@ -36,40 +36,14 @@ DEF OBSTACLE3 Solid {
   boundingObject USE BOX3
 }
 DEF EPUCK0 E-puck {
-  hidden position_0_0 15.216457582468461
-  hidden position_0_1 -5.898067426991216
-  hidden rotation_1 0 1 0 2.6500869681092882
-  hidden rotation_2 0 -1 0 5.898067426991216
-  translation 0.7826049076977445 0.6888776507512078 -6.439437519439525e-05
-  rotation -0.0006826427103479593 0.0002686385152767195 -0.999999730916103 0
+  hidden position_0_0 17.20040841269148
+  hidden position_0_1 -7.882018073929199
+  hidden rotation_1 0 1 0 4.634037798332308
+  hidden rotation_2 0 1 0 4.684352540429973
+  translation -0.14936882838605534 0.8748626601547147 -6.500312175020118e-05
+  rotation 0.00021117899157747003 0.00024917355320144846 -0.9999999466579855 0
   controller "epuck_controller"
-  customData "['0', '[]']"
-  supervisor TRUE
-  turretSlot [
-    Emitter {
-      range 0.0001
-      maxRange 0.0001
-    }
-    Receiver {
-    }
-    Compass {
-    }
-    GPS {
-    }
-  ]
-  groundSensorsSlot [
-    E-puckGroundSensors {
-    }
-  ]
-}
-DEF EPUCK1 E-puck {
-  hidden position_0_0 2.4442555457110875e-08
-  hidden position_0_1 1.0691753605844211e-08
-  hidden rotation_1 0 1 0 2.9802322387695313e-08
-  translation -1.05861387093784 -0.7483317065188341 -6.406000934722038e-05
-  rotation 0.00019341523913845736 3.439237305082857e-05 0.999999980703855 0
-  controller "epuck_controller"
-  customData "['0', '[]']"
+  customData "['0', '[(0.10000000000000009, 0.125), (0.3500000000000001, 0.375), (0.6000000000000001, 0.625), (0.8500000000000001, 0.625)]']"
   supervisor TRUE
   turretSlot [
     Emitter {

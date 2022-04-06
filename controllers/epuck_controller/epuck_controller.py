@@ -74,9 +74,12 @@ while robot.step(timestep) != -1:
 
     transmitMessage("hello") # transmit message repeatedly
 
-    if(len(robotPath) == 0):
-        path = robot.getCustomData()
-        robotPath = list(ast.literal_eval(ast.literal_eval(robot.getCustomData())[1]))
+    if len(robotPath) == 0:
+        data = robot.getCustomData()
+        if data != '':
+            #robotPath = list(ast.literal_eval(ast.literal_eval(robot.getCustomData())[1]))
+            robotPath = [(-0.3999999999999999, 0.625), (-0.6499999999999999, 0.375), (-0.8999999999999999, 0.125)]
+            
     
 
     # if queue length is not equal to 0, we have received a message
@@ -100,13 +103,13 @@ while robot.step(timestep) != -1:
 
     
     
-    if path_counter < len(robotPath)-1:
+    if len(robotPath)>0:
         
-        print("going to: " + str([robotPath[path_counter][0], robotPath[path_counter][1]]))
-        done = epuck_move.moveToDestination([robotPath[path_counter][0], robotPath[path_counter][1]])
+        print("going to: " + str([robotPath[0][0], robotPath[0][1]]))
+        done = epuck_move.moveToDestination([robotPath[0][0], robotPath[0][1]])
 
         if done:
-            path_counter += 1
+            robotPath.pop(0)
 
     
     

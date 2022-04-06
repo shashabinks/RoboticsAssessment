@@ -27,6 +27,8 @@ max_y = 7
 #epuck id : priority
 epucks = {}
 
+epucks_intialised = False
+
 #cords of map nodes
 map_nodes = []
 
@@ -78,44 +80,52 @@ emitter = Emitter(name="robot")
 
 #path = a_star(map_squares, start, end, origin, square_dist)
 
-print("generating end points and map nodes")
+
 #generate random start and end locations
 start_end_points = generate_random_start_end(5)
 populate_map_nodes()
 
-priorites = [i for i in range(num_epucks)]
-print(priorites)
+
+
 #find epuck references, generate paths, assign priorities
-for i in range(num_epucks):
-    priority_idx = random.randint(0, len(priorites)-1)
-    epucks[i] = priorites[priority_idx]
-    priorites.remove(priority_idx)
 
-    #pick random start and end pair
-    start_end__pair = random.choice(list(start_end_points))
-    start_cord = start_end__pair
-    end_cord = start_end_points[start_cord]
-
-    del start_end_points[start_end__pair]
-    #move robot to start pos
-    epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
-    epuck_ref.getField("translation").setSFVec3f([start_cord[0], start_cord[1], 0])
-
-    print(f"running a-star for epuck {i}")
-    #generate path using a-star
-    path = a_star(map_nodes, start_cord, end_cord, origin, node_dist)
-    
-
-    #create custom data array and send to epuck
-    data = [str(epucks[i]), str(path)]
-
-    print("data: " + str(data))
-
-    epuck_ref.getField("customData").setSFString(str(data))
 
 
 # get the time step of the current world.
 timestep = int(supervisor.getBasicTimeStep())
+
+
+def epuck_intialise():
+    priorites = [i for i in range(num_epucks)]
+
+    for i in range(num_epucks):
+    
+        priority_idx = random.randint(0, len(priorites)-1)
+        epucks[i] = priorites[priority_idx]
+        priorites.remove(priority_idx)
+
+        #pick random start and end pair
+        start_end__pair = random.choice(list(start_end_points))
+        start_cord = start_end__pair
+        end_cord = start_end_points[start_cord]
+
+        del start_end_points[start_end__pair]
+        #move robot to start pos
+        epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
+        epuck_ref.getField("translation").setSFVec3f([-0.1499999999999999, 0.875, 0])
+
+        print(f"running a-star for epuck {i}")
+        #generate path using a-star
+        path = a_star(map_nodes, start_cord, end_cord, origin, node_dist)
+        
+        path.pop(0)
+       
+        #create custom data array and send to epuck
+        data = [str(epucks[i]), str(path)]
+
+        print("data: " + str(data))
+
+        epuck_ref.getField("customData").setSFString(str(data))
 
 # You should insert a getDevice-like function in order to get the
 # instance of a device of the robot. Something like:
@@ -128,14 +138,11 @@ timestep = int(supervisor.getBasicTimeStep())
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
 while supervisor.step(timestep) != -1:
-    # Read the sensors:
-    # Enter here functions to read sensor data, like:
-    #  val = ds.getValue()
-
-    # Process sensor data here.
-
-    # Enter here functions to send actuator commands, like:
-    #  motor.setPosition(10.0)
-    pass
+    
+    if not epucks_intialised:
+        print("intialising epucks")
+        epuck_intialise()
+        epucks_intialised = True
+    
 
 # Enter here exit cleanup code.
