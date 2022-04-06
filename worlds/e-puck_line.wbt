@@ -62,6 +62,33 @@ DEF EPUCK0 E-puck {
     }
   ]
 }
+DEF EPUCK1 E-puck {
+  hidden position_0_0 17.20040841269148
+  hidden position_0_1 -7.882018073929199
+  hidden rotation_1 0 1 0 4.634037798332308
+  hidden rotation_2 0 1 0 4.684352540429973
+  translation -0.0493688 0.244863 0.099935
+  rotation 0.00021117899157747003 0.00024917355320144846 -0.9999999466579855 0
+  controller "epuck_controller"
+  customData "['0', '[(0.10000000000000009, 0.125), (0.3500000000000001, 0.375), (0.6000000000000001, 0.625), (0.8500000000000001, 0.625)]']"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
 Robot {
   translation 0 0 0.28
   controller "bot_controller"

@@ -12,7 +12,7 @@ import math
 
 
 #number of epucks
-num_epucks = 1
+num_epucks = 2
 
 #origin cordinates
 origin = (-1.4, -0.875)

@@ -21,6 +21,8 @@ epuck_move = Epuck_move(robot, 1, 5.6)
 emitter = Emitter("emitter") # takes as input the emitter object
 reciever = Receiver("receiver")
 
+robot_priority = 0
+
 
 #  set the range of the robot
 emitter.setRange(0.3)
@@ -72,15 +74,19 @@ m = " " # define recieving message
 while robot.step(timestep) != -1:
    
 
-    transmitMessage("hello") # transmit message repeatedly
+    
 
     if len(robotPath) == 0:
         data = robot.getCustomData()
         if data != '':
             #robotPath = list(ast.literal_eval(ast.literal_eval(robot.getCustomData())[1]))
             robotPath = [(-0.3999999999999999, 0.625), (-0.6499999999999999, 0.375), (-0.8999999999999999, 0.125)]
-            
     
+    # assign robot priority 
+    robot_priority  = int(ast.literal_eval(robot.getCustomData())[0])
+
+    # transmit priority
+    transmitMessage(str(robot_priority)) 
 
     # if queue length is not equal to 0, we have received a message
     if reciever.getQueueLength() != 0:
