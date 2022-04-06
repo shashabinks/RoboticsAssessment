@@ -81,11 +81,12 @@ while robot.step(timestep) != -1:
         data = robot.getCustomData()
         if data != '':
             robotPath = list(ast.literal_eval(ast.literal_eval(robot.getCustomData())[1]))
+            robot_priority  = int(ast.literal_eval(robot.getCustomData())[0])
             path_set = True
             
     
     # assign robot priority 
-    robot_priority  = int(ast.literal_eval(robot.getCustomData())[0])
+    
 
     # transmit priority
     transmitMessage(str(robot_priority)) 
