@@ -97,11 +97,15 @@ timestep = int(supervisor.getBasicTimeStep())
 
 def epuck_intialise():
     priorites = [i for i in range(num_epucks)]
-
-    for i in range(num_epucks):
     
-        priority_idx = random.randint(0, len(priorites)-1)
-        epucks[i] = priorites[priority_idx]
+
+    for i in range(0,num_epucks):
+    
+        priority_idx = random.choice(priorites)
+        #print(priority_idx)
+        epucks[i] = priority_idx
+        
+        
         priorites.remove(priority_idx)
 
         #pick random start and end pair
