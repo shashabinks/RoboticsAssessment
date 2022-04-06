@@ -23,7 +23,7 @@ reciever = Receiver("receiver")
 
 
 #  set the range of the robot
-emitter.setRange(1)
+emitter.setRange(0.3)
 
 
 def transmitMessage(message):
