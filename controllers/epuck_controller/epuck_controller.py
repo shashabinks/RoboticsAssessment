@@ -105,9 +105,12 @@ while robot.step(timestep) != -1:
 
         # compare priorities
         if int(m) > robot_priority:
+
+            # perform low priority actions/sequence
             print("I have low priority")
 
         else:
+            # perform high priority actions/sequence
             print("I have high priority")
 
     
