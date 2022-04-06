@@ -88,16 +88,21 @@ class Epuck_move:
             if self.rotation_dir == 1:
                 self.motor_controller.motorRotateLeft()
                 self.current_rotation+= 0.02259
+                
+
 
             else:
                 self.motor_controller.motorRotateRight()
                 self.current_rotation-= 0.02259
-        
+                
+
+            print(self.current_rotation)
         else:
             self.motor_controller.motorStop()
             self.rotation_done = True
             
 
+   
     def moveForward(self, distance):
 
         if self.forward_duration == None:
@@ -157,6 +162,11 @@ class Epuck_move:
             self.correct_rotation = None
             self.current_rotation = 0
             self.motor_controller.motorStop()
+            epuck_ref = self.robot.getSelf()
+            rotation = epuck_ref.getField("rotation").getSFRotation()
+            rotation[3] = 0
+            epuck_ref.getField("rotation").setSFRotation(rotation)
+
             return True
 
         

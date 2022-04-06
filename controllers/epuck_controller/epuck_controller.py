@@ -13,7 +13,7 @@ import math
 
 
 robotPath = []
-path_counter = 0
+path_set = False
 # create the Robot instance.
 robot = Supervisor()
 
@@ -22,6 +22,7 @@ emitter = Emitter("emitter") # takes as input the emitter object
 reciever = Receiver("receiver")
 
 robot_priority = 0
+
 
 
 #  set the range of the robot
@@ -76,11 +77,12 @@ while robot.step(timestep) != -1:
 
     
 
-    if len(robotPath) == 0:
+    if len(robotPath) == 0 and not path_set:
         data = robot.getCustomData()
         if data != '':
-            #robotPath = list(ast.literal_eval(ast.literal_eval(robot.getCustomData())[1]))
-            robotPath = [(-0.3999999999999999, 0.625), (-0.6499999999999999, 0.375), (-0.8999999999999999, 0.125)]
+            robotPath = list(ast.literal_eval(ast.literal_eval(robot.getCustomData())[1]))
+            path_set = True
+            
     
     # assign robot priority 
     robot_priority  = int(ast.literal_eval(robot.getCustomData())[0])
@@ -120,13 +122,15 @@ while robot.step(timestep) != -1:
 
     
     
-    if len(robotPath)>0:
+    if len(robotPath)>0 and path_set:
         
-        print("going to: " + str([robotPath[0][0], robotPath[0][1]]))
+        print(robotPath)
         done = epuck_move.moveToDestination([robotPath[0][0], robotPath[0][1]])
 
         if done:
             robotPath.pop(0)
+
+        
 
     
     

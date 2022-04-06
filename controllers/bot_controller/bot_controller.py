@@ -116,7 +116,7 @@ def epuck_intialise():
         del start_end_points[start_end__pair]
         #move robot to start pos
         epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
-        epuck_ref.getField("translation").setSFVec3f([-0.1499999999999999, 0.875, 0])
+        epuck_ref.getField("translation").setSFVec3f([start_cord[0], start_cord[1], 0])
 
         print(f"running a-star for epuck {i}")
         #generate path using a-star
