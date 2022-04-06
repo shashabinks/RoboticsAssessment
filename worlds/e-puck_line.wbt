@@ -36,10 +36,19 @@ DEF OBSTACLE3 Solid {
   boundingObject USE BOX3
 }
 DEF EPUCK0 E-puck {
+<<<<<<< Updated upstream
   hidden position_0_0 5.07010240000572e-09
   hidden position_0_1 8.19140202310929e-09
   translation 0.1005097546613414 0.8750819858004625 -6.39624621548221e-05
   rotation 6.752596831160443e-05 1.2377782741548385e-05 0.999999997643517 -2.7790495038551435
+=======
+  hidden position_0_0 15.216457582468461
+  hidden position_0_1 -5.898067426991216
+  hidden rotation_1 0 1 0 2.6500869681092882
+  hidden rotation_2 0 -1 0 5.898067426991216
+  translation 0.7826049076977445 0.6888776507512078 -6.439437519439525e-05
+  rotation -0.0006826427103479593 0.0002686385152767195 -0.999999730916103 0
+>>>>>>> Stashed changes
   controller "epuck_controller"
   customData "['0', '[]']"
   supervisor TRUE

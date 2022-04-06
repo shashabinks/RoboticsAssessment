@@ -26,6 +26,7 @@ class Epuck_move:
         self.rotation_start = None
         self.forward_start = None
         self.rotation_dir = None
+        self.current_rotation = 0
 
         self.correct_rotation = None
         
@@ -53,13 +54,14 @@ class Epuck_move:
     def rotateHeading(self):
         
         # this is from the properties of the robot itself
-        current_rotation = self.robot.getSelf().getField("rotation").getSFRotation()[3]
+        #current_rotation = self.robot.getSelf().getField("rotation").getSFRotation()[3]
 
-        wrap_rotation = (current_rotation + math.pi) % (2 * math.pi) - math.pi
-
-
-        print("curr: " + str(current_rotation) + " target: " + str(self.correct_rotation))
-        if abs(wrap_rotation - self.correct_rotation) > 0.05:
+        #wrap_rotation = (current_rotation + math.pi) % (2 * math.pi) - math.pi
+        #wrap_correct_rotation = (self.correct_rotation + math.pi) % (2 * math.pi) - math.pi
+        #45 = 0.785
+        #each timestep = 0.0568
+        print("curr: " + str(self.current_rotation) + " target: " + str(self.correct_rotation))
+        if abs(self.current_rotation - self.correct_rotation) > 0.02259:
 
             #TODO radian signs are not wrapping around correctly, find a way to track the sign ourselves and update the current rotation sign accordingly
             #graph of what it should be https://uk.mathworks.com/help/map/ref/wraptopi.html
@@ -77,13 +79,19 @@ class Epuck_move:
 
             #chosen direction fixed
             if self.rotation_dir is None:
-                self.rotation_dir = self.get_move_dir(self.correct_rotation, current_rotation)
+                if self.correct_rotation > 0:
+                    self.rotation_dir = 1
+                else: self.rotation_dir = -1
 
-            if self.rotation_dir is 1:
-                self.motor_controller.motorRotateRight()
+                
+
+            if self.rotation_dir == 1:
+                self.motor_controller.motorRotateLeft()
+                self.current_rotation+= 0.02259
 
             else:
-                self.motor_controller.motorRotateLeft()
+                self.motor_controller.motorRotateRight()
+                self.current_rotation-= 0.02259
         
         else:
             self.motor_controller.motorStop()
@@ -133,7 +141,7 @@ class Epuck_move:
         currentCoordinate = self.positioning_controll.positioningControllerGetRobotCoordinate()
 
         
-        if cartesianIsCoordinateEqual(currentCoordinate, destinationCoordinate):
+        if cartesianIsCoordinateEqual(currentCoordinate, destinationCoordinate) or self.forward_done:
             self.destination_set = False
 
             self.rotation_done = False
@@ -147,6 +155,8 @@ class Epuck_move:
             self.rotation_dir = None
 
             self.correct_rotation = None
+            self.current_rotation = 0
+            self.motor_controller.motorStop()
             return True
 
         

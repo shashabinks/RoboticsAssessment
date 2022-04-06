@@ -64,7 +64,7 @@ def a_star(map_squares, start_pos, end_pos, origin, square_dist):
             node_position = (new_x, new_y)
 
 
-            if node_position not in map_squares:
+            if node_position[0] < -1.4 or node_position[1] < -0.875 or node_position[0] > (-1.4 + (11 * 0.25)) or node_position[1] > (-0.875 + (7*0.25)) :
                 continue
 
             new_node = Node(current_node, node_position)

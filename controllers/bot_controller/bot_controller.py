@@ -8,6 +8,7 @@ from webots.controller import Supervisor, Emitter, Robot
 import struct
 from a_star import a_star
 import random
+import math
 
 
 #number of epucks
@@ -42,8 +43,11 @@ def generate_random_start_end(num_points):
         used_nodes.append(start_cord)    
 
         end_cord = (random.randint(0, max_x), random.randint(0, max_y))
-        while end_cord in used_nodes:
+        dist = math.sqrt((end_cord[0]-start_cord[0])**2 + (end_cord[1]-start_cord[1])**2)
+        #minimum distance of 5 squares between start and end
+        while end_cord in used_nodes or dist < node_dist*5 :
             end_cord = (random.randint(0, max_x), random.randint(0, max_y))
+            dist = math.sqrt((end_cord[0]-start_cord[0])**2 + (end_cord[1]-start_cord[1])**2)
 
         used_nodes.append(end_cord) 
 
@@ -74,6 +78,7 @@ emitter = Emitter(name="robot")
 
 #path = a_star(map_squares, start, end, origin, square_dist)
 
+print("generating end points and map nodes")
 #generate random start and end locations
 start_end_points = generate_random_start_end(5)
 populate_map_nodes()
@@ -95,10 +100,11 @@ for i in range(num_epucks):
     #move robot to start pos
     epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
     epuck_ref.getField("translation").setSFVec3f([start_cord[0], start_cord[1], 0])
-        
+
+    print(f"running a-star for epuck {i}")
     #generate path using a-star
-    #path = a_star(map_nodes, start_cord, end_cord, origin, node_dist)
-    path = []
+    path = a_star(map_nodes, start_cord, end_cord, origin, node_dist)
+    
 
     #create custom data array and send to epuck
     data = [str(epucks[i]), str(path)]

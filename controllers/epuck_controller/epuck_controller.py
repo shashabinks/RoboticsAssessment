@@ -13,11 +13,14 @@ import math
 
 
 robotPath = []
+path_counter = 0
 # create the Robot instance.
 robot = Supervisor()
-epuck_move = Epuck_move(robot, 2.5, 5.6)
+
+epuck_move = Epuck_move(robot, 1, 5.6)
 emitter = Emitter("emitter") # takes as input the emitter object
 reciever = Receiver("receiver")
+
 
 #  set the range of the robot
 emitter.setRange(1)
@@ -73,13 +76,8 @@ while robot.step(timestep) != -1:
 
     if(len(robotPath) == 0):
         path = robot.getCustomData()
-        robotPath = ast.literal_eval(robot.getCustomData())
+        robotPath = list(ast.literal_eval(ast.literal_eval(robot.getCustomData())[1]))
     
-    current_rotation = robot.getSelf().getField("rotation").getSFRotation()[3]
-
-    wrap_rotation = (current_rotation + math.pi) % (2 * math.pi) - math.pi
-
-    #print(reciever.getQueueLength())
 
     # if queue length is not equal to 0, we have received a message
     if reciever.getQueueLength() != 0:
@@ -101,8 +99,14 @@ while robot.step(timestep) != -1:
 
 
     
-    #print(str(wrap_rotation))
-    #done = epuck_move.moveToDestination([-1.4 + (6 * 0.25), -0.875 + (3 * 0.25)])
+    
+    if path_counter < len(robotPath)-1:
+        
+        print("going to: " + str([robotPath[path_counter][0], robotPath[path_counter][1]]))
+        done = epuck_move.moveToDestination([robotPath[path_counter][0], robotPath[path_counter][1]])
+
+        if done:
+            path_counter += 1
 
     
     
