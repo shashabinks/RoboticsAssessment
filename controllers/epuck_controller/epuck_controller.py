@@ -102,6 +102,14 @@ while robot.step(timestep) != -1:
 
         # print out the recieved message (in string format)
         print(m)
+
+        # compare priorities
+        if int(m) > robot_priority:
+            print("I have low priority")
+
+        else:
+            print("I have high priority")
+
     
     else:
         m = " "
