@@ -127,13 +127,13 @@ def epuck_intialise():
 
         del start_end_points[start_end__pair]
         #move robot to start pos
-        epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
-        epuck_ref.getField("translation").setSFVec3f([origin[0] + (node_dist * start_cord[0]), origin[1] + (node_dist * start_cord[1]), 0])
+        """epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
+        epuck_ref.getField("translation").setSFVec3f([origin[0] + (node_dist * start_cord[0]), origin[1] + (node_dist * start_cord[1]), 0])"""
 
         print(f"running a-star for epuck {i}")
         #generate path using a-star
-        print(start_cord)
-        print(end_cord)
+        """print(start_cord)
+        print(end_cord)"""
         
         
         if i == 0:
@@ -149,11 +149,11 @@ def epuck_intialise():
             path = convert_path(path)
 
         else:
-            start_cord = [3, 0]
-            end_cord = [3, 5]
+            start_cord = [3, 5]
+            end_cord = [3, 0]
 
             epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
-            epuck_ref.getField("translation").setSFVec3f(covert_to_world_cords(end_cord))
+            epuck_ref.getField("translation").setSFVec3f(covert_to_world_cords(start_cord))
 
             path = search(maze, 1, start_cord, end_cord)
         

@@ -132,7 +132,7 @@ while robot.step(timestep) != -1:
             else:
                 
                 # calculate elapsed time
-                elapsed_pause = robot.getTime() + start_pause
+                elapsed_pause = robot.getTime() - start_pause
 
 
         else:
