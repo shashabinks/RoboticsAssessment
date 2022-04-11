@@ -3,6 +3,8 @@
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
 #from numpy import double
+from sys import set_coroutine_origin_tracking_depth
+from tracemalloc import start
 from numpy import reciprocal
 from webots.controller import Robot, Motor, Receiver, Supervisor,Emitter
 from epuck_move_to_destination import Epuck_move
@@ -74,7 +76,8 @@ reciever.enable(1)
 
 m = " " # define recieving message
 
-
+start_pause = 0.0
+elapsed_pause = 0.0
 
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
@@ -120,7 +123,17 @@ while robot.step(timestep) != -1:
             # perform low priority actions/sequence
             print("I have low priority")
 
-            update_state(1)
+            # check state, if state is currently not paused, start the timer...
+            if state == 0:
+                start_pause = robot.getTime()
+                elapsed_pause = 0.0
+                update_state(1)
+            
+            else:
+                
+                # calculate elapsed time
+                elapsed_pause = robot.getTime() + start_pause
+
 
         else:
             # perform high priority actions/sequence
@@ -129,16 +142,24 @@ while robot.step(timestep) != -1:
     
     else:
         m = " "
+
         update_state(0)
 
+        # pass elapased pause time here?
+        epuck_move.elapsed_pause = elapsed_pause
+        # reset the pause timing
+        
+        start_pause = 0.0
 
-    if state == 1:
-        epuck_move.motor_controller.motorStop()
+
+
     
-    if len(robotPath)>0 and path_set and state == 0:
+    if len(robotPath)>0 and path_set:
         
         print(robotPath)
         done = epuck_move.moveToDestination([robotPath[0][0], robotPath[0][1]])
+
+        
 
         if done:
             robotPath.pop(0)

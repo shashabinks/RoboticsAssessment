@@ -9,7 +9,7 @@ from cartesian import *
 
 
 class Epuck_move:
-    def __init__(self, robot, rot_speed, forward_speed):
+    def __init__(self, robot, rot_speed, forward_speed,state=0):
         self.robot = robot
         self.rot_speed = rot_speed
         self.forward_speed = forward_speed
@@ -29,9 +29,9 @@ class Epuck_move:
         self.current_rotation = 0
 
         self.correct_rotation = None
-
-        self.state = 0
-    
+        self.state = state
+        self.elapsed_pause = 0.0
+        
 
     def get_move_dir(self, correct_rotation, current_rotation):
         
@@ -104,22 +104,33 @@ class Epuck_move:
             self.rotation_done = True
             
 
+    def pause(self):
+        
+        self.motor_controller.motorStop()
+
+
+
    
     def moveForward(self, distance):
 
-        if self.forward_duration == None:
-            tangelnsial_speed = 0.0205 * self.forward_speed
-            self.forward_duration = distance/tangelnsial_speed
-            self.forward_start = self.robot.getTime()
-            
+        # check state of robot, if paused, then stop motors, else continue
+        if self.state == 1: self.pause()
 
-        if self.robot.getTime() > self.forward_start + self.forward_duration:
-            self.motor_controller.motorStop()
-            self.forward_done = True
-            return
+        else:
 
-        print("currentTime: " + str(self.robot.getTime()), " start + duration: " + str(self.forward_start + self.forward_duration) + " forward: " + str(self.forward_duration))
-        self.motor_controller.motorMoveForward()
+            if self.forward_duration == None:
+                tangelnsial_speed = 0.0205 * self.forward_speed
+                self.forward_duration = distance/tangelnsial_speed
+                self.forward_start = self.robot.getTime()
+
+            if self.robot.getTime() > (self.forward_start ) + (self.forward_duration + self.elapsed_pause):
+                self.motor_controller.motorStop()
+                self.forward_done = True
+                
+                return
+
+            print("currentTime: " + str(self.robot.getTime()), " start + duration: " + str(self.forward_start + self.forward_duration) + " forward: " + str(self.forward_duration))
+            self.motor_controller.motorMoveForward()
 
     def calculate_rotation(self, current_cords, destination_cords):
 
@@ -169,6 +180,7 @@ class Epuck_move:
             rotation = epuck_ref.getField("rotation").getSFRotation()
             rotation[3] = 0
             epuck_ref.getField("rotation").setSFRotation(rotation)
+            self.elapsed_pause = 0.0
 
             return True
 
