@@ -29,7 +29,9 @@ class Epuck_move:
         self.current_rotation = 0
 
         self.correct_rotation = None
-        
+
+        self.state = 0
+    
 
     def get_move_dir(self, correct_rotation, current_rotation):
         
@@ -109,6 +111,7 @@ class Epuck_move:
             tangelnsial_speed = 0.0205 * self.forward_speed
             self.forward_duration = distance/tangelnsial_speed
             self.forward_start = self.robot.getTime()
+            
 
         if self.robot.getTime() > self.forward_start + self.forward_duration:
             self.motor_controller.motorStop()

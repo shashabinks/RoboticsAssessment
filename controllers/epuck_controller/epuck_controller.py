@@ -21,7 +21,11 @@ epuck_move = Epuck_move(robot, 1, 5.6)
 emitter = Emitter("emitter") # takes as input the emitter object
 reciever = Receiver("receiver")
 
+state = 0
+
 robot_priority = 0
+
+robot_pause = False
 
 
 
@@ -61,7 +65,9 @@ def getRobotBearing():
 
         return bearing
 
-
+def update_state(new_state):
+    state = new_state
+    epuck_move.state = new_state
 
 # takes as input the sampling period
 reciever.enable(1)
@@ -80,6 +86,8 @@ while robot.step(timestep) != -1:
     if len(robotPath) == 0 and not path_set:
         data = robot.getCustomData()
         if data != '':
+            print("recieved this data :")
+            print(data)
             robotPath = list(ast.literal_eval(ast.literal_eval(robot.getCustomData())[1]))
             robot_priority  = int(ast.literal_eval(robot.getCustomData())[0])
             path_set = True
@@ -112,6 +120,8 @@ while robot.step(timestep) != -1:
             # perform low priority actions/sequence
             print("I have low priority")
 
+            update_state(1)
+
         else:
             # perform high priority actions/sequence
             print("I have high priority")
@@ -119,11 +129,13 @@ while robot.step(timestep) != -1:
     
     else:
         m = " "
+        update_state(0)
 
 
+    if state == 1:
+        epuck_move.motor_controller.motorStop()
     
-    
-    if len(robotPath)>0 and path_set:
+    if len(robotPath)>0 and path_set and state == 0:
         
         print(robotPath)
         done = epuck_move.moveToDestination([robotPath[0][0], robotPath[0][1]])
