@@ -2,11 +2,9 @@
 
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
-from re import S
-from sys import set_coroutine_origin_tracking_depth
 from webots.controller import Supervisor, Emitter, Robot
 import struct
-from a_star import a_star
+from a_star import search
 import random
 import math
 
@@ -30,7 +28,7 @@ epucks = {}
 epucks_intialised = False
 
 #cords of map nodes
-map_nodes = []
+maze = []
 
 def generate_random_start_end(num_points):
     used_nodes = []
@@ -47,14 +45,14 @@ def generate_random_start_end(num_points):
         end_cord = (random.randint(0, max_x), random.randint(0, max_y))
         dist = math.sqrt((end_cord[0]-start_cord[0])**2 + (end_cord[1]-start_cord[1])**2)
         #minimum distance of 5 squares between start and end
-        while end_cord in used_nodes or dist < node_dist*5 :
+        while end_cord in used_nodes or dist < 5 :
             end_cord = (random.randint(0, max_x), random.randint(0, max_y))
             dist = math.sqrt((end_cord[0]-start_cord[0])**2 + (end_cord[1]-start_cord[1])**2)
 
         used_nodes.append(end_cord) 
 
 
-        generated_points[(origin[0] + (start_cord[0] * node_dist), origin[1] + (start_cord[1] * node_dist))] = (origin[0] + (end_cord[0] * node_dist), origin[1] + (end_cord[1] * node_dist))
+        generated_points[start_cord[0], start_cord[1]] = (end_cord[0], end_cord[1])
 
     return generated_points
 
@@ -64,14 +62,28 @@ def generate_random_start_end(num_points):
 
 
 def populate_map_nodes():
-    for x in range(max_x):
-        for y in range(max_y):
-            cords = (origin[0] + (node_dist * x), origin[1] + (node_dist * y))
-            map_nodes.append(cords)
+    for _ in range(12):
+        row = []
+        for _ in range(8):
+            row.append(0)
+        
+        maze.append(row)
 
 
+def convert_path(path):
+    new_path = []
+
+    for i in path:
+        new_path.append((origin[0] + (node_dist*i[0]), origin[1] + (node_dist * i[1])))
+
+    new_path.pop(0)
+
+    return new_path
 
 
+def covert_to_world_cords(cord):
+    new_cord = [origin[0] + (cord[0] * node_dist), origin[1] + (cord[1] * node_dist), 0]
+    return new_cord
 # create the Robot instance
 supervisor = Supervisor()
 
@@ -116,13 +128,37 @@ def epuck_intialise():
         del start_end_points[start_end__pair]
         #move robot to start pos
         epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
-        epuck_ref.getField("translation").setSFVec3f([start_cord[0], start_cord[1], 0])
+        epuck_ref.getField("translation").setSFVec3f([origin[0] + (node_dist * start_cord[0]), origin[1] + (node_dist * start_cord[1]), 0])
 
         print(f"running a-star for epuck {i}")
         #generate path using a-star
-        path = a_star(map_nodes, start_cord, end_cord, origin, node_dist)
+        print(start_cord)
+        print(end_cord)
         
-        path.pop(0)
+        
+        if i == 0:
+
+            start_cord = [0, 3]
+            end_cord = [5, 3]
+
+            epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
+            epuck_ref.getField("translation").setSFVec3f(covert_to_world_cords(start_cord))
+
+            path = search(maze, 1, start_cord, end_cord)
+        
+            path = convert_path(path)
+
+        else:
+            start_cord = [3, 0]
+            end_cord = [3, 5]
+
+            epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
+            epuck_ref.getField("translation").setSFVec3f(covert_to_world_cords(end_cord))
+
+            path = search(maze, 1, start_cord, end_cord)
+        
+            path = convert_path(path)
+
        
         #create custom data array and send to epuck
         data = [str(epucks[i]), str(path)]
@@ -142,10 +178,11 @@ def epuck_intialise():
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
 while supervisor.step(timestep) != -1:
-    
+       
     if not epucks_intialised:
         print("intialising epucks")
         epuck_intialise()
+        
         epucks_intialised = True
     
 
