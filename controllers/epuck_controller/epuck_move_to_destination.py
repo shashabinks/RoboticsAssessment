@@ -62,7 +62,7 @@ class Epuck_move:
         #wrap_correct_rotation = (self.correct_rotation + math.pi) % (2 * math.pi) - math.pi
         #45 = 0.785
         #each timestep = 0.0568
-        print("curr: " + str(self.current_rotation) + " target: " + str(self.correct_rotation))
+        
         if abs(self.current_rotation - self.correct_rotation) > 0.02259:
 
             #TODO radian signs are not wrapping around correctly, find a way to track the sign ourselves and update the current rotation sign accordingly
@@ -98,7 +98,7 @@ class Epuck_move:
                 self.current_rotation-= 0.02259
                 
 
-            print(self.current_rotation)
+            
         else:
             self.motor_controller.motorStop()
             self.rotation_done = True
@@ -129,7 +129,7 @@ class Epuck_move:
                 
                 return
 
-            print("currentTime: " + str(self.robot.getTime()), " start + duration: " + str(self.forward_start + self.forward_duration) + " forward: " + str(self.forward_duration))
+            
             self.motor_controller.motorMoveForward()
 
     def calculate_rotation(self, current_cords, destination_cords):

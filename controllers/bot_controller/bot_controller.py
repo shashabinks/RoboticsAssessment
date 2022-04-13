@@ -10,7 +10,7 @@ import math
 
 
 #number of epucks
-num_epucks = 2
+num_epucks = 3
 
 #origin cordinates
 origin = (-1.4, -0.875)
@@ -127,37 +127,18 @@ def epuck_intialise():
 
         del start_end_points[start_end__pair]
         #move robot to start pos
-        """epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
-        epuck_ref.getField("translation").setSFVec3f([origin[0] + (node_dist * start_cord[0]), origin[1] + (node_dist * start_cord[1]), 0])"""
+        epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
+        epuck_ref.getField("translation").setSFVec3f([origin[0] + (node_dist * start_cord[0]), origin[1] + (node_dist * start_cord[1]), 0])
 
         print(f"running a-star for epuck {i}")
         #generate path using a-star
-        """print(start_cord)
-        print(end_cord)"""
+        print(start_cord)
+        print(end_cord)
         
+
+        path = search(maze, 1, start_cord, end_cord)
         
-        if i == 0:
-
-            start_cord = [0, 3]
-            end_cord = [5, 3]
-
-            epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
-            epuck_ref.getField("translation").setSFVec3f(covert_to_world_cords(start_cord))
-
-            path = search(maze, 1, start_cord, end_cord)
-        
-            path = convert_path(path)
-
-        else:
-            start_cord = [3, 5]
-            end_cord = [3, 0]
-
-            epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
-            epuck_ref.getField("translation").setSFVec3f(covert_to_world_cords(start_cord))
-
-            path = search(maze, 1, start_cord, end_cord)
-        
-            path = convert_path(path)
+        path = convert_path(path)
 
        
         #create custom data array and send to epuck
@@ -167,16 +148,10 @@ def epuck_intialise():
 
         epuck_ref.getField("customData").setSFString(str(data))
 
-# You should insert a getDevice-like function in order to get the
-# instance of a device of the robot. Something like:
-#  motor = robot.getDevice('motorname')
-#  ds = robot.getDevice('dsname')
-#  ds.enable(timestep)
 
-# 1. ID, 2. instruction 3. optional: array of cords 
+num_collisions = 0
 
-# Main loop:
-# - perform simulation steps until Webots is stopping the controller
+collided = {}
 while supervisor.step(timestep) != -1:
        
     if not epucks_intialised:
@@ -184,6 +159,39 @@ while supervisor.step(timestep) != -1:
         epuck_intialise()
         
         epucks_intialised = True
+
+    
+    checked_pairs = []
+    for i in range(len(epucks)):
+        epuck_ref1 = supervisor.getFromDef(f"EPUCK{i}")
+        for j in range(len(epucks)):
+            if i != j and (i, j) not in checked_pairs and (j, i) not in checked_pairs:
+                epuck_ref2 = supervisor.getFromDef(f"EPUCK{j}")
+
+                vector1 = epuck_ref1.getField("translation").getSFVec3f()
+                vector2 = epuck_ref2.getField("translation").getSFVec3f()
+
+                dist = math.sqrt(math.pow((vector2[1] - vector1[1]), 2) + math.pow((vector2[0] - vector1[0]), 2))
+                if(dist < 0.08):
+                    if (i, j) not in collided:
+                        num_collisions+=1
+                        collided[(i, j)] = 3
+                        collided[(j, i)] = 3
+                    elif collided[(i, j)] <=0 and collided[(j, i)] <=0:
+                        num_collisions+=1
+                        collided[(i, j)] = 3
+                        collided[(j, i)] = 3
+                else:
+                    if (i, j) in collided:
+                        collided[(i, j)] = collided[(i, j)] - supervisor.getBasicTimeStep()
+                        collided[(j, i)] = collided[(i, j)] - supervisor.getBasicTimeStep()
+
+                checked_pairs.append((i, j))
+                checked_pairs.append((j, i))
+
+    #print(num_collisions)
+
+
     
 
 # Enter here exit cleanup code.

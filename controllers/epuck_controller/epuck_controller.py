@@ -115,7 +115,6 @@ while robot.step(timestep) != -1:
         reciever.nextPacket()
 
         # print out the recieved message (in string format)
-        print(m)
 
         # compare priorities
         if int(m) > robot_priority:
@@ -156,7 +155,7 @@ while robot.step(timestep) != -1:
     
     if len(robotPath)>0 and path_set:
         
-        print(robotPath)
+        
         done = epuck_move.moveToDestination([robotPath[0][0], robotPath[0][1]])
 
         

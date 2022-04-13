@@ -9,4 +9,5 @@ textFiles: -1
 globalOptionalRendering: LightSensorRays
 consoles: Console:All:All
 renderingDevicePerspectives: e-puck(1):camera;1;1;0;0
+renderingDevicePerspectives: e-puck(2):camera;1;1;0;0
 renderingDevicePerspectives: e-puck:camera;1;1;0;0
