@@ -30,6 +30,7 @@ robot_priority = 0
 robot_pause = False
 
 
+robot.getSelf().getField("customData").setSFString(str(""))
 
 #  set the range of the robot
 emitter.setRange(0.3)
@@ -120,7 +121,7 @@ while robot.step(timestep) != -1:
         if int(m) > robot_priority:
 
             # perform low priority actions/sequence
-            print("I have low priority")
+            #print("I have low priority")
 
             # check state, if state is currently not paused, start the timer...
             if state == 0:
@@ -134,9 +135,7 @@ while robot.step(timestep) != -1:
                 elapsed_pause = robot.getTime() - start_pause
 
 
-        else:
-            # perform high priority actions/sequence
-            print("I have high priority")
+        
 
     
     else:

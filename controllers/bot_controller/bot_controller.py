@@ -2,7 +2,7 @@
 
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
-from webots.controller import Supervisor, Emitter, Robot
+from webots.controller import Supervisor, Emitter, Robot, Node
 import struct
 from a_star import search
 import random
@@ -10,7 +10,7 @@ import math
 
 
 #number of epucks
-num_epucks = 3
+num_epucks = 6
 
 #origin cordinates
 origin = (-1.4, -0.875)
@@ -87,14 +87,15 @@ def covert_to_world_cords(cord):
 # create the Robot instance
 supervisor = Supervisor()
 
+
 emitter = Emitter(name="robot")
+
 
 
 #path = a_star(map_squares, start, end, origin, square_dist)
 
 
 #generate random start and end locations
-start_end_points = generate_random_start_end(5)
 populate_map_nodes()
 
 
@@ -128,7 +129,12 @@ def epuck_intialise():
         del start_end_points[start_end__pair]
         #move robot to start pos
         epuck_ref = supervisor.getFromDef(f"EPUCK{i}")
+
+        
+
         epuck_ref.getField("translation").setSFVec3f([origin[0] + (node_dist * start_cord[0]), origin[1] + (node_dist * start_cord[1]), 0])
+
+        
 
         print(f"running a-star for epuck {i}")
         #generate path using a-star
@@ -152,11 +158,20 @@ def epuck_intialise():
 num_collisions = 0
 
 collided = {}
+
+time_out_s = supervisor.getTime()
+
+iteration = 0
+
 while supervisor.step(timestep) != -1:
+
+    
        
     if not epucks_intialised:
+        start_end_points = generate_random_start_end(num_epucks)
         print("intialising epucks")
         epuck_intialise()
+        
         
         epucks_intialised = True
 
@@ -189,7 +204,37 @@ while supervisor.step(timestep) != -1:
                 checked_pairs.append((i, j))
                 checked_pairs.append((j, i))
 
-    #print(num_collisions)
+    print(num_collisions)
+
+    if supervisor.getTime() + time_out_s > 30.0:
+
+
+        
+        with open('results.txt', 'r') as f:
+            arr = f.readlines()
+
+            if len(arr) == 0:
+                iteration = 1
+            else:
+                iteration = int(arr[len(arr)-1].split(",")[0]) + 1
+
+        with open('results.txt', 'a') as f:
+            f.writelines(f"{iteration} , {num_collisions}\n")
+            
+            
+        
+        num_collisions = 0
+
+        for i in range(len(epucks)):
+            epuck_ref1 = supervisor.getFromDef(f"EPUCK{i}")
+            epuck_ref1.restartController()
+
+        
+        supervisor.simulationReset()
+        supervisor.simulationResetPhysics()
+        supervisor.getSelf().restartController()
+        
+        
 
 
     
