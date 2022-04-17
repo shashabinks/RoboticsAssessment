@@ -2,93 +2,48 @@
     "results": [
         {
             "iteration": 1,
-            "collision": 1,
+            "collision": 2,
             "paths completed": 3
         },
         {
             "iteration": 2,
             "collision": 0,
-            "paths completed": 4
+            "paths completed": 2
         },
         {
             "iteration": 3,
-            "collision": 0,
+            "collision": 1,
             "paths completed": 4
         },
         {
             "iteration": 4,
-            "collision": 3,
-            "paths completed": 2
+            "collision": 1,
+            "paths completed": 5
         },
         {
             "iteration": 5,
-            "collision": 2,
-            "paths completed": 3
+            "collision": 0,
+            "paths completed": 6
         },
         {
             "iteration": 6,
-            "collision": 1,
-            "paths completed": 1
+            "collision": 2,
+            "paths completed": 6
         },
         {
             "iteration": 7,
-            "collision": 1,
+            "collision": 2,
             "paths completed": 4
         },
         {
             "iteration": 8,
-            "collision": 1,
-            "paths completed": 5
+            "collision": 2,
+            "paths completed": 2
         },
         {
             "iteration": 9,
             "collision": 1,
             "paths completed": 2
-        },
-        {
-            "iteration": 10,
-            "collision": 1,
-            "paths completed": 1
-        },
-        {
-            "iteration": 11,
-            "collision": 2,
-            "paths completed": 3
-        },
-        {
-            "iteration": 12,
-            "collision": 2,
-            "paths completed": 2
-        },
-        {
-            "iteration": 13,
-            "collision": 1,
-            "paths completed": 4
-        },
-        {
-            "iteration": 14,
-            "collision": 0,
-            "paths completed": 5
-        },
-        {
-            "iteration": 15,
-            "collision": 0,
-            "paths completed": 3
-        },
-        {
-            "iteration": 16,
-            "collision": 2,
-            "paths completed": 2
-        },
-        {
-            "iteration": 17,
-            "collision": 3,
-            "paths completed": 1
-        },
-        {
-            "iteration": 18,
-            "collision": 1,
-            "paths completed": 4
         }
     ]
 }

@@ -207,7 +207,7 @@ while supervisor.step(timestep) != -1:
                 checked_pairs.append((j, i))
 
 
-    if supervisor.getTime() + time_out_s > 60.0:
+    if supervisor.getTime() + time_out_s > 360.0:
 
         path_done_counter = 0
         for i in range(len(epucks)):
