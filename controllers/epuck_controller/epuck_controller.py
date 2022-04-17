@@ -162,6 +162,9 @@ while robot.step(timestep) != -1:
         if done:
             robotPath.pop(0)
 
+    if path_set and len(robotPath) == 0:
+        robot.getSelf().getField("customData").setSFString(str("done"))
+
         
 
     

@@ -5,8 +5,10 @@
 from webots.controller import Supervisor, Emitter, Robot, Node
 import struct
 from a_star import search
+from os.path import exists
 import random
 import math
+import json
 
 
 #number of epucks
@@ -204,22 +206,47 @@ while supervisor.step(timestep) != -1:
                 checked_pairs.append((i, j))
                 checked_pairs.append((j, i))
 
-    print(num_collisions)
 
-    if supervisor.getTime() + time_out_s > 30.0:
+    if supervisor.getTime() + time_out_s > 60.0:
 
+        path_done_counter = 0
+        for i in range(len(epucks)):
+            epuck_data = supervisor.getFromDef(f"EPUCK{i}").getField("customData").getSFString()
+            
+            if epuck_data == "done":
+                path_done_counter+=1
+            
+        
+
+        if exists(f'results_epucks{num_epucks}_basic.json'):
+            with open(f'results_epucks{num_epucks}_basic.json', 'r') as f:
+                data = json.load(f)
+            
+
+            current_iteration = data['results'][len(data['results'])-1]['iteration'] + 1
+            
+
+            result_for_this_iteration = {"iteration":current_iteration, "collision":num_collisions, "paths completed":path_done_counter}
+            
+
+            with open(f'results_epucks{num_epucks}_basic.json','r+') as f:
+                
+                data = json.load(f)
+                data['results'].append(result_for_this_iteration)
+                f.seek(0)
+            
+                json.dump(data, f, indent = 4)
+        
+        else:
+
+            result_for_this_iteration = {"iteration": 1, "collision": num_collisions, "paths completed":path_done_counter}
+
+            with open(f'results_epucks{num_epucks}_basic.json','w') as f:
+                output = {}
+                output['results'] = [result_for_this_iteration]
+                json.dump(output, f, indent = 4)
 
         
-        with open('results.txt', 'r') as f:
-            arr = f.readlines()
-
-            if len(arr) == 0:
-                iteration = 1
-            else:
-                iteration = int(arr[len(arr)-1].split(",")[0]) + 1
-
-        with open('results.txt', 'a') as f:
-            f.writelines(f"{iteration} , {num_collisions}\n")
             
             
         
