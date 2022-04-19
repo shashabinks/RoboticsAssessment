@@ -137,20 +137,23 @@ class Epuck_move:
 
         # check state of robot, if paused, then stop motors, else continue
         
+        if self.state == 1:
+            self.pause()
 
-        if self.forward_duration == None:
-            tangelnsial_speed = 0.0205 * self.forward_speed
-            self.forward_duration = distance/tangelnsial_speed
-            self.forward_start = self.robot.getTime()
+        else: 
+            if self.forward_duration == None:
+                tangelnsial_speed = 0.0205 * self.forward_speed
+                self.forward_duration = distance/tangelnsial_speed
+                self.forward_start = self.robot.getTime()
 
-        if self.robot.getTime() > (self.forward_start ) + (self.forward_duration + self.elapsed_pause):
-            self.motor_controller.motorStop()
-            self.forward_done = True
+            if self.robot.getTime() > (self.forward_start ) + (self.forward_duration + self.elapsed_pause):
+                self.motor_controller.motorStop()
+                self.forward_done = True
+                
+                return
+
             
-            return
-
-        
-        self.motor_controller.motorMoveForward()
+            self.motor_controller.motorMoveForward()
 
     def calculate_rotation(self, current_cords, destination_cords):
 
