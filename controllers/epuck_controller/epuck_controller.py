@@ -72,6 +72,16 @@ def update_state(new_state):
     state = new_state
     epuck_move.state = new_state
 
+
+def collision_avoid():
+    #if robot direction is forward, it comes across another robot going into the same spot and traveling in opposite direction
+    #lower priority robot will move left or right direction if it is empty
+    #once other robot has passed move back and continue path
+    next_node  = robotPath[0]
+    new_next_node = (next_node[0], next_node[1] + 0.25)
+    robotPath[0] = new_next_node
+
+
 # takes as input the sampling period
 reciever.enable(1)
 
@@ -125,9 +135,12 @@ while robot.step(timestep) != -1:
 
             # check state, if state is currently not paused, start the timer...
             if state == 0:
+                print("lower prio updating state")
                 start_pause = robot.getTime()
                 elapsed_pause = 0.0
                 update_state(1)
+                collision_avoid()
+                epuck_move.reset()
             
             else:
                 
@@ -155,7 +168,10 @@ while robot.step(timestep) != -1:
     if len(robotPath)>0 and path_set:
         
         
+        print("state:" + str(state) +" prio: " + str(robot_priority) + "moving to " + str([robotPath[0][0], robotPath[0][1]]))
         done = epuck_move.moveToDestination([robotPath[0][0], robotPath[0][1]])
+        
+        
 
         
 

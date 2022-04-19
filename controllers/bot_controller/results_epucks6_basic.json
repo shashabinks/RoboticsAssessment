@@ -44,6 +44,46 @@
             "iteration": 9,
             "collision": 1,
             "paths completed": 2
+        },
+        {
+            "iteration": 10,
+            "collision": 3,
+            "paths completed": 5
+        },
+        {
+            "iteration": 11,
+            "collision": 1,
+            "paths completed": 5
+        },
+        {
+            "iteration": 12,
+            "collision": 0,
+            "paths completed": 3
+        },
+        {
+            "iteration": 13,
+            "collision": 1,
+            "paths completed": 3
+        },
+        {
+            "iteration": 14,
+            "collision": 2,
+            "paths completed": 3
+        },
+        {
+            "iteration": 15,
+            "collision": 1,
+            "paths completed": 3
+        },
+        {
+            "iteration": 16,
+            "collision": 4,
+            "paths completed": 5
+        },
+        {
+            "iteration": 17,
+            "collision": 2,
+            "paths completed": 2
         }
     ]
 }

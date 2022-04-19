@@ -108,29 +108,49 @@ class Epuck_move:
         
         self.motor_controller.motorStop()
 
+    def reset(self):
+        self.destination_set = False
+
+        self.rotation_done = False
+        self.forward_done = False
+
+        self.rotation_duration = None
+        self.forward_duration = None
+
+        self.rotation_start = None
+        self.forward_start = None
+        self.rotation_dir = None
+
+        self.correct_rotation = None
+        self.current_rotation = 0
+        self.motor_controller.motorStop()
+        epuck_ref = self.robot.getSelf()
+        rotation = epuck_ref.getField("rotation").getSFRotation()
+        rotation[3] = 0
+        epuck_ref.getField("rotation").setSFRotation(rotation)
+        self.elapsed_pause = 0.0
+
 
 
    
     def moveForward(self, distance):
 
         # check state of robot, if paused, then stop motors, else continue
-        if self.state == 1: self.pause()
+        
 
-        else:
+        if self.forward_duration == None:
+            tangelnsial_speed = 0.0205 * self.forward_speed
+            self.forward_duration = distance/tangelnsial_speed
+            self.forward_start = self.robot.getTime()
 
-            if self.forward_duration == None:
-                tangelnsial_speed = 0.0205 * self.forward_speed
-                self.forward_duration = distance/tangelnsial_speed
-                self.forward_start = self.robot.getTime()
-
-            if self.robot.getTime() > (self.forward_start ) + (self.forward_duration + self.elapsed_pause):
-                self.motor_controller.motorStop()
-                self.forward_done = True
-                
-                return
-
+        if self.robot.getTime() > (self.forward_start ) + (self.forward_duration + self.elapsed_pause):
+            self.motor_controller.motorStop()
+            self.forward_done = True
             
-            self.motor_controller.motorMoveForward()
+            return
+
+        
+        self.motor_controller.motorMoveForward()
 
     def calculate_rotation(self, current_cords, destination_cords):
 

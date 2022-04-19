@@ -25,7 +25,6 @@ DEF EPUCK0 E-puck {
   translation 0.8498164731562797 -0.37504744818105157 -6.500961566082743e-05
   rotation 0.00040238669818529194 -0.27634273851150176 0.9610590663205404 0.003502865898159859
   controller "epuck_controller"
-  customData "['4', '[(0.8500000000000001, -0.125), (0.6000000000000001, -0.125), (0.6000000000000001, 0.125), (0.3500000000000001, 0.125), (0.3500000000000001, 0.375), (0.10000000000000009, 0.375), (0.10000000000000009, 0.625), (-0.1499999999999999, 0.625), (-0.1499999999999999, 0.875)]']"
   supervisor TRUE
   turretSlot [
     Emitter {
@@ -53,118 +52,6 @@ DEF EPUCK1 E-puck {
   rotation 1.759810943122107e-05 -0.9999999458368594 -0.00032865876675097425 0.0009389217209257755
   name "e-puck(1)"
   controller "epuck_controller"
-  customData "['2', '[(1.1, 0.125), (0.8500000000000001, 0.125), (0.8500000000000001, 0.375), (0.6000000000000001, 0.375), (0.6000000000000001, 0.625), (0.3500000000000001, 0.625), (0.3500000000000001, 0.875)]']"
-  supervisor TRUE
-  turretSlot [
-    Emitter {
-      range 0.0001
-      maxRange 0.0001
-    }
-    Receiver {
-    }
-    Compass {
-    }
-    GPS {
-    }
-  ]
-  groundSensorsSlot [
-    E-puckGroundSensors {
-    }
-  ]
-}
-DEF EPUCK3 E-puck {
-  hidden position_0_0 528.5707651625261
-  hidden position_0_1 517.9512602971039
-  hidden rotation_1 0 1 0 0.7831993594408083
-  hidden rotation_2 0 1 0 2.730065108377795
-  translation -0.21721700025397078 -0.1206319999591967 -6.498466463765971e-05
-  rotation 6.414667779249924e-05 -0.9999999941986121 -8.653311113614414e-05 0.0006748604841848021
-  name "e-puck(4)"
-  controller "epuck_controller"
-  supervisor TRUE
-  turretSlot [
-    Emitter {
-      range 0.0001
-      maxRange 0.0001
-    }
-    Receiver {
-      name "receive"
-    }
-    Compass {
-    }
-    GPS {
-    }
-  ]
-  groundSensorsSlot [
-    E-puckGroundSensors {
-    }
-  ]
-}
-DEF EPUCK4 E-puck {
-  hidden position_0_0 528.5707651625156
-  hidden position_0_1 517.9512602970934
-  hidden rotation_1 0 1 0 0.7831993594303491
-  hidden rotation_2 0 1 0 2.7300651083673357
-  translation -0.11721700472053034 0.23936800070486106 -6.505403691680484e-05
-  rotation 3.084256456375998e-05 -0.999999997394719 -6.526330095499846e-05 0.0008942625884344739
-  name "e-puck(5)"
-  controller "epuck_controller"
-  supervisor TRUE
-  turretSlot [
-    Emitter {
-      range 0.0001
-      maxRange 0.0001
-    }
-    Receiver {
-    }
-    Compass {
-    }
-    GPS {
-    }
-  ]
-  groundSensorsSlot [
-    E-puckGroundSensors {
-    }
-  ]
-}
-DEF EPUCK5 E-puck {
-  hidden position_0_0 528.5707651625257
-  hidden position_0_1 517.9512602971034
-  hidden rotation_1 0 1 0 0.7831993594404674
-  hidden rotation_2 0 1 0 2.73006510837734
-  translation 0.512782999720522 -0.12063199995920384 -6.500886260942321e-05
-  rotation 4.1786596836161496e-05 -0.9999999966372434 -7.056481751772069e-05 0.0008275572543103894
-  name "e-puck(3)"
-  controller "epuck_controller"
-  customData "['1', '[(0.3500000000000001, -0.875), (0.10000000000000009, -0.875), (-0.1499999999999999, -0.875), (-0.3999999999999999, -0.875), (-0.3999999999999999, -0.625), (-0.6499999999999999, -0.625), (-0.6499999999999999, -0.375), (-0.8999999999999999, -0.375), (-0.8999999999999999, -0.125)]']"
-  supervisor TRUE
-  turretSlot [
-    Emitter {
-      range 0.0001
-      maxRange 0.0001
-    }
-    Receiver {
-    }
-    Compass {
-    }
-    GPS {
-    }
-  ]
-  groundSensorsSlot [
-    E-puckGroundSensors {
-    }
-  ]
-}
-DEF EPUCK2 E-puck {
-  hidden position_0_0 523.0162825230651
-  hidden position_0_1 517.7713210335982
-  hidden rotation_1 0 -1 0 4.771283280020149
-  hidden rotation_2 0 0.9999999999999999 0 2.5501258448720647
-  translation -1.3710836930590753 -0.626675982025667 -6.398435973772876e-05
-  rotation -0.00013754807869169498 -2.876066155688518e-05 0.9999999901266751 0.003861443324278842
-  name "e-puck(2)"
-  controller "epuck_controller"
-  customData "['2', '[(0.10000000000000009, -0.125), (-0.1499999999999999, -0.125), (-0.3999999999999999, -0.125), (-0.6499999999999999, -0.125), (-0.8999999999999999, -0.125), (-1.15, -0.125), (-1.15, -0.375), (-1.4, -0.375), (-1.4, -0.625)]']"
   supervisor TRUE
   turretSlot [
     Emitter {
