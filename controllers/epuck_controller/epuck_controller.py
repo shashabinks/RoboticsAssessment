@@ -169,6 +169,7 @@ class Epuck_controller:
 
             black_list = []
 
+            #TODO maybe keep track of key and their path, the next time that robot is seen, if it has a new path cuz of some other higher prio robot, this could conflict with this robot's path, then a-star would need to be done again
             for i in in_range_robots.keys():
 
                 if i not in self.already_avoided_robots:
