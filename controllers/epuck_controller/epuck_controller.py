@@ -272,7 +272,8 @@ while epuck_controller.robot.step(timestep) != -1:
 
     if len(epuck_controller.robotPath) == 0 and not epuck_controller.path_set:
         data = epuck_controller.robot.getCustomData()
-        if data != '':
+        
+        if data != "" and data !="done" and len(data) != 0:
             print("recieved this data :")
             print(data)
             epuck_controller.robotPath = list(ast.literal_eval(ast.literal_eval(data)[1]))
