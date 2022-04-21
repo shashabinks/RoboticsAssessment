@@ -9,6 +9,8 @@ from numpy import reciprocal
 from webots.controller import Robot, Motor, Receiver, Supervisor,Emitter
 from epuck_move_to_destination import Epuck_move
 
+from a_star import search
+
 import struct
 import ast
 import math
@@ -30,6 +32,7 @@ robot_priority = 0
 robot_pause = False
 
 robots_in_range = {}
+
 
 
 robot.getSelf().getField("customData").setSFString(str(""))
@@ -74,8 +77,35 @@ def update_state(new_state):
     state = new_state
     epuck_move.state = new_state
 
+#origin cordinates
+origin = (-1.4, -0.875)
 
-def collision_avoidance_routine(in_range_robots):
+#distance between each square
+node_dist = 0.25  
+
+        
+def convert_to_maze_cords(cord):
+
+    
+    new_cord = (int((cord[0] - origin[0])/node_dist), int((cord[1] - origin[1])/node_dist))
+
+    print(cord,new_cord)
+    return new_cord
+
+def populate_map_nodes():
+    #cords of map nodes
+    maze = []
+
+    for _ in range(12):
+        row = []
+        for _ in range(8):
+            row.append(0)
+        
+        maze.append(row)
+    
+    return maze
+
+def collision_avoidance_routine(in_range_robots, lrobotPath):
     #if robot direction is forward, it comes across another robot going into the same spot and traveling in opposite direction
     #lower priority robot will move left or right direction if it is empty
     #once other robot has passed move back and continue path
@@ -102,11 +132,11 @@ def collision_avoidance_routine(in_range_robots):
         #compare this robot's next two nodes to every in range collision avoiding robot's next node
         another_currently_avoiding_collision = False
         for path in robots_in_range_avoiding_coll:
-            if len(robotPath) >=2 and (((robotPath[0][0], robotPath[0][1]) == path[0]) or ((robotPath[1][0], robotPath[1][1]) == path[0])):
+            if len(lrobotPath) >=2 and (((lrobotPath[0][0], lrobotPath[0][1]) == path[0]) or ((lrobotPath[1][0], lrobotPath[1][1]) == path[0])):
                 #pause
                 another_currently_avoiding_collision = True 
 
-            elif ((robotPath[0][0], robotPath[0][1]) == path[0]):
+            elif ((lrobotPath[0][0], lrobotPath[0][1]) == path[0]):
                 #pause
                 another_currently_avoiding_collision = True
         
@@ -114,19 +144,60 @@ def collision_avoidance_routine(in_range_robots):
             epuck_move.pause()
         else:
             #update state and follow path as normal
-            return
+            return lrobotPath
 
 
 
     
     #lower than highest priortiy routine
     if robot_priority < highest_prio:
-        return
+
+        # calculate new path based on surrounding robots paths
+        
+        blacklisted_nodes = []
+        # loop thru in range robots
+        for i in in_range_robots.keys():
+
+            # 0 is state , 1 is path
+            vals = in_range_robots[i]
+
+            path = vals[1]
+            state = vals[0]
+
+            for coord in path:
+                new_coord = convert_to_maze_cords(coord)
+                blacklisted_nodes.append(new_coord)
+            
+        # generate new maze
+        maze = populate_map_nodes()
+
+        new_start = convert_to_maze_cords(lrobotPath[0])
+        new_end = convert_to_maze_cords(lrobotPath[-1])
 
 
-    
+
+
+        for blns in blacklisted_nodes:
+            if blns != new_end and blns != new_start:
+
+                maze[int(blns[0])][int(blns[1])] = 1
+
+        print(maze)
+
+        print(lrobotPath)
+
+
+        # calculate new path
+        new_path = search(maze,1,new_start,new_end)
 
         
+        
+        
+        return new_path
+    
+    return lrobotPath
+
+
 
 
 
@@ -246,17 +317,19 @@ while robot.step(timestep) != -1:
 
     robots_in_range = check_robots_in_range()
             
-    if robots_in_range != None and state != 2:
-        update_state(1)
+    if robots_in_range != None and state != 2 and len(robotPath)>0:
+        
         epuck_move.reset()
-        collision_avoidance_routine(robots_in_range)
+        robotPath = collision_avoidance_routine(robots_in_range,robotPath)
+
+        print("state:" + str(state) +" prio: " + str(robot_priority) + "moving to " + str(robotPath))
 
 
     
     if len(robotPath)>0 and path_set:
         
         
-        print("state:" + str(state) +" prio: " + str(robot_priority) + "moving to " + str([robotPath[0][0], robotPath[0][1]]))
+        #print("state:" + str(state) +" prio: " + str(robot_priority) + "moving to " + str([robotPath[0][0], robotPath[0][1]]))
         done = epuck_move.moveToDestination([robotPath[0][0], robotPath[0][1]])
         
 
