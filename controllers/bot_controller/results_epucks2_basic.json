@@ -1,0 +1,14 @@
+{
+    "results": [
+        {
+            "iteration": 1,
+            "collision": 0,
+            "paths completed": 2
+        },
+        {
+            "iteration": 2,
+            "collision": 0,
+            "paths completed": 2
+        }
+    ]
+}

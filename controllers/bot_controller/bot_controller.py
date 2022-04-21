@@ -72,13 +72,14 @@ def populate_map_nodes():
         maze.append(row)
 
 
-def convert_path(path):
+def convert_path(path, pop=True):
     new_path = []
 
     for i in path:
         new_path.append((origin[0] + (node_dist*i[0]), origin[1] + (node_dist * i[1])))
 
-    new_path.pop(0)
+    if pop:
+        new_path.pop(0)
 
     return new_path
 
@@ -111,17 +112,15 @@ timestep = int(supervisor.getBasicTimeStep())
 
 
 def epuck_intialise():
-    priorites = [i for i in range(num_epucks)]
+    
     
 
     for i in range(0,num_epucks):
     
-        priority_idx = random.choice(priorites)
+        priority_idx = i
         #print(priority_idx)
         epucks[i] = priority_idx
         
-        
-        priorites.remove(priority_idx)
 
         #pick random start and end pair
         start_end__pair = random.choice(list(start_end_points))
@@ -135,19 +134,19 @@ def epuck_intialise():
         
         if i == 0:
             start_cord = list(start_cord)
-            start_cord[0] = 3
+            start_cord[0] = 6
             start_cord[1] = 2
             end_cord = list(end_cord)
-            end_cord[0] = 6
+            end_cord[0] = 2
             end_cord[1] = 2
             epuck_ref.getField("translation").setSFVec3f([origin[0] + (node_dist * start_cord[0]), origin[1] + (node_dist * start_cord[1]), 0])
 
         else:
             start_cord = list(start_cord)
-            start_cord[0] = 6
+            start_cord[0] = 3
             start_cord[1] = 2
             end_cord = list(end_cord)
-            end_cord[0] = 3
+            end_cord[0] = 7
             end_cord[1] = 2
             epuck_ref.getField("translation").setSFVec3f([origin[0] + (node_dist * start_cord[0]), origin[1] + (node_dist * start_cord[1]), 0])
 

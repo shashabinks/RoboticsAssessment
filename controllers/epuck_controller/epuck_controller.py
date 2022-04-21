@@ -3,79 +3,22 @@
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
 #from numpy import double
-from sys import set_coroutine_origin_tracking_depth
+
 from tracemalloc import start
+import black
+
 from numpy import reciprocal
 from webots.controller import Robot, Motor, Receiver, Supervisor,Emitter
 from epuck_move_to_destination import Epuck_move
 
 from a_star import search
+import asyncio
 
 import struct
 import ast
 import math
-
-
-robotPath = []
-path_set = False
-# create the Robot instance.
-robot = Supervisor()
-
-epuck_move = Epuck_move(robot, 1, 5.6)
-emitter = Emitter("emitter") # takes as input the emitter object
-reciever = Receiver("receiver")
-
-state = 0
-
-robot_priority = 0
-
-robot_pause = False
-
-robots_in_range = {}
-
-
-
-robot.getSelf().getField("customData").setSFString(str(""))
-
-#  set the range of the robot
-emitter.setRange(0.3)
-
-
-def transmitMessage(message):
-    #print("TRANSMITTING")
-
-    # convert to bytes
-    b = bytes(message, 'utf-8')
-    
-    emitter.send(b)
-
-    #print("TRANSMITTED")
-    pass
-
-# get the time step of the current world.
-timestep = int(robot.getBasicTimeStep())
-
-path_counter = 0
-# You should insert a getDevice-like function in order to get the
-# instance of a device of the robot. Something like:
-#  motor = robot.getDevice('motorname')
-#  ds = robot.getDevice('dsname')
-#  ds.enable(timestep)
-
-
-destinationCoordinate = [0.5,0.5]
-
-def getRobotBearing():
-        north = robot.getDevice('compass').getValues()
-        rad = math.atan2(north[0],north[2])
-        bearing = (rad - 1.5708) / math.pi * 180.0
-        if bearing < 0.0: bearing = bearing + 360.0
-
-        return bearing
-
-def update_state(new_state):
-    state = new_state
-    epuck_move.state = new_state
+from threading import Thread, Timer
+from time import sleep
 
 #origin cordinates
 origin = (-1.4, -0.875)
@@ -83,22 +26,30 @@ origin = (-1.4, -0.875)
 #distance between each square
 node_dist = 0.25  
 
-        
+robot = Supervisor()
+epuck_move = Epuck_move(robot, 1, 5.6)
+emitter = Emitter("emitter") 
+reciever = Receiver("receiver")
+
+reciever.enable(1)        
+emitter.setRange(0.3)
+
+
+#helper functions
 def convert_to_maze_cords(cord):
 
-    
     new_cord = (int((cord[0] - origin[0])/node_dist), int((cord[1] - origin[1])/node_dist))
 
-    print(cord,new_cord)
     return new_cord
 
-def convert_path(path):
+def convert_path(path, pop = True):
     new_path = []
 
     for i in path:
         new_path.append((origin[0] + (node_dist*i[0]), origin[1] + (node_dist * i[1])))
 
-    new_path.pop(0)
+    if pop:
+        new_path.pop(0)
 
     return new_path
 
@@ -115,243 +66,231 @@ def populate_map_nodes():
     
     return maze
 
-def collision_avoidance_routine(in_range_robots, lrobotPath):
-    #if robot direction is forward, it comes across another robot going into the same spot and traveling in opposite direction
-    #lower priority robot will move left or right direction if it is empty
-    #once other robot has passed move back and continue path
-
-    #find highest prio
-    highest_prio = None
-    for i in in_range_robots.keys():
-        if highest_prio == None:
-            highest_prio = i
-        elif i > highest_prio:
-            highest_prio = i
-
-    #highest priority routine
-    if robot_priority > highest_prio:
-        robots_in_range_avoiding_coll = []
-
-        #add paths of all collision avoding robots to list
-        for v in in_range_robots.values():
-            this_state = v[0]
-
-            if this_state == 2:
-                robots_in_range_avoiding_coll.append(v[1])
-        
-        #compare this robot's next two nodes to every in range collision avoiding robot's next node
-        another_currently_avoiding_collision = False
-        for path in robots_in_range_avoiding_coll:
-            if len(lrobotPath) >=2 and (((lrobotPath[0][0], lrobotPath[0][1]) == path[0]) or ((lrobotPath[1][0], lrobotPath[1][1]) == path[0])):
-                #pause
-                another_currently_avoiding_collision = True 
-
-            elif ((lrobotPath[0][0], lrobotPath[0][1]) == path[0]):
-                #pause
-                another_currently_avoiding_collision = True
-        
-        if another_currently_avoiding_collision:
-            epuck_move.pause()
-        else:
-            #update state and follow path as normal
-            return lrobotPath
-
-
-
+#main class
+class Epuck_controller:
+    def __init__(self):
+        self.emitter = None
+        self.reciever = None
+        self.robot = None 
+        self.epuck_move = None
+        self.robot_priority = 0
+        self.state = 0
+        self.end_point = None
+        self.robotPath = []
+        self.path_set = False
+        self.already_avoided_robots = []
     
-    #lower than highest priortiy routine
-    if robot_priority < highest_prio:
 
-        # calculate new path based on surrounding robots paths
-        
-        blacklisted_nodes = []
-        # loop thru in range robots
+    def check_robots_in_range(self):
+    
+        if self.reciever.getQueueLength() == 0:
+            return None
+
+        robots_in_range = {}
+        while(self.reciever.getQueueLength() != 0):
+            m = self.reciever.getData()
+            self.reciever.nextPacket()
+            m=m.decode("utf-8").split('/')
+            robots_in_range[int(m[0].strip())] = (int(m[1].strip()), list(ast.literal_eval(m[2].strip())))
+
+        return robots_in_range
+
+    def transmit_status_in_radius(self):
+        #print("TRANSMITTING")
+
+        # convert to bytes
+        b = bytes(str(self.robot_priority) +"/" + str(self.state) + "/" + str(self.robotPath), 'utf-8')
+
+        self.emitter.send(b)
+
+        #print("TRANSMITTED")
+        pass
+    
+    def collision_avoidance_routine(self, in_range_robots, robotPath, end_point):
+        #if robot direction is forward, it comes across another robot going into the same spot and traveling in opposite direction
+        #lower priority robot will move left or right direction if it is empty
+        #once other robot has passed move back and continue path
+        #find highest prio
+        highest_prio = None
         for i in in_range_robots.keys():
+            if highest_prio == None:
+                highest_prio = i
+            elif i > highest_prio:
+                highest_prio = i
 
-            # 0 is state , 1 is path
-            vals = in_range_robots[i]
+        #highest priority routine
+        if self.robot_priority > highest_prio:
+            robots_in_range_avoiding_coll = []
 
-            path = vals[1]
-            state = vals[0]
-
-            for coord in path:
-                new_coord = convert_to_maze_cords(coord)
-                blacklisted_nodes.append(new_coord)
+            #add paths of all collision avoding robots to list
+            another_currently_avoiding_collision = False
+            for k in in_range_robots.keys():
+                this_state = in_range_robots[k][0]
+                #print(this_state)
+                if this_state == 2:
+                    robots_in_range_avoiding_coll.append(k)
             
-        # generate new maze
-        maze = populate_map_nodes()
+            
+            #compare this robot's next two nodes to every in range collision avoiding robot's next node
+            
+            next_node = (robotPath[0][0], robotPath[0][1]) 
+            for k in robots_in_range_avoiding_coll:
+                path = in_range_robots[k][1]
+                location = self.robot.getFromDef(f"EPUCK{i}").getField("translation").getSFVec3f()
 
-        print("start", lrobotPath[0])
+                if len(robotPath) >=2 and ((convert_to_maze_cords(next_node) == convert_to_maze_cords(path[0])) or (convert_to_maze_cords(next_node) == convert_to_maze_cords(location))):
+                    another_currently_avoiding_collision = True
+                    
 
-        new_start = convert_to_maze_cords(lrobotPath[0])
-        new_end = convert_to_maze_cords(lrobotPath[-1])
+            
+            if another_currently_avoiding_collision:
+
+                self.epuck_move.reset()
+                self.state = 1
+                self.epuck_move.state = 1
+                print(str(self.robot.getTime()) + "epucks currently avoiding collisions" + str(len(in_range_robots)))
+            else:
+                #update state and follow path as normal
+                self.state = 0
+                self.epuck_move.state = 0
+                print(str(self.robot.getTime()) + "no epucks")
+                return robotPath
 
 
 
-
-        for blns in blacklisted_nodes:
-            if blns != new_end and blns != new_start:
-
-                maze[int(blns[0])][int(blns[1])] = 1
-
-        #print(maze)
-
-        #print(lrobotPath)
-
-
-        # calculate new path
-        new_path = search(maze,1,new_start,new_end)
-
-        new_path = convert_path(new_path)
         
+        #lower than highest priortiy routine
+        if self.robot_priority < highest_prio:
+
+            #loop through all robots
+            #add their paths and their robot location to blacklist, remove my end point
+            # recalculate path with current location and fixed end point
+            # figure out case where higher prio epuch is in my end point
+
+            black_list = []
+
+            for i in in_range_robots.keys():
+
+                if i not in self.already_avoided_robots:
+
+                    this_path = in_range_robots[i][1]
+
+                    for node in this_path:
+                        black_list.append(node)
+                    
+                    epuck_ref = self.robot.getFromDef(f"EPUCK{i}")
+
+                    location = epuck_ref.getField("translation").getSFVec3f()
+
+                    black_list.append(location)
+                    self.already_avoided_robots.append(i)
+            
+            if len(black_list) == 0:
+                print("low prio, no new bots")
+                return robotPath
+
+            maze = populate_map_nodes()
+            
+            for b_node in black_list:
+                if b_node != end_point:
+                    
+                    converted_b_node = convert_to_maze_cords(b_node)
+                    maze[converted_b_node[0]][converted_b_node[1]] = -1
+
+            my_location = self.robot.getSelf().getField("translation").getSFVec3f()
+
+
+            
+            new_path = search(maze, 1, convert_to_maze_cords(my_location), convert_to_maze_cords(end_point))
+
+            print("lower prio path: " + str(new_path))
+
+            
+            self.state = 2
+            thread = Thread(target=self.timer_function, args=(5.0,))
+            thread.start()
+            self.epuck_move.reset()
+            return convert_path(new_path)
         
-        return new_path
+        return robotPath
+
+
+    def update_state(self, new_state):
+        self.state = new_state
+        self.epuck_move.state = new_state
+
+    def check_for_other_robots(self):
+        robots_in_range = self.check_robots_in_range()
     
-    return lrobotPath
+        if robots_in_range != None and self.state != 2 and len(self.robotPath)>0:
+            
+            
+            self.robotPath = self.collision_avoidance_routine(robots_in_range, self.robotPath, self.end_point)
 
+            #print("state:" + str(state) +" prio: " + str(robot_priority) + "moving to " + str(robotPath))
+        
+        elif self.state == 1:
+            self.state = 0
+            self.epuck_move.state = 0
+            self.epuck_move.reset()
 
+    def follow_path(self):
+        if len(self.robotPath)>0 and self.path_set:
+            
+            done = False
 
+            if self.state != 1:
+                
+                done = self.epuck_move.moveToDestination([self.robotPath[0][0], self.robotPath[0][1]])
 
+            if done:
+                self.robotPath.pop(0)
 
-def check_robots_in_range():
+        if self.path_set and len(self.robotPath) == 0:
+            self.robot.getSelf().getField("customData").setSFString(str("done"))
+
+    def timer_function(self, secs):
+        sleep(secs)
+        self.update_state(0)
     
-    if reciever.getQueueLength() == 0:
-        return None
-
-    robots_in_range = {}
-    while(reciever.getQueueLength() != 0):
-        m = reciever.getData()
-        reciever.nextPacket()
-        m=m.decode("utf-8").split('/')
-        robots_in_range[int(m[0].strip())] = (int(m[1].strip()), list(ast.literal_eval(m[2].strip())))
-
-    return robots_in_range
+        
 
 
-# takes as input the sampling period
-reciever.enable(1)
 
-m = " " # define recieving message
-
-start_pause = 0.0
-elapsed_pause = 0.0
-
-in_range_timer = 0.0
-current_node_done = True
+epuck_controller = Epuck_controller()
+epuck_controller.robot = robot
+epuck_controller.epuck_move = epuck_move
+epuck_controller.reciever = reciever
+epuck_controller.emitter = emitter
+# get the time step of the current world.
+timestep = int(epuck_controller.robot.getBasicTimeStep())
 
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
-while robot.step(timestep) != -1:
+while epuck_controller.robot.step(timestep) != -1:
    
 
-    
-
-    if len(robotPath) == 0 and not path_set:
-        data = robot.getCustomData()
+    if len(epuck_controller.robotPath) == 0 and not epuck_controller.path_set:
+        data = epuck_controller.robot.getCustomData()
         if data != '':
             print("recieved this data :")
             print(data)
-            robotPath = list(ast.literal_eval(ast.literal_eval(robot.getCustomData())[1]))
-            robot_priority  = int(ast.literal_eval(robot.getCustomData())[0])
-            path_set = True
-            
-    
-    # assign robot priority 
+            epuck_controller.robotPath = list(ast.literal_eval(ast.literal_eval(data)[1]))
+            epuck_controller.robot_priority  = int(ast.literal_eval(data)[0])
+            epuck_controller.path_set = True
+            epuck_controller.end_point = epuck_controller.robotPath[-1]
+        
     
 
     # transmit priority
-    transmitMessage(str(robot_priority) +"/" + str(state) + "/" + str(robotPath)) 
+    epuck_controller.transmit_status_in_radius() 
 
-    # if queue length is not equal to 0, we have received a message
-    """if reciever.getQueueLength() != 0:
+    epuck_controller.check_for_other_robots()
 
-        # get the data (in bytes)
-        m = reciever.getData()
-
-        # decode to string
-        m=m.decode("utf-8")
-
-        # delete head and set pointer to whatever is in the queue
-        reciever.nextPacket()
-
-        # print out the recieved message (in string format)
-
-        # compare priorities
-        if int(m) > robot_priority:
-
-            # perform low priority actions/sequence
-            #print("I have low priority")
-
-            # check state, if state is currently not paused, start the timer...
-            if state == 0:
-                print("lower prio updating state")
-                start_pause = robot.getTime()
-                elapsed_pause = 0.0
-                update_state(1)
-                collision_avoid()
-                epuck_move.reset()
-            
-            else:
-                
-                # calculate elapsed time
-                elapsed_pause = robot.getTime() - start_pause
-
-
-        
+    epuck_controller.follow_path()
 
     
-    else:
-        m = " "
-
-        update_state(0)
-
-        # pass elapased pause time here?
-        epuck_move.elapsed_pause = elapsed_pause
-        # reset the pause timing
-        
-        start_pause = 0.0
-
-
-    if reciever.getQueueLength() != 0 and state !=3 and in_range_timer < 3:
-        # get the data (in bytes)
-        m = reciever.getData()
-
-        # decode to string
-        m=m.decode("utf-8")
-        
-        #print(m.split('/')[1])
-        
-        
-
-        robots_in_range[int(m.split('/')[0].strip())] = list(ast.literal_eval(m.split('/')[2].strip()))"""
-
-        
-
-    robots_in_range = check_robots_in_range()
-            
-    if robots_in_range != None and state != 2 and len(robotPath)>0:
-        
-        epuck_move.reset()
-        robotPath = collision_avoidance_routine(robots_in_range,robotPath)
-
-        print("state:" + str(state) +" prio: " + str(robot_priority) + "moving to " + str(robotPath))
-
-
     
-    if len(robotPath)>0 and path_set:
-        
-        
-        #print("state:" + str(state) +" prio: " + str(robot_priority) + "moving to " + str([robotPath[0][0], robotPath[0][1]]))
-        done = epuck_move.moveToDestination([robotPath[0][0], robotPath[0][1]])
-        
-
-        if done:
-            robotPath.pop(0)
-            if state == 2:
-                update_state(0)
-
-    if path_set and len(robotPath) == 0:
-        robot.getSelf().getField("customData").setSFString(str("done"))
 
         
 
