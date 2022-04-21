@@ -92,6 +92,16 @@ def convert_to_maze_cords(cord):
     print(cord,new_cord)
     return new_cord
 
+def convert_path(path):
+    new_path = []
+
+    for i in path:
+        new_path.append((origin[0] + (node_dist*i[0]), origin[1] + (node_dist * i[1])))
+
+    new_path.pop(0)
+
+    return new_path
+
 def populate_map_nodes():
     #cords of map nodes
     maze = []
@@ -171,6 +181,8 @@ def collision_avoidance_routine(in_range_robots, lrobotPath):
         # generate new maze
         maze = populate_map_nodes()
 
+        print("start", lrobotPath[0])
+
         new_start = convert_to_maze_cords(lrobotPath[0])
         new_end = convert_to_maze_cords(lrobotPath[-1])
 
@@ -182,15 +194,15 @@ def collision_avoidance_routine(in_range_robots, lrobotPath):
 
                 maze[int(blns[0])][int(blns[1])] = 1
 
-        print(maze)
+        #print(maze)
 
-        print(lrobotPath)
+        #print(lrobotPath)
 
 
         # calculate new path
         new_path = search(maze,1,new_start,new_end)
 
-        
+        new_path = convert_path(new_path)
         
         
         return new_path
