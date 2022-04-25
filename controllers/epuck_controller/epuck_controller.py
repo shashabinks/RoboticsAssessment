@@ -112,43 +112,64 @@ class Epuck_controller:
         #once other robot has passed move back and continue path
         #find highest prio
         highest_prio = None
+        in_range_robot_done = False
+        
         for i in in_range_robots.keys():
             if highest_prio == None:
                 highest_prio = i
             elif i > highest_prio:
                 highest_prio = i
+            
+            if len(in_range_robots[i][1]) == 0:
+                print("robot done in the way, doing lower prio routine")
+                in_range_robot_done = True
 
         #highest priority routine
-        if self.robot_priority > highest_prio:
+        if self.robot_priority > highest_prio and not in_range_robot_done:
             robots_in_range_avoiding_coll = []
 
             #add paths of all collision avoding robots to list
-            another_currently_avoiding_collision = False
+            
+            lower_prio_robot_blocking = False
+            next_node = (robotPath[0][0], robotPath[0][1]) 
             for k in in_range_robots.keys():
                 this_state = in_range_robots[k][0]
                 #print(this_state)
                 if this_state == 2:
                     robots_in_range_avoiding_coll.append(k)
+                
+                this_path = in_range_robots[k][1]
+                location = self.robot.getFromDef(f"EPUCK{i}").getField("translation").getSFVec3f()
+                path = in_range_robots[k][1]
+                if len(this_path) > 0 and (convert_to_maze_cords(next_node) == convert_to_maze_cords(path[0]) or convert_to_maze_cords(next_node) == convert_to_maze_cords(location)):
+                    lower_prio_robot_blocking = True
+                    
+
             
             
             #compare this robot's next two nodes to every in range collision avoiding robot's next node
             
-            next_node = (robotPath[0][0], robotPath[0][1]) 
-            for k in robots_in_range_avoiding_coll:
+            
+            """for k in robots_in_range_avoiding_coll:
                 path = in_range_robots[k][1]
                 location = self.robot.getFromDef(f"EPUCK{i}").getField("translation").getSFVec3f()
 
-                if len(robotPath) >=2 and ((convert_to_maze_cords(next_node) == convert_to_maze_cords(path[0])) or (convert_to_maze_cords(next_node) == convert_to_maze_cords(location))):
-                    another_currently_avoiding_collision = True
-                    
+                if len(robotPath) >=2 and len(path) > 0 and ((convert_to_maze_cords(next_node) == convert_to_maze_cords(path[0])) or (convert_to_maze_cords(next_node) == convert_to_maze_cords(location))):
+                    another_currently_avoiding_collision = True"""
+
+
+
+                
+
 
             
-            if another_currently_avoiding_collision:
+            if lower_prio_robot_blocking:
 
                 self.epuck_move.reset()
                 self.state = 1
                 self.epuck_move.state = 1
-                print(str(self.robot.getTime()) + "epucks currently avoiding collisions" + str(len(in_range_robots)))
+                
+                print(f"epuck {self.robot_priority}" + "waiting, epucks currently avoiding collisions or blocking: " + str(in_range_robots.keys()))
             else:
                 #update state and follow path as normal
                 self.state = 0
@@ -160,7 +181,7 @@ class Epuck_controller:
 
         
         #lower than highest priortiy routine
-        if self.robot_priority < highest_prio:
+        if self.robot_priority < highest_prio or in_range_robot_done:
 
             #loop through all robots
             #add their paths and their robot location to blacklist, remove my end point
@@ -185,6 +206,21 @@ class Epuck_controller:
 
                     black_list.append(location)
                     self.already_avoided_robots.append(i)
+                else:
+                    this_path = in_range_robots[i][1]
+                    for node in this_path:
+                        black_list.append(node)
+                    
+                    epuck_ref = self.robot.getFromDef(f"EPUCK{i}")
+
+                    location = epuck_ref.getField("translation").getSFVec3f()
+
+                    black_list.append(location)
+                    for n, v in enumerate(self.already_avoided_robots):
+                        if i == v:
+                            del self.already_avoided_robots[n]
+                    
+                    self.already_avoided_robots.append(i)
             
             if len(black_list) == 0:
                 print("low prio, no new bots")
@@ -192,25 +228,46 @@ class Epuck_controller:
 
             maze = populate_map_nodes()
             
+            end_node_blocked = False
             for b_node in black_list:
                 if b_node != end_point:
-                    
                     converted_b_node = convert_to_maze_cords(b_node)
                     maze[converted_b_node[0]][converted_b_node[1]] = -1
-
-            my_location = self.robot.getSelf().getField("translation").getSFVec3f()
-
+                
+                next_node = (robotPath[0][0], robotPath[0][1]) 
+                if b_node == end_point and next_node == end_point:
+                    #higher prio robot currently blocking end, pause for a bit
+                    end_node_blocked = True
+                    
 
             
+            my_location = self.robot.getSelf().getField("translation").getSFVec3f()
+
             new_path = search(maze, 1, convert_to_maze_cords(my_location), convert_to_maze_cords(end_point))
+
+            #if generated path is none with blacklisted nodes, then no path is avaliable, remake path without blacklsited nodes and chance the collission avoidance
+            if new_path == None or len(new_path) == 0:
+                maze = populate_map_nodes()
+                new_path = search(maze, 1, convert_to_maze_cords(my_location), convert_to_maze_cords(end_point))
+
+            
 
             print("lower prio path: " + str(new_path))
 
             
-            self.state = 2
-            thread = Thread(target=self.timer_function, args=(5.0,))
-            thread.start()
-            self.epuck_move.reset()
+            if end_node_blocked:
+                self.epuck_move.reset()
+                self.state = 4  
+                thread = Thread(target=self.timer_function, args=(5.0,))
+                thread.start()
+                self.epuck_move.state = 1
+                print(str(self.robot.getTime()) + "end node blocked, waiting" + str(len(in_range_robots)))
+            else:
+                self.state = 2
+                thread = Thread(target=self.timer_function, args=(1.5,))
+                thread.start()
+                self.epuck_move.reset()
+
             return convert_path(new_path)
         
         return robotPath
@@ -223,7 +280,7 @@ class Epuck_controller:
     def check_for_other_robots(self):
         robots_in_range = self.check_robots_in_range()
     
-        if robots_in_range != None and self.state != 2 and len(self.robotPath)>0:
+        if robots_in_range != None and self.state != 2 and self.state != 4 and len(self.robotPath)>0:
             
             
             self.robotPath = self.collision_avoidance_routine(robots_in_range, self.robotPath, self.end_point)
@@ -248,7 +305,7 @@ class Epuck_controller:
                 self.robotPath.pop(0)
 
         if self.path_set and len(self.robotPath) == 0:
-            self.robot.getSelf().getField("customData").setSFString(str("done"))
+            self.robot.getSelf().getField("customData").setSFString(str(f"done|{self.robot.getTime()}"))
 
     def timer_function(self, secs):
         sleep(secs)
@@ -287,9 +344,11 @@ while epuck_controller.robot.step(timestep) != -1:
     # transmit priority
     epuck_controller.transmit_status_in_radius() 
 
-    epuck_controller.check_for_other_robots()
+    if epuck_controller.path_set and len(epuck_controller.robotPath) != 0:
 
-    epuck_controller.follow_path()
+        epuck_controller.check_for_other_robots()
+
+        epuck_controller.follow_path()
 
     
     

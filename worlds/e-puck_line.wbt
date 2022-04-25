@@ -18,12 +18,14 @@ RectangleArena {
   floorSize 3 2
 }
 DEF EPUCK0 E-puck {
-  hidden position_0_0 494.4378243904514
-  hidden position_0_1 474.6672037405962
-  hidden rotation_1 0 1 0 4.349370430443651
-  hidden rotation_2 0 -1 0 2.854879605052351
-  translation 0.8498164731562797 -0.37504744818105157 -6.500961566082743e-05
-  rotation 0.00040238669818529194 -0.27634273851150176 0.9610590663205404 0.003502865898159859
+  hidden position_0_0 537.4770947226319
+  hidden position_0_1 508.68392756270345
+  hidden linearVelocity_0 -0.0015026826758207637 -0.00044591317923703183 0.00028520608316273975
+  hidden angularVelocity_0 0.013693279746930423 0.001991413709509512 0.7519585104045271
+  hidden rotation_1 0 -1 0 2.876841694812505
+  hidden rotation_2 0 1 0 6.029102988336527
+  translation -0.15203092273334476 0.10257586541390717 -0.00011258786008404298
+  rotation -0.013971592743653689 0.0032303492730499255 0.9998971744333413 0.15384893527497068
   controller "epuck_controller"
   supervisor TRUE
   turretSlot [
@@ -44,13 +46,123 @@ DEF EPUCK0 E-puck {
   ]
 }
 DEF EPUCK1 E-puck {
-  hidden position_0_0 528.5707651666984
-  hidden position_0_1 517.9512603013515
-  hidden rotation_1 0 1 0 0.7831993636131154
-  hidden rotation_2 0 1 0 2.7300651126253626
-  translation 1.099922987035762 -0.12499993598548774 -6.521635534192764e-05
-  rotation 1.759810943122107e-05 -0.9999999458368594 -0.00032865876675097425 0.0009389217209257755
+  hidden position_0_0 600.9158077407624
+  hidden position_0_1 590.7442886919775
+  hidden linearVelocity_0 0.11245347126447063 -0.0007183503339922929 -1.500488687519288e-05
+  hidden angularVelocity_0 0.016260173976543228 0.016465903725085076 -0.0025808767819192084
+  hidden rotation_1 0 -1 0 2.2699817484779268
+  hidden rotation_2 0 1 0 0.12486981709641717
+  translation 0.22633477592150297 -0.38029639219083305 -2.829811666902292e-05
+  rotation 0.14311691581495598 -0.5250126567072725 -0.8389751240083263 0.005102711433471201
   name "e-puck(1)"
+  controller "epuck_controller"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+DEF EPUCK2 E-puck {
+  hidden position_0_0 573.1972029454058
+  hidden position_0_1 548.9472188414852
+  hidden rotation_1 0 -1 0 4.855845315116136
+  hidden rotation_2 0 -1 0 3.9730881903184003
+  translation -0.12217704078762957 -0.8804589252397611 -6.79215865477048e-05
+  rotation -0.012363805938709583 -0.05434230042374323 0.99844581760222 0.0033111007610425996
+  name "e-puck(2)"
+  controller "epuck_controller"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+DEF EPUCK3 E-puck {
+  hidden position_0_0 573.1972029454058
+  hidden position_0_1 548.9472188414852
+  hidden rotation_1 0 -1 0 4.855845315116136
+  hidden rotation_2 0 -1 0 3.9730881903184003
+  translation -0.022177040787629568 -0.8804589252397611 0.09993207841345231
+  rotation -0.012363805938709583 -0.05434230042374323 0.99844581760222 0.0033111007610425996
+  name "e-puck(3)"
+  controller "epuck_controller"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+DEF EPUCK4 E-puck {
+  hidden position_0_0 573.1972029454058
+  hidden position_0_1 548.9472188414852
+  hidden rotation_1 0 -1 0 4.855845315116136
+  hidden rotation_2 0 -1 0 3.9730881903184003
+  translation 0.07782295921237044 -0.8804589252397611 0.1999320784134523
+  rotation -0.012363805938709583 -0.05434230042374323 0.99844581760222 0.0033111007610425996
+  name "e-puck(4)"
+  controller "epuck_controller"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+DEF EPUCK5 E-puck {
+  hidden position_0_0 573.1972029454058
+  hidden position_0_1 548.9472188414852
+  hidden rotation_1 0 -1 0 4.855845315116136
+  hidden rotation_2 0 -1 0 3.9730881903184003
+  translation 0.17782295921237046 -0.8804589252397611 0.2999320784134523
+  rotation -0.012363805938709583 -0.05434230042374323 0.99844581760222 0.0033111007610425996
+  name "e-puck(5)"
   controller "epuck_controller"
   supervisor TRUE
   turretSlot [
