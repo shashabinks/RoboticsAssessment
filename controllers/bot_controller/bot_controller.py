@@ -9,6 +9,7 @@ from os.path import exists
 import random
 import math
 import json
+from plyer import notification
 
 from threading import Thread, Timer
 import time
@@ -211,6 +212,15 @@ class Bot_controller:
                     f.seek(0)
                 
                     json.dump(data, f, indent = 4)
+                
+                if current_iteration == 500:
+                    notification.notify(
+                        title = f'epucks count: {self.num_epucks}, exp: {self.test_type}',
+                        message = '500 iterations reached',
+                        app_icon = None,
+                        timeout = 10,
+                    )
+                    supervisor.simulationQuit()
             
             else:
 
@@ -224,7 +234,7 @@ class Bot_controller:
             self.reset()
                 
                 
-
+    
 
     def force_restart(self):
         time.sleep(130)
@@ -243,7 +253,7 @@ class Bot_controller:
         self.supervisor.simulationResetPhysics()
         self.supervisor.getSelf().restartController()
 
-bot_controller = Bot_controller(num_epucks=6, test_type="Adv_algo")
+bot_controller = Bot_controller(num_epucks=4, test_type="Adv_algo")
 bot_controller.supervisor = supervisor
 
 while supervisor.step(timestep) != -1:
