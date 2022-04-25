@@ -1,0 +1,119 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  info [
+    "Copyright (C) 2006 Laboratory of Intelligent Systems (LIS), EPFL"
+    "Thanks to jean-christophe.zufferey@epfl.ch"
+  ]
+}
+Viewpoint {
+  orientation 0.2764034890427477 -0.5630229375557035 -0.7788493326896685 5.158337800001458
+  position -2.9919897482712106 -3.1307743485575714 2.9014392460398204
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  name "rectangle arena(1)"
+  floorSize 3 2
+}
+DEF EPUCK0 E-puck {
+  hidden linearVelocity_0 -0.0015026826758207637 -0.00044591317923703183 0.00028520608316273975
+  hidden angularVelocity_0 0.013693279746930423 0.001991413709509512 0.7519585104045271
+  translation -0.15203092273334476 0.10257586541390717 -0.00011258786008404298
+  rotation -0.013971592743653689 0.0032303492730499255 0.9998971744333413 0.15384893527497068
+  controller "epuck_controller"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+DEF EPUCK1 E-puck {
+  hidden linearVelocity_0 0.11245347126447063 -0.0007183503339922929 -1.500488687519288e-05
+  hidden angularVelocity_0 0.016260173976543228 0.016465903725085076 -0.0025808767819192084
+  translation 0.22633477592150297 -0.38029639219083305 -2.829811666902292e-05
+  rotation 0.14311691581495598 -0.5250126567072725 -0.8389751240083263 0.005102711433471201
+  name "e-puck(1)"
+  controller "epuck_controller"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+DEF EPUCK2 E-puck {
+  translation -0.12217704078762957 -0.8804589252397611 -6.79215865477048e-05
+  rotation -0.012363805938709583 -0.05434230042374323 0.99844581760222 0.0033111007610425996
+  name "e-puck(2)"
+  controller "epuck_controller"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+DEF EPUCK3 E-puck {
+  translation -0.022177040787629568 -0.8804589252397611 0.09993207841345231
+  rotation -0.012363805938709583 -0.05434230042374323 0.99844581760222 0.0033111007610425996
+  name "e-puck(3)"
+  controller "epuck_controller"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+Robot {
+  translation 0 0 0.28
+  controller "bot_controller"
+  supervisor TRUE
+}
