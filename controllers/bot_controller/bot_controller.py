@@ -218,7 +218,7 @@ class Bot_controller:
                         title = f'epucks count: {self.num_epucks}, exp: {self.test_type}',
                         message = '500 iterations reached',
                         app_icon = None,
-                        timeout = 10,
+                        timeout = 9999999,
                     )
                     supervisor.simulationQuit()
             

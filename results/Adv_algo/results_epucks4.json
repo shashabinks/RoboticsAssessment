@@ -531,6 +531,90 @@
             "collision": 0,
             "paths completed": 4,
             "average path completed time": 31.22
+        },
+        {
+            "time": "Mon Apr 25 21:02:28 2022",
+            "iteration": 77,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 46.46
+        },
+        {
+            "time": "Mon Apr 25 21:02:35 2022",
+            "iteration": 78,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 43.8
+        },
+        {
+            "time": "Mon Apr 25 21:02:42 2022",
+            "iteration": 79,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 34.73
+        },
+        {
+            "time": "Mon Apr 25 21:02:51 2022",
+            "iteration": 80,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 60.59
+        },
+        {
+            "time": "Mon Apr 25 21:03:00 2022",
+            "iteration": 81,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 32.83
+        },
+        {
+            "time": "Mon Apr 25 21:03:09 2022",
+            "iteration": 82,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 73.02
+        },
+        {
+            "time": "Mon Apr 25 21:03:18 2022",
+            "iteration": 83,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 37.26
+        },
+        {
+            "time": "Mon Apr 25 21:03:25 2022",
+            "iteration": 84,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 50.74
+        },
+        {
+            "time": "Mon Apr 25 21:03:32 2022",
+            "iteration": 85,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 45.91
+        },
+        {
+            "time": "Mon Apr 25 21:03:39 2022",
+            "iteration": 86,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 48.45
+        },
+        {
+            "time": "Mon Apr 25 21:03:47 2022",
+            "iteration": 87,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 50.5
+        },
+        {
+            "time": "Mon Apr 25 21:03:56 2022",
+            "iteration": 88,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 34.54
         }
     ]
 }
