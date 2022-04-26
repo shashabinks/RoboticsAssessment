@@ -1,0 +1,60 @@
+{
+    "results": [
+        {
+            "time": "Tue Apr 26 19:01:59 2022",
+            "iteration": 1,
+            "collision": 2,
+            "paths completed": 5,
+            "average path completed time": 119.97
+        },
+        {
+            "time": "Tue Apr 26 19:02:07 2022",
+            "iteration": 2,
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 119.94
+        },
+        {
+            "time": "Tue Apr 26 19:02:16 2022",
+            "iteration": 3,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 119.94
+        },
+        {
+            "time": "Tue Apr 26 19:02:26 2022",
+            "iteration": 4,
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 119.94
+        },
+        {
+            "time": "Tue Apr 26 19:02:35 2022",
+            "iteration": 5,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 119.94
+        },
+        {
+            "time": "Tue Apr 26 19:02:51 2022",
+            "iteration": 6,
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 119.94
+        },
+        {
+            "time": "Tue Apr 26 19:03:00 2022",
+            "iteration": 7,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 119.94
+        },
+        {
+            "time": "Tue Apr 26 19:03:09 2022",
+            "iteration": 8,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 119.94
+        }
+    ]
+}

@@ -1,0 +1,215 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  info [
+    "Copyright (C) 2006 Laboratory of Intelligent Systems (LIS), EPFL"
+    "Thanks to jean-christophe.zufferey@epfl.ch"
+  ]
+}
+Viewpoint {
+  orientation 0.2764034890427477 -0.5630229375557035 -0.7788493326896685 5.158337800001458
+  position -2.9919897482712106 -3.1307743485575714 2.9014392460398204
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  name "rectangle arena(1)"
+  floorSize 2 2
+}
+DEF EPUCK0 E-puck {
+  hidden position_0_0 543.5698918982979
+  hidden position_0_1 514.776724749099
+  hidden linearVelocity_0 0.00016236374571907124 2.5190157522423207e-05 -4.43080927539172e-09
+  hidden angularVelocity_0 -0.001679365869675636 0.010824391741645501 -1.7513545159405152e-12
+  hidden rotation_1 0 1 0 3.21595548085346
+  hidden linearVelocity_1 0.00021648777324183435 3.3587307840693775e-05 -2.3544145211570937e-11
+  hidden angularVelocity_1 -0.0016793658693735377 0.010824391739446973 1.3996689044008308e-10
+  hidden rotation_2 0 -1 0 0.4444704396270884
+  hidden linearVelocity_2 0.00021648777319252838 3.358730783247458e-05 -2.3926805785474608e-11
+  hidden angularVelocity_2 -0.0016793658694952405 0.010824391739381585 -1.4346963425404359e-10
+  translation -0.28305003419699637 -0.6066793292914225 -6.419382760442134e-05
+  rotation -9.307105122619159e-05 0.0012047311732057767 0.9999992699800234 0.15391941910835222
+  controller "epuck_controller"
+  customData "['0', '[(-0.1499999999999999, -0.625), (0.10000000000000009, -0.625), (0.3500000000000001, -0.625), (0.6000000000000001, -0.625)]']"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+DEF EPUCK1 E-puck {
+  hidden position_0_0 619.7322788767826
+  hidden position_0_1 618.5198212819903
+  hidden linearVelocity_0 -2.003392008897548e-13 -1.0765193199174943e-12 3.173757553061781e-15
+  hidden angularVelocity_0 4.061601985480869e-13 -3.959758329347917e-13 2.7727954510707045e-11
+  hidden rotation_1 0 1 0 3.980118773183155
+  hidden linearVelocity_1 -2.4372627471540143e-13 -1.7974331461290901e-12 1.5928529690760393e-15
+  hidden angularVelocity_1 9.873213427059156e-11 -5.9236482269403015e-12 2.7694835663498406e-11
+  hidden rotation_2 0 1 0 2.7676611783908145
+  hidden linearVelocity_2 -1.6187256872698322e-13 -3.5945150146085923e-13 1.3540959942120264e-15
+  hidden angularVelocity_2 2.2935550539379084e-11 -1.4016287086317e-12 2.772054084654825e-11
+  translation -0.12663873905969644 -0.4094035007139358 -6.83717031176069e-05
+  rotation 0.000678889757363834 -0.000335271056137553 0.9999997133509672 1.518497897349885
+  name "e-puck(1)"
+  controller "epuck_controller"
+  customData "['1', '[(-0.1499999999999999, -0.625), (-0.1499999999999999, -0.375), (-0.1499999999999999, -0.125), (-0.1499999999999999, 0.125), (-0.3999999999999999, 0.125), (-0.3999999999999999, 0.375), (-0.6499999999999999, 0.375), (-0.6499999999999999, 0.625), (-0.8999999999999999, 0.625), (-0.8999999999999999, 0.875)]']"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+DEF EPUCK2 E-puck {
+  hidden position_0_0 666.2985953311894
+  hidden position_0_1 659.7754300282843
+  hidden linearVelocity_0 1.9852851950818813e-11 4.81255448094808e-12 1.6129320101754276e-13
+  hidden angularVelocity_0 2.988434741555368e-11 2.6891146634048234e-10 -7.02781599465912e-10
+  hidden rotation_1 0 1 0 0.28095277015323783
+  hidden linearVelocity_1 4.5170587270841926e-11 8.142663524333871e-10 -7.594791757610887e-13
+  hidden angularVelocity_1 5.3464701728697667e-11 4.5797520653382364e-10 -7.024785013953975e-10
+  hidden rotation_2 0 -1 0 6.242212532751879
+  hidden linearVelocity_2 -6.115213951551534e-11 -8.203119504823482e-10 2.280684347554259e-13
+  hidden angularVelocity_2 1.2319389913259284e-11 2.36115495438841e-10 -7.007971288192649e-10
+  translation -0.04868961953957873 -0.12351655703372923 -8.792841116432581e-05
+  rotation 7.768367998276731e-06 0.00036357130776434844 0.9999999338777761 3.1044072873156274
+  name "e-puck(2)"
+  controller "epuck_controller"
+  customData "['2', '[(0.8500000000000001, 0.625), (0.6000000000000001, 0.625), (0.6000000000000001, 0.375), (0.3500000000000001, 0.375), (0.3500000000000001, 0.125), (0.10000000000000009, 0.125), (0.10000000000000009, -0.125), (-0.1499999999999999, -0.125), (-0.1499999999999999, -0.375)]']"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+DEF EPUCK3 E-puck {
+  hidden position_0_0 641.3513750853728
+  hidden position_0_1 630.6042454861571
+  hidden rotation_1 0 0.9999999999999999 0 0.46647375305493083
+  hidden rotation_2 0 1 0 2.2857147681984356
+  translation -0.8919496867084219 -0.6232665367678514 -6.167108095980929e-05
+  rotation 0.1478308159504198 -0.10408300211148964 0.9835206040174719 0.00576909540095116
+  name "e-puck(3)"
+  controller "epuck_controller"
+  customData "done|48.192"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+DEF EPUCK4 E-puck {
+  hidden position_0_0 590.9380706565115
+  hidden position_0_1 575.6479513026653
+  hidden linearVelocity_0 0.00011603485132051286 -4.321615219360018e-06 4.252653775801898e-08
+  hidden angularVelocity_0 0.0002880762422026745 0.007734812598896618 6.051511077033483e-12
+  hidden rotation_1 0 1 0 0.3186517816303842
+  hidden linearVelocity_1 0.00015469657940969073 -5.7615370259027344e-06 6.872932841484469e-11
+  hidden angularVelocity_1 0.0002880762422006396 0.007734812619151332 -2.41687841517081e-10
+  hidden rotation_2 0 -1 0 2.4050969578566366
+  hidden linearVelocity_2 0.000154696580241734 -5.761537060609134e-06 -6.38373848785893e-11
+  hidden angularVelocity_2 0.00028807624212791636 0.007734812602068375 2.53792251459061e-10
+  translation -0.34411818652505677 -0.12918621090986782 -6.245862867615588e-05
+  rotation 0.0005563578828086688 -1.01771128113847e-05 0.9999998451811544 3.1044101734184406
+  name "e-puck(4)"
+  controller "epuck_controller"
+  customData "['4', '[(-0.1499999999999999, -0.125), (-0.3999999999999999, -0.125), (-0.6499999999999999, -0.125), (-0.8999999999999999, -0.125)]']"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+DEF EPUCK5 E-puck {
+  hidden position_0_0 644.49761243227
+  hidden position_0_1 602.0095686539279
+  hidden rotation_1 0 1 0 3.6127110999521683
+  hidden rotation_2 0 -1 0 1.1762208353124157
+  translation -0.40707893194631334 -0.3506405243113924 -7.4865918143735e-05
+  rotation -0.16810808350475756 0.9857685686979805 3.5035589623845367e-05 0.0009010988574593988
+  name "e-puck(5)"
+  controller "epuck_controller"
+  customData "done|48.192"
+  supervisor TRUE
+  turretSlot [
+    Emitter {
+      range 0.0001
+      maxRange 0.0001
+    }
+    Receiver {
+    }
+    Compass {
+    }
+    GPS {
+    }
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+Robot {
+  translation 0 0 0.28
+  controller "bot_controller"
+  supervisor TRUE
+}

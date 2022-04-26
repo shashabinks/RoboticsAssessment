@@ -15,16 +15,27 @@ from threading import Thread, Timer
 import time
 
 
+map_choices = {"basic": {"origin" : (-1.4, -0.875), "max_area": (11,7) , "path_size": 5 }, "medium": {"origin" : (-1.4 + 0.5, -0.875), "max_area": (7,7), "path_size": 5 * (2/3) }, "small": {"origin" : (-1.4 + 0.5, -0.875 + 0.5), "max_area": (7,3), "path_size": 5 * (1/3)}}
+
+map_choice = "small"
+
+min_path_size = map_choices[map_choice]["path_size"]
 
 #origin cordinates
-origin = (-1.4, -0.875)
+origin = map_choices[map_choice]["origin"]
+
+# 8 x 8 origin = (-1.4 + 0.5, -0.875)
+# 8 x 4 origin = (-1.4 + 0.5, -0.875 + 0.5)
+
 
 #distance between each square
 node_dist = 0.25
 
 #map size
-max_x = 11
-max_y = 7
+max_x = map_choices[map_choice]["max_area"][0]
+max_y = map_choices[map_choice]["max_area"][1]
+
+
 
 def force_restart():
     time.sleep(180)
@@ -138,7 +149,7 @@ class Bot_controller:
             end_cord = (random.randint(0, max_x), random.randint(0, max_y))
             dist = math.sqrt((end_cord[0]-start_cord[0])**2 + (end_cord[1]-start_cord[1])**2)
             #minimum distance of 5 squares between start and end
-            while end_cord in used_nodes or dist < 5 :
+            while end_cord in used_nodes or dist < min_path_size:
                 end_cord = (random.randint(0, max_x), random.randint(0, max_y))
                 dist = math.sqrt((end_cord[0]-start_cord[0])**2 + (end_cord[1]-start_cord[1])**2)
 
@@ -253,7 +264,7 @@ class Bot_controller:
         self.supervisor.simulationResetPhysics()
         self.supervisor.getSelf().restartController()
 
-bot_controller = Bot_controller(num_epucks=4, test_type="Adv_algo")
+bot_controller = Bot_controller(num_epucks=6, test_type="8x4_map_size_basic_algo")
 bot_controller.supervisor = supervisor
 
 while supervisor.step(timestep) != -1:
