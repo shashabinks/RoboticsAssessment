@@ -1,0 +1,6 @@
+map size
+num epucks
+controller folder name
+results folder name
+world file
+rate of collision avoidance
