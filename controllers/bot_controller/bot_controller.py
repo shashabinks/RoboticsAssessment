@@ -17,7 +17,7 @@ import time
 
 map_choices = {"basic": {"origin" : (-1.4, -0.875), "max_area": (11,7) , "path_size": 5 }, "medium": {"origin" : (-1.4 + 0.5, -0.875), "max_area": (7,7), "path_size": 5 * (2/3) }, "small": {"origin" : (-1.4 + 0.5, -0.875 + 0.5), "max_area": (7,3), "path_size": 5 * (1/3)}}
 
-map_choice = "medium"
+map_choice = "small"
 
 min_path_size = map_choices[map_choice]["path_size"]
 
@@ -264,7 +264,7 @@ class Bot_controller:
         self.supervisor.simulationResetPhysics()
         self.supervisor.getSelf().restartController()
 
-bot_controller = Bot_controller(num_epucks=6, test_type="8x8_map_size_basic_algo")
+bot_controller = Bot_controller(num_epucks=6, test_type="8x4_map_size_basic_algo")
 bot_controller.supervisor = supervisor
 
 while supervisor.step(timestep) != -1:
