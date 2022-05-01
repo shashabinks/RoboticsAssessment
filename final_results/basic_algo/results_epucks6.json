@@ -1,3504 +1,3504 @@
 {
     "results": [
         {
-            "time": "Mon Apr 25 22:11:57 2022",
+            "time": "Sun May  1 19:30:28 2022",
             "iteration": 1,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.97
+            "collision": 3,
+            "paths completed": 2,
+            "average path completed time": 41.44
         },
         {
-            "time": "Mon Apr 25 22:12:05 2022",
+            "time": "Sun May  1 19:30:33 2022",
             "iteration": 2,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 33.47
         },
         {
-            "time": "Mon Apr 25 22:12:13 2022",
+            "time": "Sun May  1 19:30:39 2022",
             "iteration": 3,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 54.75
         },
         {
-            "time": "Mon Apr 25 22:12:21 2022",
+            "time": "Sun May  1 19:30:44 2022",
             "iteration": 4,
             "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 42.76
         },
         {
-            "time": "Mon Apr 25 22:12:29 2022",
+            "time": "Sun May  1 19:30:49 2022",
             "iteration": 5,
-            "collision": 0,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:12:36 2022",
-            "iteration": 6,
             "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 43.17
         },
         {
-            "time": "Mon Apr 25 22:12:43 2022",
+            "time": "Sun May  1 19:30:54 2022",
+            "iteration": 6,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 37.67
+        },
+        {
+            "time": "Sun May  1 19:30:59 2022",
             "iteration": 7,
             "collision": 1,
             "paths completed": 6,
-            "average path completed time": 119.94
+            "average path completed time": 48.93
         },
         {
-            "time": "Mon Apr 25 22:12:50 2022",
+            "time": "Sun May  1 19:31:05 2022",
             "iteration": 8,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:12:57 2022",
-            "iteration": 9,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:13:04 2022",
-            "iteration": 10,
-            "collision": 1,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:13:11 2022",
-            "iteration": 11,
-            "collision": 4,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:13:18 2022",
-            "iteration": 12,
             "collision": 0,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 60.26
         },
         {
-            "time": "Mon Apr 25 22:13:25 2022",
-            "iteration": 13,
+            "time": "Sun May  1 19:31:10 2022",
+            "iteration": 9,
             "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 33.89
         },
         {
-            "time": "Mon Apr 25 22:13:32 2022",
-            "iteration": 14,
-            "collision": 1,
+            "time": "Sun May  1 19:31:16 2022",
+            "iteration": 10,
+            "collision": 2,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 41.22
         },
         {
-            "time": "Mon Apr 25 22:13:38 2022",
-            "iteration": 15,
-            "collision": 3,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:13:45 2022",
-            "iteration": 16,
+            "time": "Sun May  1 19:31:21 2022",
+            "iteration": 11,
             "collision": 0,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 34.02
         },
         {
-            "time": "Mon Apr 25 22:13:53 2022",
+            "time": "Sun May  1 19:31:26 2022",
+            "iteration": 12,
+            "collision": 4,
+            "paths completed": 5,
+            "average path completed time": 47.53
+        },
+        {
+            "time": "Sun May  1 19:31:31 2022",
+            "iteration": 13,
+            "collision": 4,
+            "paths completed": 3,
+            "average path completed time": 48.34
+        },
+        {
+            "time": "Sun May  1 19:31:37 2022",
+            "iteration": 14,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 39.2
+        },
+        {
+            "time": "Sun May  1 19:31:42 2022",
+            "iteration": 15,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 45.83
+        },
+        {
+            "time": "Sun May  1 19:31:47 2022",
+            "iteration": 16,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 46.17
+        },
+        {
+            "time": "Sun May  1 19:31:52 2022",
             "iteration": 17,
+            "collision": 0,
+            "paths completed": 2,
+            "average path completed time": 43.31
+        },
+        {
+            "time": "Sun May  1 19:31:58 2022",
+            "iteration": 18,
+            "collision": 0,
+            "paths completed": 2,
+            "average path completed time": 28.4
+        },
+        {
+            "time": "Sun May  1 19:32:03 2022",
+            "iteration": 19,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 47.68
+        },
+        {
+            "time": "Sun May  1 19:32:08 2022",
+            "iteration": 20,
+            "collision": 0,
+            "paths completed": 2,
+            "average path completed time": 37.28
+        },
+        {
+            "time": "Sun May  1 19:32:13 2022",
+            "iteration": 21,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 37.41
+        },
+        {
+            "time": "Sun May  1 19:32:19 2022",
+            "iteration": 22,
             "collision": 2,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 48.24
         },
         {
-            "time": "Mon Apr 25 22:14:00 2022",
-            "iteration": 18,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:14:07 2022",
-            "iteration": 19,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:14:14 2022",
-            "iteration": 20,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:14:22 2022",
-            "iteration": 21,
-            "collision": 3,
-            "paths completed": 1,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:14:28 2022",
-            "iteration": 22,
-            "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:14:35 2022",
+            "time": "Sun May  1 19:32:24 2022",
             "iteration": 23,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:14:43 2022",
-            "iteration": 24,
-            "collision": 4,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:14:50 2022",
-            "iteration": 25,
             "collision": 0,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 49.9
         },
         {
-            "time": "Mon Apr 25 22:14:57 2022",
-            "iteration": 26,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:15:04 2022",
-            "iteration": 27,
+            "time": "Sun May  1 19:32:29 2022",
+            "iteration": 24,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 41.74
         },
         {
-            "time": "Mon Apr 25 22:15:10 2022",
+            "time": "Sun May  1 19:32:34 2022",
+            "iteration": 25,
+            "collision": 3,
+            "paths completed": 2,
+            "average path completed time": 47.17
+        },
+        {
+            "time": "Sun May  1 19:32:40 2022",
+            "iteration": 26,
+            "collision": 6,
+            "paths completed": 3,
+            "average path completed time": 39.78
+        },
+        {
+            "time": "Sun May  1 19:32:45 2022",
+            "iteration": 27,
+            "collision": 0,
+            "paths completed": 2,
+            "average path completed time": 47.78
+        },
+        {
+            "time": "Sun May  1 19:32:50 2022",
             "iteration": 28,
             "collision": 2,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 46.19
         },
         {
-            "time": "Mon Apr 25 22:15:18 2022",
+            "time": "Sun May  1 19:32:56 2022",
             "iteration": 29,
-            "collision": 4,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:15:25 2022",
-            "iteration": 30,
-            "collision": 1,
+            "collision": 3,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 40.06
         },
         {
-            "time": "Mon Apr 25 22:15:32 2022",
-            "iteration": 31,
+            "time": "Sun May  1 19:33:01 2022",
+            "iteration": 30,
             "collision": 0,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 52.62
         },
         {
-            "time": "Mon Apr 25 22:15:39 2022",
+            "time": "Sun May  1 19:33:06 2022",
+            "iteration": 31,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 65.47
+        },
+        {
+            "time": "Sun May  1 19:33:11 2022",
             "iteration": 32,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 36.42
         },
         {
-            "time": "Mon Apr 25 22:15:46 2022",
+            "time": "Sun May  1 19:33:16 2022",
             "iteration": 33,
-            "collision": 0,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 50.06
         },
         {
-            "time": "Mon Apr 25 22:15:52 2022",
+            "time": "Sun May  1 19:33:21 2022",
             "iteration": 34,
+            "collision": 2,
+            "paths completed": 6,
+            "average path completed time": 55.18
+        },
+        {
+            "time": "Sun May  1 19:33:26 2022",
+            "iteration": 35,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 60.33
+        },
+        {
+            "time": "Sun May  1 19:33:32 2022",
+            "iteration": 36,
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 50.8
+        },
+        {
+            "time": "Sun May  1 19:33:37 2022",
+            "iteration": 37,
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 40.32
+        },
+        {
+            "time": "Sun May  1 19:33:42 2022",
+            "iteration": 38,
             "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 25.0
         },
         {
-            "time": "Mon Apr 25 22:15:59 2022",
-            "iteration": 35,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:16:06 2022",
-            "iteration": 36,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:16:13 2022",
-            "iteration": 37,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:16:20 2022",
-            "iteration": 38,
-            "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:16:27 2022",
+            "time": "Sun May  1 19:33:47 2022",
             "iteration": 39,
-            "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 43.71
         },
         {
-            "time": "Mon Apr 25 22:16:34 2022",
+            "time": "Sun May  1 19:33:53 2022",
             "iteration": 40,
-            "collision": 3,
-            "paths completed": 1,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 47.04
         },
         {
-            "time": "Mon Apr 25 22:16:41 2022",
+            "time": "Sun May  1 19:33:58 2022",
             "iteration": 41,
             "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:16:48 2022",
-            "iteration": 42,
-            "collision": 3,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:16:54 2022",
-            "iteration": 43,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:17:01 2022",
-            "iteration": 44,
-            "collision": 3,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:17:08 2022",
-            "iteration": 45,
-            "collision": 2,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 34.62
         },
         {
-            "time": "Mon Apr 25 22:17:15 2022",
+            "time": "Sun May  1 19:34:03 2022",
+            "iteration": 42,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 44.88
+        },
+        {
+            "time": "Sun May  1 19:34:08 2022",
+            "iteration": 43,
+            "collision": 3,
+            "paths completed": 4,
+            "average path completed time": 49.38
+        },
+        {
+            "time": "Sun May  1 19:34:13 2022",
+            "iteration": 44,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 31.34
+        },
+        {
+            "time": "Sun May  1 19:34:18 2022",
+            "iteration": 45,
+            "collision": 0,
+            "paths completed": 2,
+            "average path completed time": 33.81
+        },
+        {
+            "time": "Sun May  1 19:34:24 2022",
             "iteration": 46,
             "collision": 2,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 33.76
         },
         {
-            "time": "Mon Apr 25 22:17:21 2022",
+            "time": "Sun May  1 19:34:29 2022",
             "iteration": 47,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 49.07
         },
         {
-            "time": "Mon Apr 25 22:17:29 2022",
+            "time": "Sun May  1 19:34:34 2022",
             "iteration": 48,
-            "collision": 4,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 5,
+            "average path completed time": 33.56
         },
         {
-            "time": "Mon Apr 25 22:17:36 2022",
+            "time": "Sun May  1 19:34:39 2022",
             "iteration": 49,
             "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:17:42 2022",
-            "iteration": 50,
-            "collision": 2,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:17:49 2022",
-            "iteration": 51,
-            "collision": 2,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:17:56 2022",
-            "iteration": 52,
-            "collision": 2,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:18:03 2022",
-            "iteration": 53,
-            "collision": 5,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 41.5
         },
         {
-            "time": "Mon Apr 25 22:18:11 2022",
+            "time": "Sun May  1 19:34:45 2022",
+            "iteration": 50,
+            "collision": 0,
+            "paths completed": 6,
+            "average path completed time": 42.31
+        },
+        {
+            "time": "Sun May  1 19:34:50 2022",
+            "iteration": 51,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 32.5
+        },
+        {
+            "time": "Sun May  1 19:34:56 2022",
+            "iteration": 52,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 31.68
+        },
+        {
+            "time": "Sun May  1 19:35:01 2022",
+            "iteration": 53,
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 49.24
+        },
+        {
+            "time": "Sun May  1 19:35:07 2022",
             "iteration": 54,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 61.31
         },
         {
-            "time": "Mon Apr 25 22:18:18 2022",
+            "time": "Sun May  1 19:35:12 2022",
             "iteration": 55,
-            "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 45.18
         },
         {
-            "time": "Mon Apr 25 22:18:25 2022",
+            "time": "Sun May  1 19:35:17 2022",
             "iteration": 56,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 49.71
         },
         {
-            "time": "Mon Apr 25 22:18:31 2022",
+            "time": "Sun May  1 19:35:23 2022",
             "iteration": 57,
-            "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 1,
+            "average path completed time": 39.74
         },
         {
-            "time": "Mon Apr 25 22:18:39 2022",
+            "time": "Sun May  1 19:35:29 2022",
             "iteration": 58,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 33.77
         },
         {
-            "time": "Mon Apr 25 22:18:46 2022",
+            "time": "Sun May  1 19:35:34 2022",
             "iteration": 59,
-            "collision": 3,
+            "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 62.9
         },
         {
-            "time": "Mon Apr 25 22:18:53 2022",
+            "time": "Sun May  1 19:35:40 2022",
             "iteration": 60,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 47.04
         },
         {
-            "time": "Mon Apr 25 22:19:00 2022",
+            "time": "Sun May  1 19:35:45 2022",
             "iteration": 61,
-            "collision": 4,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 31.66
         },
         {
-            "time": "Mon Apr 25 22:19:07 2022",
+            "time": "Sun May  1 19:35:51 2022",
             "iteration": 62,
             "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 1,
+            "average path completed time": 31.71
         },
         {
-            "time": "Mon Apr 25 22:19:15 2022",
+            "time": "Sun May  1 19:35:57 2022",
             "iteration": 63,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:19:22 2022",
-            "iteration": 64,
             "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 29.87
         },
         {
-            "time": "Mon Apr 25 22:19:29 2022",
+            "time": "Sun May  1 19:36:03 2022",
+            "iteration": 64,
+            "collision": 3,
+            "paths completed": 4,
+            "average path completed time": 69.95
+        },
+        {
+            "time": "Sun May  1 19:36:08 2022",
             "iteration": 65,
             "collision": 1,
             "paths completed": 6,
-            "average path completed time": 119.94
+            "average path completed time": 43.8
         },
         {
-            "time": "Mon Apr 25 22:19:36 2022",
+            "time": "Sun May  1 19:36:14 2022",
             "iteration": 66,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 3,
+            "paths completed": 2,
+            "average path completed time": 50.3
         },
         {
-            "time": "Mon Apr 25 22:19:44 2022",
+            "time": "Sun May  1 19:36:20 2022",
             "iteration": 67,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 50.32
         },
         {
-            "time": "Mon Apr 25 22:19:51 2022",
+            "time": "Sun May  1 19:36:25 2022",
             "iteration": 68,
-            "collision": 1,
+            "collision": 3,
             "paths completed": 6,
-            "average path completed time": 119.94
+            "average path completed time": 47.55
         },
         {
-            "time": "Mon Apr 25 22:19:58 2022",
+            "time": "Sun May  1 19:36:31 2022",
             "iteration": 69,
             "collision": 2,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 35.03
         },
         {
-            "time": "Mon Apr 25 22:20:05 2022",
+            "time": "Sun May  1 19:36:36 2022",
             "iteration": 70,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 5,
+            "average path completed time": 32.5
         },
         {
-            "time": "Mon Apr 25 22:20:12 2022",
+            "time": "Sun May  1 19:36:42 2022",
             "iteration": 71,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 33.25
         },
         {
-            "time": "Mon Apr 25 22:20:19 2022",
+            "time": "Sun May  1 19:36:47 2022",
             "iteration": 72,
-            "collision": 1,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 43.67
         },
         {
-            "time": "Mon Apr 25 22:20:26 2022",
+            "time": "Sun May  1 19:36:53 2022",
             "iteration": 73,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 46.65
         },
         {
-            "time": "Mon Apr 25 22:20:34 2022",
+            "time": "Sun May  1 19:36:58 2022",
             "iteration": 74,
-            "collision": 1,
+            "collision": 0,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 35.47
         },
         {
-            "time": "Mon Apr 25 22:20:41 2022",
+            "time": "Sun May  1 19:37:04 2022",
             "iteration": 75,
             "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 32.1
         },
         {
-            "time": "Mon Apr 25 22:20:48 2022",
+            "time": "Sun May  1 19:37:09 2022",
             "iteration": 76,
             "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 52.96
         },
         {
-            "time": "Mon Apr 25 22:20:56 2022",
+            "time": "Sun May  1 19:37:15 2022",
             "iteration": 77,
-            "collision": 1,
+            "collision": 2,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 34.02
         },
         {
-            "time": "Mon Apr 25 22:21:02 2022",
+            "time": "Sun May  1 19:37:20 2022",
             "iteration": 78,
             "collision": 2,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:21:09 2022",
-            "iteration": 79,
-            "collision": 0,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 46.73
         },
         {
-            "time": "Mon Apr 25 22:21:16 2022",
+            "time": "Sun May  1 19:37:26 2022",
+            "iteration": 79,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 47.59
+        },
+        {
+            "time": "Sun May  1 19:37:31 2022",
             "iteration": 80,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 45.69
+        },
+        {
+            "time": "Sun May  1 19:37:37 2022",
+            "iteration": 81,
+            "collision": 0,
+            "paths completed": 6,
+            "average path completed time": 46.93
+        },
+        {
+            "time": "Sun May  1 19:37:42 2022",
+            "iteration": 82,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 52.27
         },
         {
-            "time": "Mon Apr 25 22:21:22 2022",
-            "iteration": 81,
-            "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:21:30 2022",
-            "iteration": 82,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:21:37 2022",
+            "time": "Sun May  1 19:37:48 2022",
             "iteration": 83,
             "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 35.68
         },
         {
-            "time": "Mon Apr 25 22:21:44 2022",
+            "time": "Sun May  1 19:37:53 2022",
             "iteration": 84,
-            "collision": 4,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:21:51 2022",
-            "iteration": 85,
-            "collision": 3,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:21:59 2022",
-            "iteration": 86,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:22:06 2022",
-            "iteration": 87,
-            "collision": 2,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:22:13 2022",
-            "iteration": 88,
-            "collision": 1,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:22:20 2022",
-            "iteration": 89,
             "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:22:27 2022",
-            "iteration": 90,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:22:34 2022",
-            "iteration": 91,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:22:41 2022",
-            "iteration": 92,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:22:49 2022",
-            "iteration": 93,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:22:55 2022",
-            "iteration": 94,
-            "collision": 3,
             "paths completed": 6,
-            "average path completed time": 119.94
+            "average path completed time": 38.71
         },
         {
-            "time": "Mon Apr 25 22:23:02 2022",
-            "iteration": 95,
+            "time": "Sun May  1 19:37:59 2022",
+            "iteration": 85,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 46.46
+        },
+        {
+            "time": "Sun May  1 19:38:04 2022",
+            "iteration": 86,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 48.61
+        },
+        {
+            "time": "Sun May  1 19:38:10 2022",
+            "iteration": 87,
             "collision": 0,
             "paths completed": 1,
-            "average path completed time": 119.94
+            "average path completed time": 24.77
         },
         {
-            "time": "Mon Apr 25 22:23:09 2022",
+            "time": "Sun May  1 19:38:15 2022",
+            "iteration": 88,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 23.34
+        },
+        {
+            "time": "Sun May  1 19:38:20 2022",
+            "iteration": 89,
+            "collision": 2,
+            "paths completed": 6,
+            "average path completed time": 32.99
+        },
+        {
+            "time": "Sun May  1 19:38:26 2022",
+            "iteration": 90,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 42.06
+        },
+        {
+            "time": "Sun May  1 19:38:31 2022",
+            "iteration": 91,
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 46.84
+        },
+        {
+            "time": "Sun May  1 19:38:37 2022",
+            "iteration": 92,
+            "collision": 3,
+            "paths completed": 2,
+            "average path completed time": 48.13
+        },
+        {
+            "time": "Sun May  1 19:38:42 2022",
+            "iteration": 93,
+            "collision": 2,
+            "paths completed": 6,
+            "average path completed time": 57.41
+        },
+        {
+            "time": "Sun May  1 19:38:47 2022",
+            "iteration": 94,
+            "collision": 0,
+            "paths completed": 6,
+            "average path completed time": 46.4
+        },
+        {
+            "time": "Sun May  1 19:38:53 2022",
+            "iteration": 95,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 47.08
+        },
+        {
+            "time": "Sun May  1 19:38:58 2022",
             "iteration": 96,
             "collision": 0,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 29.25
         },
         {
-            "time": "Mon Apr 25 22:23:16 2022",
+            "time": "Sun May  1 19:39:04 2022",
             "iteration": 97,
             "collision": 2,
-            "paths completed": 1,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 54.42
         },
         {
-            "time": "Mon Apr 25 22:23:24 2022",
+            "time": "Sun May  1 19:39:10 2022",
             "iteration": 98,
             "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:23:31 2022",
-            "iteration": 99,
-            "collision": 4,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:23:38 2022",
-            "iteration": 100,
-            "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:23:45 2022",
-            "iteration": 101,
-            "collision": 2,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 35.21
         },
         {
-            "time": "Mon Apr 25 22:23:52 2022",
+            "time": "Sun May  1 19:39:15 2022",
+            "iteration": 99,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 37.04
+        },
+        {
+            "time": "Sun May  1 19:39:21 2022",
+            "iteration": 100,
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 51.72
+        },
+        {
+            "time": "Sun May  1 19:39:26 2022",
+            "iteration": 101,
+            "collision": 0,
+            "paths completed": 6,
+            "average path completed time": 33.77
+        },
+        {
+            "time": "Sun May  1 19:39:31 2022",
             "iteration": 102,
             "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 43.98
         },
         {
-            "time": "Mon Apr 25 22:23:59 2022",
+            "time": "Sun May  1 19:39:37 2022",
             "iteration": 103,
             "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 36.82
         },
         {
-            "time": "Mon Apr 25 22:24:06 2022",
+            "time": "Sun May  1 19:39:42 2022",
             "iteration": 104,
-            "collision": 2,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 28.19
         },
         {
-            "time": "Mon Apr 25 22:24:13 2022",
+            "time": "Sun May  1 19:39:48 2022",
             "iteration": 105,
             "collision": 1,
-            "paths completed": 1,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 40.66
         },
         {
-            "time": "Mon Apr 25 22:24:20 2022",
+            "time": "Sun May  1 19:39:53 2022",
             "iteration": 106,
-            "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:24:27 2022",
-            "iteration": 107,
-            "collision": 3,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:24:34 2022",
-            "iteration": 108,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 40.95
         },
         {
-            "time": "Mon Apr 25 22:24:41 2022",
+            "time": "Sun May  1 19:39:58 2022",
+            "iteration": 107,
+            "collision": 0,
+            "paths completed": 5,
+            "average path completed time": 35.62
+        },
+        {
+            "time": "Sun May  1 19:40:04 2022",
+            "iteration": 108,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 30.27
+        },
+        {
+            "time": "Sun May  1 19:40:10 2022",
             "iteration": 109,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 31.8
         },
         {
-            "time": "Mon Apr 25 22:24:47 2022",
+            "time": "Sun May  1 19:40:15 2022",
             "iteration": 110,
-            "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:24:54 2022",
-            "iteration": 111,
-            "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:25:01 2022",
-            "iteration": 112,
-            "collision": 0,
+            "collision": 3,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 64.29
         },
         {
-            "time": "Mon Apr 25 22:25:08 2022",
-            "iteration": 113,
+            "time": "Sun May  1 19:40:21 2022",
+            "iteration": 111,
             "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 50.55
         },
         {
-            "time": "Mon Apr 25 22:25:15 2022",
+            "time": "Sun May  1 19:40:26 2022",
+            "iteration": 112,
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 35.68
+        },
+        {
+            "time": "Sun May  1 19:40:32 2022",
+            "iteration": 113,
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 44.18
+        },
+        {
+            "time": "Sun May  1 19:40:38 2022",
             "iteration": 114,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 33.45
         },
         {
-            "time": "Mon Apr 25 22:25:24 2022",
+            "time": "Sun May  1 19:40:43 2022",
             "iteration": 115,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 35.24
         },
         {
-            "time": "Mon Apr 25 22:25:30 2022",
+            "time": "Sun May  1 19:40:49 2022",
             "iteration": 116,
-            "collision": 3,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 5,
+            "average path completed time": 44.9
         },
         {
-            "time": "Mon Apr 25 22:25:37 2022",
+            "time": "Sun May  1 19:40:54 2022",
             "iteration": 117,
-            "collision": 2,
+            "collision": 3,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 36.13
         },
         {
-            "time": "Mon Apr 25 22:25:44 2022",
+            "time": "Sun May  1 19:41:00 2022",
             "iteration": 118,
-            "collision": 2,
+            "collision": 0,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 51.8
         },
         {
-            "time": "Mon Apr 25 22:25:51 2022",
+            "time": "Sun May  1 19:41:05 2022",
             "iteration": 119,
             "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:25:58 2022",
-            "iteration": 120,
-            "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 49.34
         },
         {
-            "time": "Mon Apr 25 22:26:05 2022",
-            "iteration": 121,
-            "collision": 2,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:26:12 2022",
-            "iteration": 122,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:26:20 2022",
-            "iteration": 123,
+            "time": "Sun May  1 19:41:11 2022",
+            "iteration": 120,
             "collision": 3,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 51.28
         },
         {
-            "time": "Mon Apr 25 22:26:29 2022",
-            "iteration": 124,
+            "time": "Sun May  1 19:41:16 2022",
+            "iteration": 121,
             "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 31.9
         },
         {
-            "time": "Mon Apr 25 22:26:37 2022",
-            "iteration": 125,
+            "time": "Sun May  1 19:41:22 2022",
+            "iteration": 122,
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 43.84
+        },
+        {
+            "time": "Sun May  1 19:41:27 2022",
+            "iteration": 123,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 38.09
+        },
+        {
+            "time": "Sun May  1 19:41:33 2022",
+            "iteration": 124,
             "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 43.57
         },
         {
-            "time": "Mon Apr 25 22:26:45 2022",
+            "time": "Sun May  1 19:41:38 2022",
+            "iteration": 125,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 50.54
+        },
+        {
+            "time": "Sun May  1 19:41:43 2022",
             "iteration": 126,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:26:53 2022",
-            "iteration": 127,
-            "collision": 1,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 32.6
         },
         {
-            "time": "Mon Apr 25 22:27:01 2022",
-            "iteration": 128,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:27:09 2022",
-            "iteration": 129,
+            "time": "Sun May  1 19:41:50 2022",
+            "iteration": 127,
             "collision": 2,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 32.09
         },
         {
-            "time": "Mon Apr 25 22:27:17 2022",
+            "time": "Sun May  1 19:41:56 2022",
+            "iteration": 128,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 49.03
+        },
+        {
+            "time": "Sun May  1 19:42:01 2022",
+            "iteration": 129,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 42.66
+        },
+        {
+            "time": "Sun May  1 19:42:07 2022",
             "iteration": 130,
-            "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 46.11
         },
         {
-            "time": "Mon Apr 25 22:27:25 2022",
+            "time": "Sun May  1 19:42:12 2022",
             "iteration": 131,
             "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 29.06
         },
         {
-            "time": "Mon Apr 25 22:27:33 2022",
+            "time": "Sun May  1 19:42:18 2022",
             "iteration": 132,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 38.54
         },
         {
-            "time": "Mon Apr 25 22:27:41 2022",
+            "time": "Sun May  1 19:42:24 2022",
             "iteration": 133,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 32.94
         },
         {
-            "time": "Mon Apr 25 22:27:49 2022",
+            "time": "Sun May  1 19:42:29 2022",
             "iteration": 134,
             "collision": 0,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 51.64
         },
         {
-            "time": "Mon Apr 25 22:27:57 2022",
+            "time": "Sun May  1 19:42:35 2022",
             "iteration": 135,
-            "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 33.7
         },
         {
-            "time": "Mon Apr 25 22:28:05 2022",
+            "time": "Sun May  1 19:42:41 2022",
             "iteration": 136,
-            "collision": 2,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 27.37
         },
         {
-            "time": "Mon Apr 25 22:28:12 2022",
+            "time": "Sun May  1 19:42:47 2022",
             "iteration": 137,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:28:20 2022",
-            "iteration": 138,
-            "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:28:28 2022",
-            "iteration": 139,
             "collision": 1,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 31.97
         },
         {
-            "time": "Mon Apr 25 22:28:36 2022",
-            "iteration": 140,
+            "time": "Sun May  1 19:42:52 2022",
+            "iteration": 138,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 20.48
         },
         {
-            "time": "Mon Apr 25 22:28:46 2022",
+            "time": "Sun May  1 19:42:59 2022",
+            "iteration": 139,
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 37.29
+        },
+        {
+            "time": "Sun May  1 19:43:04 2022",
+            "iteration": 140,
+            "collision": 0,
+            "paths completed": 5,
+            "average path completed time": 45.31
+        },
+        {
+            "time": "Sun May  1 19:43:09 2022",
             "iteration": 141,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 47.9
         },
         {
-            "time": "Mon Apr 25 22:28:54 2022",
+            "time": "Sun May  1 19:43:15 2022",
             "iteration": 142,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 52.21
         },
         {
-            "time": "Mon Apr 25 22:29:02 2022",
+            "time": "Sun May  1 19:43:21 2022",
             "iteration": 143,
-            "collision": 4,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:29:10 2022",
-            "iteration": 144,
-            "collision": 1,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:29:19 2022",
-            "iteration": 145,
             "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 59.54
         },
         {
-            "time": "Mon Apr 25 22:29:27 2022",
+            "time": "Sun May  1 19:43:26 2022",
+            "iteration": 144,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 30.27
+        },
+        {
+            "time": "Sun May  1 19:43:31 2022",
+            "iteration": 145,
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 40.44
+        },
+        {
+            "time": "Sun May  1 19:43:37 2022",
             "iteration": 146,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 38.04
         },
         {
-            "time": "Mon Apr 25 22:29:35 2022",
+            "time": "Sun May  1 19:43:42 2022",
             "iteration": 147,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 49.52
         },
         {
-            "time": "Mon Apr 25 22:29:43 2022",
+            "time": "Sun May  1 19:43:48 2022",
             "iteration": 148,
-            "collision": 0,
+            "collision": 2,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 27.02
         },
         {
-            "time": "Mon Apr 25 22:29:51 2022",
+            "time": "Sun May  1 19:43:53 2022",
             "iteration": 149,
             "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 50.19
         },
         {
-            "time": "Mon Apr 25 22:30:01 2022",
+            "time": "Sun May  1 19:43:59 2022",
             "iteration": 150,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 45.33
         },
         {
-            "time": "Mon Apr 25 22:30:09 2022",
+            "time": "Sun May  1 19:44:04 2022",
             "iteration": 151,
             "collision": 0,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:30:17 2022",
-            "iteration": 152,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:30:25 2022",
-            "iteration": 153,
-            "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:30:32 2022",
-            "iteration": 154,
-            "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:30:41 2022",
-            "iteration": 155,
-            "collision": 2,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:30:48 2022",
-            "iteration": 156,
-            "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:30:56 2022",
-            "iteration": 157,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:31:04 2022",
-            "iteration": 158,
-            "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:31:11 2022",
-            "iteration": 159,
-            "collision": 2,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:31:19 2022",
-            "iteration": 160,
-            "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 26.86
         },
         {
-            "time": "Mon Apr 25 22:31:27 2022",
-            "iteration": 161,
+            "time": "Sun May  1 19:44:10 2022",
+            "iteration": 152,
             "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 47.59
         },
         {
-            "time": "Mon Apr 25 22:31:36 2022",
-            "iteration": 162,
-            "collision": 3,
+            "time": "Sun May  1 19:44:16 2022",
+            "iteration": 153,
+            "collision": 2,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 66.03
         },
         {
-            "time": "Mon Apr 25 22:31:44 2022",
+            "time": "Sun May  1 19:44:21 2022",
+            "iteration": 154,
+            "collision": 3,
+            "paths completed": 5,
+            "average path completed time": 41.38
+        },
+        {
+            "time": "Sun May  1 19:44:27 2022",
+            "iteration": 155,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 33.73
+        },
+        {
+            "time": "Sun May  1 19:44:33 2022",
+            "iteration": 156,
+            "collision": 2,
+            "paths completed": 1,
+            "average path completed time": 51.26
+        },
+        {
+            "time": "Sun May  1 19:44:38 2022",
+            "iteration": 157,
+            "collision": 2,
+            "paths completed": 6,
+            "average path completed time": 39.56
+        },
+        {
+            "time": "Sun May  1 19:44:44 2022",
+            "iteration": 158,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 47.47
+        },
+        {
+            "time": "Sun May  1 19:44:49 2022",
+            "iteration": 159,
+            "collision": 4,
+            "paths completed": 4,
+            "average path completed time": 42.27
+        },
+        {
+            "time": "Sun May  1 19:44:55 2022",
+            "iteration": 160,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 45.3
+        },
+        {
+            "time": "Sun May  1 19:45:00 2022",
+            "iteration": 161,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 48.11
+        },
+        {
+            "time": "Sun May  1 19:45:05 2022",
+            "iteration": 162,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 31.96
+        },
+        {
+            "time": "Sun May  1 19:45:10 2022",
             "iteration": 163,
             "collision": 0,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 46.1
         },
         {
-            "time": "Mon Apr 25 22:31:52 2022",
+            "time": "Sun May  1 19:45:16 2022",
             "iteration": 164,
             "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 39.85
         },
         {
-            "time": "Mon Apr 25 22:32:00 2022",
+            "time": "Sun May  1 19:45:21 2022",
             "iteration": 165,
             "collision": 2,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 38.74
         },
         {
-            "time": "Mon Apr 25 22:32:08 2022",
+            "time": "Sun May  1 19:45:26 2022",
             "iteration": 166,
             "collision": 1,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 36.45
         },
         {
-            "time": "Mon Apr 25 22:32:16 2022",
+            "time": "Sun May  1 19:45:31 2022",
             "iteration": 167,
             "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 40.15
         },
         {
-            "time": "Mon Apr 25 22:32:25 2022",
+            "time": "Sun May  1 19:45:36 2022",
             "iteration": 168,
+            "collision": 0,
+            "paths completed": 5,
+            "average path completed time": 35.87
+        },
+        {
+            "time": "Sun May  1 19:45:41 2022",
+            "iteration": 169,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 39.9
+        },
+        {
+            "time": "Sun May  1 19:45:47 2022",
+            "iteration": 170,
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 30.29
+        },
+        {
+            "time": "Sun May  1 19:45:52 2022",
+            "iteration": 171,
             "collision": 2,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 37.17
         },
         {
-            "time": "Mon Apr 25 22:32:33 2022",
-            "iteration": 169,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:32:41 2022",
-            "iteration": 170,
-            "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:32:49 2022",
-            "iteration": 171,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:32:57 2022",
+            "time": "Sun May  1 19:45:57 2022",
             "iteration": 172,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 49.1
         },
         {
-            "time": "Mon Apr 25 22:33:05 2022",
+            "time": "Sun May  1 19:46:03 2022",
             "iteration": 173,
-            "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:33:15 2022",
-            "iteration": 174,
-            "collision": 2,
+            "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 34.72
         },
         {
-            "time": "Mon Apr 25 22:33:23 2022",
-            "iteration": 175,
-            "collision": 2,
+            "time": "Sun May  1 19:46:08 2022",
+            "iteration": 174,
+            "collision": 3,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 44.04
         },
         {
-            "time": "Mon Apr 25 22:33:31 2022",
+            "time": "Sun May  1 19:46:13 2022",
+            "iteration": 175,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 52.18
+        },
+        {
+            "time": "Sun May  1 19:46:18 2022",
             "iteration": 176,
             "collision": 3,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 41.12
         },
         {
-            "time": "Mon Apr 25 22:33:40 2022",
+            "time": "Sun May  1 19:46:23 2022",
             "iteration": 177,
-            "collision": 3,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 39.63
         },
         {
-            "time": "Mon Apr 25 22:33:49 2022",
+            "time": "Sun May  1 19:46:28 2022",
             "iteration": 178,
             "collision": 1,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:33:56 2022",
-            "iteration": 179,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:34:02 2022",
-            "iteration": 180,
-            "collision": 2,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 44.63
         },
         {
-            "time": "Mon Apr 25 22:34:09 2022",
+            "time": "Sun May  1 19:46:34 2022",
+            "iteration": 179,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 41.7
+        },
+        {
+            "time": "Sun May  1 19:46:40 2022",
+            "iteration": 180,
+            "collision": 5,
+            "paths completed": 2,
+            "average path completed time": 79.73
+        },
+        {
+            "time": "Sun May  1 19:46:45 2022",
             "iteration": 181,
-            "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 22.01
         },
         {
-            "time": "Mon Apr 25 22:34:16 2022",
+            "time": "Sun May  1 19:46:50 2022",
             "iteration": 182,
             "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 58.46
         },
         {
-            "time": "Mon Apr 25 22:34:22 2022",
+            "time": "Sun May  1 19:46:56 2022",
             "iteration": 183,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 50.48
         },
         {
-            "time": "Mon Apr 25 22:34:29 2022",
+            "time": "Sun May  1 19:47:01 2022",
             "iteration": 184,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 45.3
         },
         {
-            "time": "Mon Apr 25 22:34:36 2022",
+            "time": "Sun May  1 19:47:06 2022",
             "iteration": 185,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:34:43 2022",
-            "iteration": 186,
-            "collision": 2,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:34:51 2022",
-            "iteration": 187,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:34:59 2022",
-            "iteration": 188,
-            "collision": 3,
+            "collision": 0,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 28.38
         },
         {
-            "time": "Mon Apr 25 22:35:07 2022",
-            "iteration": 189,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:35:14 2022",
-            "iteration": 190,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:35:21 2022",
-            "iteration": 191,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:35:29 2022",
-            "iteration": 192,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:35:35 2022",
-            "iteration": 193,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:35:42 2022",
-            "iteration": 194,
+            "time": "Sun May  1 19:47:11 2022",
+            "iteration": 186,
             "collision": 0,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 46.12
         },
         {
-            "time": "Mon Apr 25 22:35:49 2022",
+            "time": "Sun May  1 19:47:16 2022",
+            "iteration": 187,
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 41.37
+        },
+        {
+            "time": "Sun May  1 19:47:21 2022",
+            "iteration": 188,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 29.46
+        },
+        {
+            "time": "Sun May  1 19:47:27 2022",
+            "iteration": 189,
+            "collision": 0,
+            "paths completed": 5,
+            "average path completed time": 45.87
+        },
+        {
+            "time": "Sun May  1 19:47:32 2022",
+            "iteration": 190,
+            "collision": 2,
+            "paths completed": 6,
+            "average path completed time": 46.15
+        },
+        {
+            "time": "Sun May  1 19:47:37 2022",
+            "iteration": 191,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 42.35
+        },
+        {
+            "time": "Sun May  1 19:47:42 2022",
+            "iteration": 192,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 28.05
+        },
+        {
+            "time": "Sun May  1 19:47:47 2022",
+            "iteration": 193,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 49.16
+        },
+        {
+            "time": "Sun May  1 19:47:52 2022",
+            "iteration": 194,
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 43.21
+        },
+        {
+            "time": "Sun May  1 19:47:57 2022",
             "iteration": 195,
             "collision": 0,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 39.84
         },
         {
-            "time": "Mon Apr 25 22:35:56 2022",
+            "time": "Sun May  1 19:48:02 2022",
             "iteration": 196,
-            "collision": 2,
+            "collision": 1,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 27.56
         },
         {
-            "time": "Mon Apr 25 22:36:02 2022",
+            "time": "Sun May  1 19:48:07 2022",
             "iteration": 197,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 31.39
         },
         {
-            "time": "Mon Apr 25 22:36:09 2022",
+            "time": "Sun May  1 19:48:12 2022",
             "iteration": 198,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 37.91
         },
         {
-            "time": "Mon Apr 25 22:36:17 2022",
+            "time": "Sun May  1 19:48:18 2022",
             "iteration": 199,
             "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 28.01
         },
         {
-            "time": "Mon Apr 25 22:36:24 2022",
+            "time": "Sun May  1 19:48:23 2022",
             "iteration": 200,
-            "collision": 3,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 6,
+            "average path completed time": 56.02
         },
         {
-            "time": "Mon Apr 25 22:36:31 2022",
+            "time": "Sun May  1 19:48:28 2022",
             "iteration": 201,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 32.52
+        },
+        {
+            "time": "Sun May  1 19:48:33 2022",
+            "iteration": 202,
             "collision": 0,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 32.13
         },
         {
-            "time": "Mon Apr 25 22:36:38 2022",
-            "iteration": 202,
-            "collision": 2,
-            "paths completed": 1,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:36:46 2022",
+            "time": "Sun May  1 19:48:39 2022",
             "iteration": 203,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 3,
+            "paths completed": 5,
+            "average path completed time": 59.33
         },
         {
-            "time": "Mon Apr 25 22:36:52 2022",
+            "time": "Sun May  1 19:48:43 2022",
             "iteration": 204,
             "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 37.32
         },
         {
-            "time": "Mon Apr 25 22:37:00 2022",
+            "time": "Sun May  1 19:48:49 2022",
             "iteration": 205,
-            "collision": 1,
+            "collision": 4,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 46.73
         },
         {
-            "time": "Mon Apr 25 22:37:06 2022",
+            "time": "Sun May  1 19:48:54 2022",
             "iteration": 206,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 30.76
         },
         {
-            "time": "Mon Apr 25 22:37:14 2022",
+            "time": "Sun May  1 19:48:59 2022",
             "iteration": 207,
-            "collision": 1,
-            "paths completed": 1,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 31.67
         },
         {
-            "time": "Mon Apr 25 22:37:21 2022",
+            "time": "Sun May  1 19:49:05 2022",
             "iteration": 208,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:37:28 2022",
-            "iteration": 209,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:37:35 2022",
-            "iteration": 210,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:37:42 2022",
-            "iteration": 211,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:37:49 2022",
-            "iteration": 212,
-            "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:37:56 2022",
-            "iteration": 213,
-            "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:38:03 2022",
-            "iteration": 214,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:38:10 2022",
-            "iteration": 215,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:38:17 2022",
-            "iteration": 216,
-            "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:38:24 2022",
-            "iteration": 217,
-            "collision": 5,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:38:31 2022",
-            "iteration": 218,
-            "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:38:38 2022",
-            "iteration": 219,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:38:44 2022",
-            "iteration": 220,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:38:51 2022",
-            "iteration": 221,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:38:58 2022",
-            "iteration": 222,
-            "collision": 0,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:39:05 2022",
-            "iteration": 223,
-            "collision": 3,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:39:12 2022",
-            "iteration": 224,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:39:19 2022",
-            "iteration": 225,
-            "collision": 3,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:39:27 2022",
-            "iteration": 226,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:39:34 2022",
-            "iteration": 227,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:39:41 2022",
-            "iteration": 228,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:39:48 2022",
-            "iteration": 229,
-            "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:39:56 2022",
-            "iteration": 230,
             "collision": 4,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 52.3
         },
         {
-            "time": "Mon Apr 25 22:40:03 2022",
+            "time": "Sun May  1 19:49:10 2022",
+            "iteration": 209,
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 42.22
+        },
+        {
+            "time": "Sun May  1 19:49:15 2022",
+            "iteration": 210,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 39.46
+        },
+        {
+            "time": "Sun May  1 19:49:20 2022",
+            "iteration": 211,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 38.91
+        },
+        {
+            "time": "Sun May  1 19:49:25 2022",
+            "iteration": 212,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 36.54
+        },
+        {
+            "time": "Sun May  1 19:49:30 2022",
+            "iteration": 213,
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 44.89
+        },
+        {
+            "time": "Sun May  1 19:49:36 2022",
+            "iteration": 214,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 36.54
+        },
+        {
+            "time": "Sun May  1 19:49:41 2022",
+            "iteration": 215,
+            "collision": 0,
+            "paths completed": 1,
+            "average path completed time": 24.77
+        },
+        {
+            "time": "Sun May  1 19:49:47 2022",
+            "iteration": 216,
+            "collision": 0,
+            "paths completed": 2,
+            "average path completed time": 51.58
+        },
+        {
+            "time": "Sun May  1 19:49:52 2022",
+            "iteration": 217,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 47.99
+        },
+        {
+            "time": "Sun May  1 19:49:57 2022",
+            "iteration": 218,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 36.96
+        },
+        {
+            "time": "Sun May  1 19:50:03 2022",
+            "iteration": 219,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 45.29
+        },
+        {
+            "time": "Sun May  1 19:50:08 2022",
+            "iteration": 220,
+            "collision": 5,
+            "paths completed": 3,
+            "average path completed time": 40.62
+        },
+        {
+            "time": "Sun May  1 19:50:13 2022",
+            "iteration": 221,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 43.88
+        },
+        {
+            "time": "Sun May  1 19:50:18 2022",
+            "iteration": 222,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 37.97
+        },
+        {
+            "time": "Sun May  1 19:50:24 2022",
+            "iteration": 223,
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 40.77
+        },
+        {
+            "time": "Sun May  1 19:50:30 2022",
+            "iteration": 224,
+            "collision": 3,
+            "paths completed": 2,
+            "average path completed time": 82.02
+        },
+        {
+            "time": "Sun May  1 19:50:35 2022",
+            "iteration": 225,
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 36.86
+        },
+        {
+            "time": "Sun May  1 19:50:40 2022",
+            "iteration": 226,
+            "collision": 2,
+            "paths completed": 5,
+            "average path completed time": 39.29
+        },
+        {
+            "time": "Sun May  1 19:50:45 2022",
+            "iteration": 227,
+            "collision": 2,
+            "paths completed": 5,
+            "average path completed time": 51.7
+        },
+        {
+            "time": "Sun May  1 19:50:50 2022",
+            "iteration": 228,
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 48.2
+        },
+        {
+            "time": "Sun May  1 19:50:55 2022",
+            "iteration": 229,
+            "collision": 0,
+            "paths completed": 5,
+            "average path completed time": 45.89
+        },
+        {
+            "time": "Sun May  1 19:51:01 2022",
+            "iteration": 230,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 40.53
+        },
+        {
+            "time": "Sun May  1 19:51:06 2022",
             "iteration": 231,
             "collision": 1,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:40:10 2022",
-            "iteration": 232,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:40:17 2022",
-            "iteration": 233,
-            "collision": 2,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 42.94
         },
         {
-            "time": "Mon Apr 25 22:40:24 2022",
+            "time": "Sun May  1 19:51:11 2022",
+            "iteration": 232,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 51.34
+        },
+        {
+            "time": "Sun May  1 19:51:16 2022",
+            "iteration": 233,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 34.74
+        },
+        {
+            "time": "Sun May  1 19:51:22 2022",
             "iteration": 234,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 49.56
         },
         {
-            "time": "Mon Apr 25 22:40:31 2022",
+            "time": "Sun May  1 19:51:27 2022",
             "iteration": 235,
-            "collision": 0,
+            "collision": 1,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 30.5
         },
         {
-            "time": "Mon Apr 25 22:40:38 2022",
+            "time": "Sun May  1 19:51:32 2022",
             "iteration": 236,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:40:46 2022",
-            "iteration": 237,
             "collision": 2,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 53.09
         },
         {
-            "time": "Mon Apr 25 22:40:53 2022",
-            "iteration": 238,
+            "time": "Sun May  1 19:51:37 2022",
+            "iteration": 237,
             "collision": 0,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 54.48
         },
         {
-            "time": "Mon Apr 25 22:41:00 2022",
+            "time": "Sun May  1 19:51:43 2022",
+            "iteration": 238,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 50.55
+        },
+        {
+            "time": "Sun May  1 19:51:48 2022",
             "iteration": 239,
-            "collision": 1,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:41:06 2022",
-            "iteration": 240,
             "collision": 2,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:41:13 2022",
-            "iteration": 241,
-            "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 53.11
         },
         {
-            "time": "Mon Apr 25 22:41:20 2022",
+            "time": "Sun May  1 19:51:53 2022",
+            "iteration": 240,
+            "collision": 5,
+            "paths completed": 3,
+            "average path completed time": 34.2
+        },
+        {
+            "time": "Sun May  1 19:51:59 2022",
+            "iteration": 241,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 58.5
+        },
+        {
+            "time": "Sun May  1 19:52:04 2022",
             "iteration": 242,
-            "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:41:27 2022",
-            "iteration": 243,
-            "collision": 2,
+            "collision": 3,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 55.97
         },
         {
-            "time": "Mon Apr 25 22:41:34 2022",
+            "time": "Sun May  1 19:52:09 2022",
+            "iteration": 243,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 55.0
+        },
+        {
+            "time": "Sun May  1 19:52:14 2022",
             "iteration": 244,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 24.84
+        },
+        {
+            "time": "Sun May  1 19:52:20 2022",
+            "iteration": 245,
             "collision": 2,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 34.35
         },
         {
-            "time": "Mon Apr 25 22:41:41 2022",
-            "iteration": 245,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:41:49 2022",
+            "time": "Sun May  1 19:52:24 2022",
             "iteration": 246,
             "collision": 3,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 43.04
         },
         {
-            "time": "Mon Apr 25 22:41:56 2022",
+            "time": "Sun May  1 19:52:30 2022",
             "iteration": 247,
-            "collision": 1,
+            "collision": 0,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 36.25
         },
         {
-            "time": "Mon Apr 25 22:42:04 2022",
+            "time": "Sun May  1 19:52:35 2022",
             "iteration": 248,
+            "collision": 4,
+            "paths completed": 2,
+            "average path completed time": 35.66
+        },
+        {
+            "time": "Sun May  1 19:52:41 2022",
+            "iteration": 249,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 44.25
+        },
+        {
+            "time": "Sun May  1 19:52:47 2022",
+            "iteration": 250,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 29.65
+        },
+        {
+            "time": "Sun May  1 19:52:52 2022",
+            "iteration": 251,
             "collision": 2,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 35.01
         },
         {
-            "time": "Mon Apr 25 22:42:11 2022",
-            "iteration": 249,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:42:19 2022",
-            "iteration": 250,
-            "collision": 3,
-            "paths completed": 1,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:42:26 2022",
-            "iteration": 251,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:42:33 2022",
+            "time": "Sun May  1 19:52:57 2022",
             "iteration": 252,
-            "collision": 1,
+            "collision": 2,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 34.93
         },
         {
-            "time": "Mon Apr 25 22:42:40 2022",
+            "time": "Sun May  1 19:53:02 2022",
             "iteration": 253,
-            "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 36.78
         },
         {
-            "time": "Mon Apr 25 22:42:47 2022",
+            "time": "Sun May  1 19:53:07 2022",
             "iteration": 254,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 27.76
         },
         {
-            "time": "Mon Apr 25 22:42:55 2022",
+            "time": "Sun May  1 19:53:12 2022",
             "iteration": 255,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 45.48
         },
         {
-            "time": "Mon Apr 25 22:43:02 2022",
+            "time": "Sun May  1 19:53:17 2022",
             "iteration": 256,
-            "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 44.87
         },
         {
-            "time": "Mon Apr 25 22:43:09 2022",
+            "time": "Sun May  1 19:53:23 2022",
             "iteration": 257,
+            "collision": 3,
+            "paths completed": 5,
+            "average path completed time": 35.89
+        },
+        {
+            "time": "Sun May  1 19:53:28 2022",
+            "iteration": 258,
+            "collision": 0,
+            "paths completed": 5,
+            "average path completed time": 34.32
+        },
+        {
+            "time": "Sun May  1 19:53:33 2022",
+            "iteration": 259,
+            "collision": 0,
+            "paths completed": 5,
+            "average path completed time": 37.96
+        },
+        {
+            "time": "Sun May  1 19:53:38 2022",
+            "iteration": 260,
             "collision": 2,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 51.54
         },
         {
-            "time": "Mon Apr 25 22:43:17 2022",
-            "iteration": 258,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:43:24 2022",
-            "iteration": 259,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:43:31 2022",
-            "iteration": 260,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:43:39 2022",
+            "time": "Sun May  1 19:53:43 2022",
             "iteration": 261,
-            "collision": 1,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "collision": 0,
+            "paths completed": 1,
+            "average path completed time": 31.94
         },
         {
-            "time": "Mon Apr 25 22:43:47 2022",
+            "time": "Sun May  1 19:53:48 2022",
             "iteration": 262,
-            "collision": 1,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:43:54 2022",
-            "iteration": 263,
             "collision": 0,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 40.14
         },
         {
-            "time": "Mon Apr 25 22:44:02 2022",
-            "iteration": 264,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:44:09 2022",
-            "iteration": 265,
-            "collision": 2,
+            "time": "Sun May  1 19:53:54 2022",
+            "iteration": 263,
+            "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 56.07
         },
         {
-            "time": "Mon Apr 25 22:44:16 2022",
+            "time": "Sun May  1 19:53:59 2022",
+            "iteration": 264,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 60.0
+        },
+        {
+            "time": "Sun May  1 19:54:04 2022",
+            "iteration": 265,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 36.73
+        },
+        {
+            "time": "Sun May  1 19:54:09 2022",
             "iteration": 266,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 30.54
         },
         {
-            "time": "Mon Apr 25 22:44:24 2022",
+            "time": "Sun May  1 19:54:14 2022",
             "iteration": 267,
-            "collision": 5,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:44:31 2022",
-            "iteration": 268,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 46.31
         },
         {
-            "time": "Mon Apr 25 22:44:38 2022",
+            "time": "Sun May  1 19:54:20 2022",
+            "iteration": 268,
+            "collision": 2,
+            "paths completed": 5,
+            "average path completed time": 58.6
+        },
+        {
+            "time": "Sun May  1 19:54:25 2022",
             "iteration": 269,
             "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 43.11
         },
         {
-            "time": "Mon Apr 25 22:44:45 2022",
+            "time": "Sun May  1 19:54:30 2022",
             "iteration": 270,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 17.79
         },
         {
-            "time": "Mon Apr 25 22:44:53 2022",
+            "time": "Sun May  1 19:54:35 2022",
             "iteration": 271,
             "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 46.49
         },
         {
-            "time": "Mon Apr 25 22:45:01 2022",
+            "time": "Sun May  1 19:54:41 2022",
             "iteration": 272,
-            "collision": 2,
+            "collision": 4,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 54.1
         },
         {
-            "time": "Mon Apr 25 22:45:08 2022",
+            "time": "Sun May  1 19:54:46 2022",
             "iteration": 273,
             "collision": 0,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:45:16 2022",
-            "iteration": 274,
-            "collision": 4,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:45:23 2022",
-            "iteration": 275,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:45:31 2022",
-            "iteration": 276,
-            "collision": 0,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 29.42
         },
         {
-            "time": "Mon Apr 25 22:45:38 2022",
-            "iteration": 277,
+            "time": "Sun May  1 19:54:51 2022",
+            "iteration": 274,
             "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 36.6
         },
         {
-            "time": "Mon Apr 25 22:45:45 2022",
-            "iteration": 278,
+            "time": "Sun May  1 19:54:56 2022",
+            "iteration": 275,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 49.79
+        },
+        {
+            "time": "Sun May  1 19:55:02 2022",
+            "iteration": 276,
             "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 49.0
         },
         {
-            "time": "Mon Apr 25 22:45:53 2022",
-            "iteration": 279,
+            "time": "Sun May  1 19:55:07 2022",
+            "iteration": 277,
+            "collision": 2,
+            "paths completed": 2,
+            "average path completed time": 46.72
+        },
+        {
+            "time": "Sun May  1 19:55:13 2022",
+            "iteration": 278,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 53.69
         },
         {
-            "time": "Mon Apr 25 22:46:00 2022",
+            "time": "Sun May  1 19:55:18 2022",
+            "iteration": 279,
+            "collision": 4,
+            "paths completed": 3,
+            "average path completed time": 36.84
+        },
+        {
+            "time": "Sun May  1 19:55:23 2022",
             "iteration": 280,
             "collision": 0,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 41.64
         },
         {
-            "time": "Mon Apr 25 22:46:07 2022",
+            "time": "Sun May  1 19:55:28 2022",
             "iteration": 281,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:46:14 2022",
-            "iteration": 282,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:46:22 2022",
-            "iteration": 283,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:46:31 2022",
-            "iteration": 284,
             "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 59.24
         },
         {
-            "time": "Mon Apr 25 22:46:38 2022",
+            "time": "Sun May  1 19:55:33 2022",
+            "iteration": 282,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 32.58
+        },
+        {
+            "time": "Sun May  1 19:55:39 2022",
+            "iteration": 283,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 45.43
+        },
+        {
+            "time": "Sun May  1 19:55:44 2022",
+            "iteration": 284,
+            "collision": 4,
+            "paths completed": 4,
+            "average path completed time": 48.02
+        },
+        {
+            "time": "Sun May  1 19:55:50 2022",
             "iteration": 285,
             "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 33.13
         },
         {
-            "time": "Mon Apr 25 22:46:45 2022",
+            "time": "Sun May  1 19:55:55 2022",
             "iteration": 286,
             "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 44.5
         },
         {
-            "time": "Mon Apr 25 22:46:52 2022",
+            "time": "Sun May  1 19:56:00 2022",
             "iteration": 287,
-            "collision": 2,
+            "collision": 0,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 42.72
         },
         {
-            "time": "Mon Apr 25 22:46:59 2022",
+            "time": "Sun May  1 19:56:05 2022",
             "iteration": 288,
-            "collision": 2,
+            "collision": 1,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 38.55
         },
         {
-            "time": "Mon Apr 25 22:47:06 2022",
+            "time": "Sun May  1 19:56:11 2022",
             "iteration": 289,
             "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 20.72
         },
         {
-            "time": "Mon Apr 25 22:47:13 2022",
+            "time": "Sun May  1 19:56:16 2022",
             "iteration": 290,
             "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 31.65
         },
         {
-            "time": "Mon Apr 25 22:47:20 2022",
+            "time": "Sun May  1 19:56:22 2022",
             "iteration": 291,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 4,
+            "paths completed": 2,
+            "average path completed time": 41.9
         },
         {
-            "time": "Mon Apr 25 22:47:27 2022",
+            "time": "Sun May  1 19:56:27 2022",
             "iteration": 292,
             "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 45.69
         },
         {
-            "time": "Mon Apr 25 22:47:34 2022",
+            "time": "Sun May  1 19:56:32 2022",
             "iteration": 293,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 0,
+            "paths completed": 2,
+            "average path completed time": 23.01
         },
         {
-            "time": "Mon Apr 25 22:47:41 2022",
+            "time": "Sun May  1 19:56:37 2022",
             "iteration": 294,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 50.67
         },
         {
-            "time": "Mon Apr 25 22:47:48 2022",
+            "time": "Sun May  1 19:56:43 2022",
             "iteration": 295,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 34.93
         },
         {
-            "time": "Mon Apr 25 22:47:56 2022",
+            "time": "Sun May  1 19:56:48 2022",
             "iteration": 296,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 40.79
         },
         {
-            "time": "Mon Apr 25 22:48:03 2022",
+            "time": "Sun May  1 19:56:53 2022",
             "iteration": 297,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:48:10 2022",
-            "iteration": 298,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:48:17 2022",
-            "iteration": 299,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:48:24 2022",
-            "iteration": 300,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:48:32 2022",
-            "iteration": 301,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:48:39 2022",
-            "iteration": 302,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:48:46 2022",
-            "iteration": 303,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:48:53 2022",
-            "iteration": 304,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:49:01 2022",
-            "iteration": 305,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:49:08 2022",
-            "iteration": 306,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:49:17 2022",
-            "iteration": 307,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:49:24 2022",
-            "iteration": 308,
             "collision": 1,
             "paths completed": 6,
-            "average path completed time": 119.94
+            "average path completed time": 37.32
         },
         {
-            "time": "Mon Apr 25 22:49:31 2022",
-            "iteration": 309,
+            "time": "Sun May  1 19:56:58 2022",
+            "iteration": 298,
             "collision": 0,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 41.08
         },
         {
-            "time": "Mon Apr 25 22:49:38 2022",
+            "time": "Sun May  1 19:57:03 2022",
+            "iteration": 299,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 46.81
+        },
+        {
+            "time": "Sun May  1 19:57:08 2022",
+            "iteration": 300,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 34.99
+        },
+        {
+            "time": "Sun May  1 19:57:14 2022",
+            "iteration": 301,
+            "collision": 3,
+            "paths completed": 2,
+            "average path completed time": 34.56
+        },
+        {
+            "time": "Sun May  1 19:57:19 2022",
+            "iteration": 302,
+            "collision": 0,
+            "paths completed": 6,
+            "average path completed time": 39.69
+        },
+        {
+            "time": "Sun May  1 19:57:24 2022",
+            "iteration": 303,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 49.49
+        },
+        {
+            "time": "Sun May  1 19:57:29 2022",
+            "iteration": 304,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 39.03
+        },
+        {
+            "time": "Sun May  1 19:57:34 2022",
+            "iteration": 305,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 22.76
+        },
+        {
+            "time": "Sun May  1 19:57:39 2022",
+            "iteration": 306,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 49.9
+        },
+        {
+            "time": "Sun May  1 19:57:45 2022",
+            "iteration": 307,
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 47.65
+        },
+        {
+            "time": "Sun May  1 19:57:50 2022",
+            "iteration": 308,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 28.33
+        },
+        {
+            "time": "Sun May  1 19:57:55 2022",
+            "iteration": 309,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 45.45
+        },
+        {
+            "time": "Sun May  1 19:58:00 2022",
             "iteration": 310,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 68.68
         },
         {
-            "time": "Mon Apr 25 22:49:45 2022",
+            "time": "Sun May  1 19:58:06 2022",
             "iteration": 311,
             "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:49:52 2022",
-            "iteration": 312,
-            "collision": 3,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:50:00 2022",
-            "iteration": 313,
-            "collision": 2,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 31.66
         },
         {
-            "time": "Mon Apr 25 22:50:06 2022",
+            "time": "Sun May  1 19:58:11 2022",
+            "iteration": 312,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 31.14
+        },
+        {
+            "time": "Sun May  1 19:58:16 2022",
+            "iteration": 313,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 36.06
+        },
+        {
+            "time": "Sun May  1 19:58:21 2022",
             "iteration": 314,
             "collision": 1,
-            "paths completed": 1,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:50:14 2022",
-            "iteration": 315,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:50:21 2022",
-            "iteration": 316,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:50:28 2022",
-            "iteration": 317,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:50:35 2022",
-            "iteration": 318,
-            "collision": 3,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 36.59
         },
         {
-            "time": "Mon Apr 25 22:50:42 2022",
+            "time": "Sun May  1 19:58:26 2022",
+            "iteration": 315,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 54.74
+        },
+        {
+            "time": "Sun May  1 19:58:32 2022",
+            "iteration": 316,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 48.89
+        },
+        {
+            "time": "Sun May  1 19:58:37 2022",
+            "iteration": 317,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 31.62
+        },
+        {
+            "time": "Sun May  1 19:58:42 2022",
+            "iteration": 318,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 30.4
+        },
+        {
+            "time": "Sun May  1 19:58:47 2022",
             "iteration": 319,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 37.09
         },
         {
-            "time": "Mon Apr 25 22:50:48 2022",
+            "time": "Sun May  1 19:58:52 2022",
             "iteration": 320,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:50:55 2022",
-            "iteration": 321,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:51:02 2022",
-            "iteration": 322,
-            "collision": 4,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:51:09 2022",
-            "iteration": 323,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:51:16 2022",
-            "iteration": 324,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:51:23 2022",
-            "iteration": 325,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:51:30 2022",
-            "iteration": 326,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:51:38 2022",
-            "iteration": 327,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:51:45 2022",
-            "iteration": 328,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:51:52 2022",
-            "iteration": 329,
             "collision": 0,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 33.57
         },
         {
-            "time": "Mon Apr 25 22:51:58 2022",
+            "time": "Sun May  1 19:58:57 2022",
+            "iteration": 321,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 40.86
+        },
+        {
+            "time": "Sun May  1 19:59:02 2022",
+            "iteration": 322,
+            "collision": 0,
+            "paths completed": 6,
+            "average path completed time": 44.61
+        },
+        {
+            "time": "Sun May  1 19:59:07 2022",
+            "iteration": 323,
+            "collision": 0,
+            "paths completed": 5,
+            "average path completed time": 28.44
+        },
+        {
+            "time": "Sun May  1 19:59:12 2022",
+            "iteration": 324,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 45.43
+        },
+        {
+            "time": "Sun May  1 19:59:18 2022",
+            "iteration": 325,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 59.9
+        },
+        {
+            "time": "Sun May  1 19:59:23 2022",
+            "iteration": 326,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 55.92
+        },
+        {
+            "time": "Sun May  1 19:59:28 2022",
+            "iteration": 327,
+            "collision": 0,
+            "paths completed": 6,
+            "average path completed time": 58.33
+        },
+        {
+            "time": "Sun May  1 19:59:33 2022",
+            "iteration": 328,
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 25.34
+        },
+        {
+            "time": "Sun May  1 19:59:39 2022",
+            "iteration": 329,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 45.26
+        },
+        {
+            "time": "Sun May  1 19:59:44 2022",
             "iteration": 330,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 37.74
         },
         {
-            "time": "Mon Apr 25 22:52:05 2022",
+            "time": "Sun May  1 19:59:49 2022",
             "iteration": 331,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 47.7
         },
         {
-            "time": "Mon Apr 25 22:52:12 2022",
+            "time": "Sun May  1 19:59:54 2022",
             "iteration": 332,
             "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 36.05
         },
         {
-            "time": "Mon Apr 25 22:52:19 2022",
+            "time": "Sun May  1 19:59:59 2022",
             "iteration": 333,
-            "collision": 0,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:52:26 2022",
-            "iteration": 334,
-            "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:52:33 2022",
-            "iteration": 335,
-            "collision": 0,
+            "collision": 1,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 41.66
         },
         {
-            "time": "Mon Apr 25 22:52:39 2022",
-            "iteration": 336,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:52:46 2022",
-            "iteration": 337,
+            "time": "Sun May  1 20:00:04 2022",
+            "iteration": 334,
             "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 31.97
         },
         {
-            "time": "Mon Apr 25 22:52:53 2022",
+            "time": "Sun May  1 20:00:09 2022",
+            "iteration": 335,
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 47.39
+        },
+        {
+            "time": "Sun May  1 20:00:14 2022",
+            "iteration": 336,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 34.7
+        },
+        {
+            "time": "Sun May  1 20:00:19 2022",
+            "iteration": 337,
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 36.13
+        },
+        {
+            "time": "Sun May  1 20:00:24 2022",
             "iteration": 338,
             "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 39.63
         },
         {
-            "time": "Mon Apr 25 22:53:00 2022",
+            "time": "Sun May  1 20:00:29 2022",
             "iteration": 339,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 30.71
         },
         {
-            "time": "Mon Apr 25 22:53:07 2022",
+            "time": "Sun May  1 20:00:34 2022",
             "iteration": 340,
             "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 41.61
         },
         {
-            "time": "Mon Apr 25 22:53:14 2022",
+            "time": "Sun May  1 20:00:39 2022",
             "iteration": 341,
-            "collision": 3,
+            "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 35.42
         },
         {
-            "time": "Mon Apr 25 22:53:21 2022",
+            "time": "Sun May  1 20:00:45 2022",
             "iteration": 342,
             "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 48.64
         },
         {
-            "time": "Mon Apr 25 22:53:29 2022",
+            "time": "Sun May  1 20:00:50 2022",
             "iteration": 343,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 0,
+            "paths completed": 6,
+            "average path completed time": 40.86
         },
         {
-            "time": "Mon Apr 25 22:53:36 2022",
+            "time": "Sun May  1 20:00:55 2022",
             "iteration": 344,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 3,
+            "paths completed": 1,
+            "average path completed time": 29.5
         },
         {
-            "time": "Mon Apr 25 22:53:43 2022",
+            "time": "Sun May  1 20:01:00 2022",
             "iteration": 345,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 36.66
         },
         {
-            "time": "Mon Apr 25 22:53:50 2022",
+            "time": "Sun May  1 20:01:06 2022",
             "iteration": 346,
-            "collision": 1,
+            "collision": 2,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 34.86
         },
         {
-            "time": "Mon Apr 25 22:53:57 2022",
+            "time": "Sun May  1 20:01:11 2022",
             "iteration": 347,
-            "collision": 3,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 40.24
         },
         {
-            "time": "Mon Apr 25 22:54:03 2022",
+            "time": "Sun May  1 20:01:16 2022",
             "iteration": 348,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 56.73
         },
         {
-            "time": "Mon Apr 25 22:54:10 2022",
+            "time": "Sun May  1 20:01:22 2022",
             "iteration": 349,
             "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 53.55
         },
         {
-            "time": "Mon Apr 25 22:54:17 2022",
+            "time": "Sun May  1 20:01:27 2022",
             "iteration": 350,
             "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:54:25 2022",
-            "iteration": 351,
-            "collision": 5,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 29.38
         },
         {
-            "time": "Mon Apr 25 22:54:32 2022",
+            "time": "Sun May  1 20:01:32 2022",
+            "iteration": 351,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 30.61
+        },
+        {
+            "time": "Sun May  1 20:01:37 2022",
             "iteration": 352,
             "collision": 2,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 23.05
         },
         {
-            "time": "Mon Apr 25 22:54:39 2022",
+            "time": "Sun May  1 20:01:43 2022",
             "iteration": 353,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 3,
+            "paths completed": 2,
+            "average path completed time": 48.74
         },
         {
-            "time": "Mon Apr 25 22:54:46 2022",
+            "time": "Sun May  1 20:01:48 2022",
             "iteration": 354,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 50.69
         },
         {
-            "time": "Mon Apr 25 22:54:53 2022",
+            "time": "Sun May  1 20:01:53 2022",
             "iteration": 355,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:55:00 2022",
-            "iteration": 356,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:55:07 2022",
-            "iteration": 357,
-            "collision": 0,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 38.65
         },
         {
-            "time": "Mon Apr 25 22:55:14 2022",
+            "time": "Sun May  1 20:01:58 2022",
+            "iteration": 356,
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 26.99
+        },
+        {
+            "time": "Sun May  1 20:02:04 2022",
+            "iteration": 357,
+            "collision": 4,
+            "paths completed": 3,
+            "average path completed time": 36.09
+        },
+        {
+            "time": "Sun May  1 20:02:09 2022",
             "iteration": 358,
             "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 38.85
         },
         {
-            "time": "Mon Apr 25 22:55:21 2022",
+            "time": "Sun May  1 20:02:14 2022",
             "iteration": 359,
-            "collision": 3,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:55:28 2022",
-            "iteration": 360,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:55:36 2022",
-            "iteration": 361,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:55:43 2022",
-            "iteration": 362,
             "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 43.29
         },
         {
-            "time": "Mon Apr 25 22:55:51 2022",
+            "time": "Sun May  1 20:02:19 2022",
+            "iteration": 360,
+            "collision": 2,
+            "paths completed": 5,
+            "average path completed time": 40.75
+        },
+        {
+            "time": "Sun May  1 20:02:24 2022",
+            "iteration": 361,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 45.67
+        },
+        {
+            "time": "Sun May  1 20:02:30 2022",
+            "iteration": 362,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 32.94
+        },
+        {
+            "time": "Sun May  1 20:02:35 2022",
             "iteration": 363,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 58.66
         },
         {
-            "time": "Mon Apr 25 22:55:58 2022",
+            "time": "Sun May  1 20:02:40 2022",
             "iteration": 364,
             "collision": 3,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 54.9
         },
         {
-            "time": "Mon Apr 25 22:56:05 2022",
+            "time": "Sun May  1 20:02:45 2022",
             "iteration": 365,
             "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 33.84
         },
         {
-            "time": "Mon Apr 25 22:56:11 2022",
+            "time": "Sun May  1 20:02:50 2022",
             "iteration": 366,
-            "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 27.98
         },
         {
-            "time": "Mon Apr 25 22:56:18 2022",
+            "time": "Sun May  1 20:02:56 2022",
             "iteration": 367,
-            "collision": 0,
+            "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 47.46
         },
         {
-            "time": "Mon Apr 25 22:56:25 2022",
+            "time": "Sun May  1 20:03:01 2022",
             "iteration": 368,
             "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 44.92
         },
         {
-            "time": "Mon Apr 25 22:56:33 2022",
+            "time": "Sun May  1 20:03:06 2022",
             "iteration": 369,
             "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 55.5
         },
         {
-            "time": "Mon Apr 25 22:56:40 2022",
+            "time": "Sun May  1 20:03:11 2022",
             "iteration": 370,
-            "collision": 3,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:56:47 2022",
-            "iteration": 371,
             "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 31.39
         },
         {
-            "time": "Mon Apr 25 22:56:54 2022",
+            "time": "Sun May  1 20:03:17 2022",
+            "iteration": 371,
+            "collision": 4,
+            "paths completed": 3,
+            "average path completed time": 85.26
+        },
+        {
+            "time": "Sun May  1 20:03:22 2022",
             "iteration": 372,
             "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 41.95
         },
         {
-            "time": "Mon Apr 25 22:57:01 2022",
+            "time": "Sun May  1 20:03:27 2022",
             "iteration": 373,
             "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 38.49
         },
         {
-            "time": "Mon Apr 25 22:57:08 2022",
+            "time": "Sun May  1 20:03:32 2022",
             "iteration": 374,
-            "collision": 2,
+            "collision": 1,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 32.48
         },
         {
-            "time": "Mon Apr 25 22:57:15 2022",
+            "time": "Sun May  1 20:03:38 2022",
             "iteration": 375,
             "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 66.08
         },
         {
-            "time": "Mon Apr 25 22:57:22 2022",
+            "time": "Sun May  1 20:03:43 2022",
             "iteration": 376,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 48.78
         },
         {
-            "time": "Mon Apr 25 22:57:29 2022",
+            "time": "Sun May  1 20:03:48 2022",
             "iteration": 377,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:57:36 2022",
-            "iteration": 378,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:57:43 2022",
-            "iteration": 379,
-            "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:57:50 2022",
-            "iteration": 380,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:57:58 2022",
-            "iteration": 381,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:58:06 2022",
-            "iteration": 382,
             "collision": 2,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 56.27
         },
         {
-            "time": "Mon Apr 25 22:58:13 2022",
+            "time": "Sun May  1 20:03:53 2022",
+            "iteration": 378,
+            "collision": 0,
+            "paths completed": 6,
+            "average path completed time": 36.07
+        },
+        {
+            "time": "Sun May  1 20:03:59 2022",
+            "iteration": 379,
+            "collision": 2,
+            "paths completed": 2,
+            "average path completed time": 45.18
+        },
+        {
+            "time": "Sun May  1 20:04:04 2022",
+            "iteration": 380,
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 44.11
+        },
+        {
+            "time": "Sun May  1 20:04:10 2022",
+            "iteration": 381,
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 38.93
+        },
+        {
+            "time": "Sun May  1 20:04:15 2022",
+            "iteration": 382,
+            "collision": 0,
+            "paths completed": 5,
+            "average path completed time": 39.49
+        },
+        {
+            "time": "Sun May  1 20:04:21 2022",
             "iteration": 383,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:58:21 2022",
-            "iteration": 384,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:58:29 2022",
-            "iteration": 385,
-            "collision": 0,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 33.7
         },
         {
-            "time": "Mon Apr 25 22:58:36 2022",
+            "time": "Sun May  1 20:04:26 2022",
+            "iteration": 384,
+            "collision": 4,
+            "paths completed": 4,
+            "average path completed time": 47.01
+        },
+        {
+            "time": "Sun May  1 20:04:32 2022",
+            "iteration": 385,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 37.26
+        },
+        {
+            "time": "Sun May  1 20:04:37 2022",
             "iteration": 386,
             "collision": 0,
-            "paths completed": 1,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 45.22
         },
         {
-            "time": "Mon Apr 25 22:58:43 2022",
+            "time": "Sun May  1 20:04:42 2022",
             "iteration": 387,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:58:50 2022",
-            "iteration": 388,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 37.47
         },
         {
-            "time": "Mon Apr 25 22:58:58 2022",
+            "time": "Sun May  1 20:04:47 2022",
+            "iteration": 388,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 51.98
+        },
+        {
+            "time": "Sun May  1 20:04:52 2022",
             "iteration": 389,
             "collision": 2,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 31.76
         },
         {
-            "time": "Mon Apr 25 22:59:05 2022",
+            "time": "Sun May  1 20:04:57 2022",
             "iteration": 390,
-            "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 47.78
         },
         {
-            "time": "Mon Apr 25 22:59:12 2022",
+            "time": "Sun May  1 20:05:02 2022",
             "iteration": 391,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:59:20 2022",
-            "iteration": 392,
-            "collision": 2,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:59:27 2022",
-            "iteration": 393,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 22:59:35 2022",
-            "iteration": 394,
-            "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 31.51
         },
         {
-            "time": "Mon Apr 25 22:59:43 2022",
-            "iteration": 395,
+            "time": "Sun May  1 20:05:08 2022",
+            "iteration": 392,
             "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 46.99
         },
         {
-            "time": "Mon Apr 25 22:59:55 2022",
+            "time": "Sun May  1 20:05:13 2022",
+            "iteration": 393,
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 28.72
+        },
+        {
+            "time": "Sun May  1 20:05:18 2022",
+            "iteration": 394,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 51.13
+        },
+        {
+            "time": "Sun May  1 20:05:23 2022",
+            "iteration": 395,
+            "collision": 0,
+            "paths completed": 5,
+            "average path completed time": 48.19
+        },
+        {
+            "time": "Sun May  1 20:05:28 2022",
             "iteration": 396,
             "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 48.67
         },
         {
-            "time": "Mon Apr 25 23:00:04 2022",
+            "time": "Sun May  1 20:05:33 2022",
             "iteration": 397,
             "collision": 0,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 55.05
         },
         {
-            "time": "Mon Apr 25 23:00:12 2022",
+            "time": "Sun May  1 20:05:39 2022",
             "iteration": 398,
-            "collision": 3,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:00:19 2022",
-            "iteration": 399,
-            "collision": 3,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:00:27 2022",
-            "iteration": 400,
-            "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:00:35 2022",
-            "iteration": 401,
             "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:00:43 2022",
-            "iteration": 402,
-            "collision": 3,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:00:51 2022",
-            "iteration": 403,
-            "collision": 3,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 19.36
         },
         {
-            "time": "Mon Apr 25 23:00:58 2022",
-            "iteration": 404,
-            "collision": 0,
+            "time": "Sun May  1 20:05:44 2022",
+            "iteration": 399,
+            "collision": 2,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 57.84
         },
         {
-            "time": "Mon Apr 25 23:01:05 2022",
-            "iteration": 405,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "time": "Sun May  1 20:05:49 2022",
+            "iteration": 400,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 44.25
         },
         {
-            "time": "Mon Apr 25 23:01:12 2022",
-            "iteration": 406,
+            "time": "Sun May  1 20:05:54 2022",
+            "iteration": 401,
             "collision": 0,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 25.14
         },
         {
-            "time": "Mon Apr 25 23:01:20 2022",
+            "time": "Sun May  1 20:06:00 2022",
+            "iteration": 402,
+            "collision": 0,
+            "paths completed": 3,
+            "average path completed time": 27.33
+        },
+        {
+            "time": "Sun May  1 20:06:05 2022",
+            "iteration": 403,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 43.84
+        },
+        {
+            "time": "Sun May  1 20:06:10 2022",
+            "iteration": 404,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 53.25
+        },
+        {
+            "time": "Sun May  1 20:06:15 2022",
+            "iteration": 405,
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 28.98
+        },
+        {
+            "time": "Sun May  1 20:06:20 2022",
+            "iteration": 406,
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 42.66
+        },
+        {
+            "time": "Sun May  1 20:06:26 2022",
             "iteration": 407,
             "collision": 0,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "paths completed": 3,
+            "average path completed time": 32.04
         },
         {
-            "time": "Mon Apr 25 23:01:27 2022",
+            "time": "Sun May  1 20:06:31 2022",
             "iteration": 408,
             "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 26.95
         },
         {
-            "time": "Mon Apr 25 23:01:34 2022",
+            "time": "Sun May  1 20:06:36 2022",
             "iteration": 409,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 46.85
         },
         {
-            "time": "Mon Apr 25 23:01:41 2022",
+            "time": "Sun May  1 20:06:41 2022",
             "iteration": 410,
-            "collision": 2,
+            "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 28.83
         },
         {
-            "time": "Mon Apr 25 23:01:48 2022",
+            "time": "Sun May  1 20:06:46 2022",
             "iteration": 411,
             "collision": 1,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 44.75
         },
         {
-            "time": "Mon Apr 25 23:01:55 2022",
+            "time": "Sun May  1 20:06:52 2022",
             "iteration": 412,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 35.7
         },
         {
-            "time": "Mon Apr 25 23:02:03 2022",
+            "time": "Sun May  1 20:06:57 2022",
             "iteration": 413,
             "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 54.78
         },
         {
-            "time": "Mon Apr 25 23:02:10 2022",
+            "time": "Sun May  1 20:07:02 2022",
             "iteration": 414,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 40.87
+        },
+        {
+            "time": "Sun May  1 20:07:08 2022",
+            "iteration": 415,
             "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 50.26
         },
         {
-            "time": "Mon Apr 25 23:02:16 2022",
-            "iteration": 415,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:02:23 2022",
+            "time": "Sun May  1 20:07:13 2022",
             "iteration": 416,
-            "collision": 1,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 3,
+            "average path completed time": 41.74
         },
         {
-            "time": "Mon Apr 25 23:02:30 2022",
+            "time": "Sun May  1 20:07:18 2022",
             "iteration": 417,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 37.66
         },
         {
-            "time": "Mon Apr 25 23:02:37 2022",
+            "time": "Sun May  1 20:07:24 2022",
             "iteration": 418,
             "collision": 1,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 46.11
         },
         {
-            "time": "Mon Apr 25 23:02:45 2022",
+            "time": "Sun May  1 20:07:29 2022",
             "iteration": 419,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 30.14
         },
         {
-            "time": "Mon Apr 25 23:02:52 2022",
+            "time": "Sun May  1 20:07:33 2022",
             "iteration": 420,
+            "collision": 0,
+            "paths completed": 6,
+            "average path completed time": 21.19
+        },
+        {
+            "time": "Sun May  1 20:07:38 2022",
+            "iteration": 421,
             "collision": 1,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 32.44
         },
         {
-            "time": "Mon Apr 25 23:02:59 2022",
-            "iteration": 421,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:03:06 2022",
+            "time": "Sun May  1 20:07:44 2022",
             "iteration": 422,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 31.56
         },
         {
-            "time": "Mon Apr 25 23:03:13 2022",
+            "time": "Sun May  1 20:07:49 2022",
             "iteration": 423,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 49.38
         },
         {
-            "time": "Mon Apr 25 23:03:20 2022",
+            "time": "Sun May  1 20:07:54 2022",
             "iteration": 424,
-            "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:03:27 2022",
-            "iteration": 425,
-            "collision": 0,
+            "collision": 1,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 37.09
         },
         {
-            "time": "Mon Apr 25 23:03:35 2022",
+            "time": "Sun May  1 20:07:59 2022",
+            "iteration": 425,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 31.96
+        },
+        {
+            "time": "Sun May  1 20:08:04 2022",
             "iteration": 426,
             "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 33.35
         },
         {
-            "time": "Mon Apr 25 23:03:42 2022",
+            "time": "Sun May  1 20:08:09 2022",
             "iteration": 427,
             "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 57.24
         },
         {
-            "time": "Mon Apr 25 23:03:50 2022",
+            "time": "Sun May  1 20:08:15 2022",
             "iteration": 428,
-            "collision": 2,
-            "paths completed": 2,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 32.01
         },
         {
-            "time": "Mon Apr 25 23:03:57 2022",
+            "time": "Sun May  1 20:08:20 2022",
             "iteration": 429,
+            "collision": 3,
+            "paths completed": 4,
+            "average path completed time": 36.74
+        },
+        {
+            "time": "Sun May  1 20:08:25 2022",
+            "iteration": 430,
+            "collision": 4,
+            "paths completed": 4,
+            "average path completed time": 58.1
+        },
+        {
+            "time": "Sun May  1 20:08:30 2022",
+            "iteration": 431,
             "collision": 0,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 41.79
         },
         {
-            "time": "Mon Apr 25 23:04:04 2022",
-            "iteration": 430,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:04:11 2022",
-            "iteration": 431,
-            "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:04:17 2022",
+            "time": "Sun May  1 20:08:35 2022",
             "iteration": 432,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:04:24 2022",
-            "iteration": 433,
-            "collision": 0,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 58.51
         },
         {
-            "time": "Mon Apr 25 23:04:31 2022",
+            "time": "Sun May  1 20:08:41 2022",
+            "iteration": 433,
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 43.81
+        },
+        {
+            "time": "Sun May  1 20:08:46 2022",
             "iteration": 434,
             "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 42.85
         },
         {
-            "time": "Mon Apr 25 23:04:38 2022",
+            "time": "Sun May  1 20:08:51 2022",
             "iteration": 435,
-            "collision": 2,
-            "paths completed": 6,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 72.6
         },
         {
-            "time": "Mon Apr 25 23:04:45 2022",
+            "time": "Sun May  1 20:08:56 2022",
             "iteration": 436,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 35.9
         },
         {
-            "time": "Mon Apr 25 23:04:52 2022",
+            "time": "Sun May  1 20:09:01 2022",
             "iteration": 437,
-            "collision": 3,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 2,
+            "paths completed": 6,
+            "average path completed time": 35.68
         },
         {
-            "time": "Mon Apr 25 23:04:59 2022",
+            "time": "Sun May  1 20:09:07 2022",
             "iteration": 438,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 30.07
         },
         {
-            "time": "Mon Apr 25 23:05:06 2022",
+            "time": "Sun May  1 20:09:12 2022",
             "iteration": 439,
-            "collision": 3,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:05:13 2022",
-            "iteration": 440,
-            "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:05:20 2022",
-            "iteration": 441,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:05:27 2022",
-            "iteration": 442,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:05:34 2022",
-            "iteration": 443,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:05:41 2022",
-            "iteration": 444,
-            "collision": 3,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:05:48 2022",
-            "iteration": 445,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:05:56 2022",
-            "iteration": 446,
-            "collision": 0,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:06:03 2022",
-            "iteration": 447,
-            "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:06:10 2022",
-            "iteration": 448,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:06:17 2022",
-            "iteration": 449,
-            "collision": 0,
-            "paths completed": 1,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:06:25 2022",
-            "iteration": 450,
-            "collision": 1,
-            "paths completed": 1,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:06:32 2022",
-            "iteration": 451,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:06:39 2022",
-            "iteration": 452,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:06:46 2022",
-            "iteration": 453,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:06:53 2022",
-            "iteration": 454,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:07:00 2022",
-            "iteration": 455,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:07:07 2022",
-            "iteration": 456,
-            "collision": 1,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:07:14 2022",
-            "iteration": 457,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:07:21 2022",
-            "iteration": 458,
-            "collision": 1,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:07:27 2022",
-            "iteration": 459,
-            "collision": 1,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:07:34 2022",
-            "iteration": 460,
-            "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:07:41 2022",
-            "iteration": 461,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:07:48 2022",
-            "iteration": 462,
-            "collision": 0,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:07:55 2022",
-            "iteration": 463,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:08:02 2022",
-            "iteration": 464,
-            "collision": 2,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:08:09 2022",
-            "iteration": 465,
-            "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:08:16 2022",
-            "iteration": 466,
-            "collision": 2,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:08:24 2022",
-            "iteration": 467,
-            "collision": 3,
-            "paths completed": 4,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:08:31 2022",
-            "iteration": 468,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:08:38 2022",
-            "iteration": 469,
-            "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:08:45 2022",
-            "iteration": 470,
-            "collision": 2,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:08:53 2022",
-            "iteration": 471,
             "collision": 4,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 40.14
         },
         {
-            "time": "Mon Apr 25 23:09:00 2022",
-            "iteration": 472,
+            "time": "Sun May  1 20:09:18 2022",
+            "iteration": 440,
+            "collision": 9,
+            "paths completed": 2,
+            "average path completed time": 53.28
+        },
+        {
+            "time": "Sun May  1 20:09:23 2022",
+            "iteration": 441,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 5,
+            "average path completed time": 33.45
         },
         {
-            "time": "Mon Apr 25 23:09:07 2022",
-            "iteration": 473,
+            "time": "Sun May  1 20:09:29 2022",
+            "iteration": 442,
             "collision": 2,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 49.0
         },
         {
-            "time": "Mon Apr 25 23:09:14 2022",
-            "iteration": 474,
-            "collision": 2,
+            "time": "Sun May  1 20:09:34 2022",
+            "iteration": 443,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 38.01
+        },
+        {
+            "time": "Sun May  1 20:09:41 2022",
+            "iteration": 444,
+            "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 39.36
         },
         {
-            "time": "Mon Apr 25 23:09:21 2022",
-            "iteration": 475,
+            "time": "Sun May  1 20:09:49 2022",
+            "iteration": 445,
             "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 2,
+            "average path completed time": 50.46
         },
         {
-            "time": "Mon Apr 25 23:09:28 2022",
-            "iteration": 476,
-            "collision": 1,
+            "time": "Sun May  1 20:09:55 2022",
+            "iteration": 446,
+            "collision": 2,
+            "paths completed": 2,
+            "average path completed time": 28.14
+        },
+        {
+            "time": "Sun May  1 20:10:00 2022",
+            "iteration": 447,
+            "collision": 2,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 47.34
         },
         {
-            "time": "Mon Apr 25 23:09:36 2022",
-            "iteration": 477,
+            "time": "Sun May  1 20:10:06 2022",
+            "iteration": 448,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 43.4
+        },
+        {
+            "time": "Sun May  1 20:10:11 2022",
+            "iteration": 449,
+            "collision": 3,
+            "paths completed": 2,
+            "average path completed time": 61.55
+        },
+        {
+            "time": "Sun May  1 20:10:16 2022",
+            "iteration": 450,
+            "collision": 2,
+            "paths completed": 6,
+            "average path completed time": 43.89
+        },
+        {
+            "time": "Sun May  1 20:10:22 2022",
+            "iteration": 451,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 59.06
+        },
+        {
+            "time": "Sun May  1 20:10:28 2022",
+            "iteration": 452,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 35.58
+        },
+        {
+            "time": "Sun May  1 20:10:34 2022",
+            "iteration": 453,
+            "collision": 0,
+            "paths completed": 2,
+            "average path completed time": 29.58
+        },
+        {
+            "time": "Sun May  1 20:10:40 2022",
+            "iteration": 454,
             "collision": 3,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 54.7
         },
         {
-            "time": "Mon Apr 25 23:09:44 2022",
-            "iteration": 478,
-            "collision": 2,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:09:52 2022",
-            "iteration": 479,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:09:59 2022",
-            "iteration": 480,
-            "collision": 0,
-            "paths completed": 6,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:10:06 2022",
-            "iteration": 481,
+            "time": "Sun May  1 20:10:45 2022",
+            "iteration": 455,
             "collision": 0,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 24.96
         },
         {
-            "time": "Mon Apr 25 23:10:14 2022",
-            "iteration": 482,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:10:21 2022",
-            "iteration": 483,
+            "time": "Sun May  1 20:10:51 2022",
+            "iteration": 456,
             "collision": 0,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 40.63
         },
         {
-            "time": "Mon Apr 25 23:10:28 2022",
-            "iteration": 484,
+            "time": "Sun May  1 20:10:57 2022",
+            "iteration": 457,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 48.09
+        },
+        {
+            "time": "Sun May  1 20:11:02 2022",
+            "iteration": 458,
+            "collision": 2,
+            "paths completed": 5,
+            "average path completed time": 42.34
+        },
+        {
+            "time": "Sun May  1 20:11:08 2022",
+            "iteration": 459,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 60.3
+        },
+        {
+            "time": "Sun May  1 20:11:14 2022",
+            "iteration": 460,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 46.86
+        },
+        {
+            "time": "Sun May  1 20:11:20 2022",
+            "iteration": 461,
+            "collision": 1,
+            "paths completed": 3,
+            "average path completed time": 47.27
+        },
+        {
+            "time": "Sun May  1 20:11:27 2022",
+            "iteration": 462,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 57.94
+        },
+        {
+            "time": "Sun May  1 20:11:34 2022",
+            "iteration": 463,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 35.37
+        },
+        {
+            "time": "Sun May  1 20:11:39 2022",
+            "iteration": 464,
             "collision": 1,
             "paths completed": 5,
-            "average path completed time": 119.94
+            "average path completed time": 47.9
         },
         {
-            "time": "Mon Apr 25 23:10:36 2022",
-            "iteration": 485,
+            "time": "Sun May  1 20:11:46 2022",
+            "iteration": 465,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 31.58
+        },
+        {
+            "time": "Sun May  1 20:11:53 2022",
+            "iteration": 466,
+            "collision": 4,
+            "paths completed": 2,
+            "average path completed time": 88.42
+        },
+        {
+            "time": "Sun May  1 20:11:58 2022",
+            "iteration": 467,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 61.14
+        },
+        {
+            "time": "Sun May  1 20:12:04 2022",
+            "iteration": 468,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 44.59
+        },
+        {
+            "time": "Sun May  1 20:12:11 2022",
+            "iteration": 469,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 46.04
+        },
+        {
+            "time": "Sun May  1 20:12:16 2022",
+            "iteration": 470,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 35.88
+        },
+        {
+            "time": "Sun May  1 20:12:22 2022",
+            "iteration": 471,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 31.23
+        },
+        {
+            "time": "Sun May  1 20:12:27 2022",
+            "iteration": 472,
             "collision": 1,
             "paths completed": 6,
-            "average path completed time": 119.94
+            "average path completed time": 47.4
         },
         {
-            "time": "Mon Apr 25 23:10:43 2022",
-            "iteration": 486,
+            "time": "Sun May  1 20:12:33 2022",
+            "iteration": 473,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 42.9
         },
         {
-            "time": "Mon Apr 25 23:10:50 2022",
-            "iteration": 487,
-            "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "time": "Sun May  1 20:12:38 2022",
+            "iteration": 474,
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 41.82
         },
         {
-            "time": "Mon Apr 25 23:10:57 2022",
-            "iteration": 488,
+            "time": "Sun May  1 20:12:43 2022",
+            "iteration": 475,
             "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 46.66
         },
         {
-            "time": "Mon Apr 25 23:11:05 2022",
-            "iteration": 489,
+            "time": "Sun May  1 20:12:49 2022",
+            "iteration": 476,
+            "collision": 2,
+            "paths completed": 2,
+            "average path completed time": 30.83
+        },
+        {
+            "time": "Sun May  1 20:12:55 2022",
+            "iteration": 477,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 35.95
         },
         {
-            "time": "Mon Apr 25 23:11:12 2022",
-            "iteration": 490,
+            "time": "Sun May  1 20:13:00 2022",
+            "iteration": 478,
             "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 33.92
         },
         {
-            "time": "Mon Apr 25 23:11:19 2022",
+            "time": "Sun May  1 20:13:06 2022",
+            "iteration": 479,
+            "collision": 3,
+            "paths completed": 6,
+            "average path completed time": 44.72
+        },
+        {
+            "time": "Sun May  1 20:13:11 2022",
+            "iteration": 480,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 41.52
+        },
+        {
+            "time": "Sun May  1 20:13:17 2022",
+            "iteration": 481,
+            "collision": 0,
+            "paths completed": 1,
+            "average path completed time": 16.0
+        },
+        {
+            "time": "Sun May  1 20:13:23 2022",
+            "iteration": 482,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 47.37
+        },
+        {
+            "time": "Sun May  1 20:13:28 2022",
+            "iteration": 483,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 46.05
+        },
+        {
+            "time": "Sun May  1 20:13:34 2022",
+            "iteration": 484,
+            "collision": 2,
+            "paths completed": 2,
+            "average path completed time": 42.0
+        },
+        {
+            "time": "Sun May  1 20:13:40 2022",
+            "iteration": 485,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 54.18
+        },
+        {
+            "time": "Sun May  1 20:13:45 2022",
+            "iteration": 486,
+            "collision": 0,
+            "paths completed": 4,
+            "average path completed time": 26.5
+        },
+        {
+            "time": "Sun May  1 20:13:50 2022",
+            "iteration": 487,
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 46.44
+        },
+        {
+            "time": "Sun May  1 20:13:56 2022",
+            "iteration": 488,
+            "collision": 1,
+            "paths completed": 4,
+            "average path completed time": 40.79
+        },
+        {
+            "time": "Sun May  1 20:14:01 2022",
+            "iteration": 489,
+            "collision": 2,
+            "paths completed": 4,
+            "average path completed time": 40.14
+        },
+        {
+            "time": "Sun May  1 20:14:07 2022",
+            "iteration": 490,
+            "collision": 1,
+            "paths completed": 2,
+            "average path completed time": 36.82
+        },
+        {
+            "time": "Sun May  1 20:14:13 2022",
             "iteration": 491,
             "collision": 0,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 4,
+            "average path completed time": 43.72
         },
         {
-            "time": "Mon Apr 25 23:11:26 2022",
+            "time": "Sun May  1 20:14:18 2022",
             "iteration": 492,
             "collision": 0,
             "paths completed": 2,
-            "average path completed time": 119.94
+            "average path completed time": 22.78
         },
         {
-            "time": "Mon Apr 25 23:11:34 2022",
+            "time": "Sun May  1 20:14:24 2022",
             "iteration": 493,
             "collision": 1,
-            "paths completed": 3,
-            "average path completed time": 119.94
+            "paths completed": 6,
+            "average path completed time": 52.86
         },
         {
-            "time": "Mon Apr 25 23:11:42 2022",
+            "time": "Sun May  1 20:14:30 2022",
             "iteration": 494,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:11:49 2022",
-            "iteration": 495,
-            "collision": 0,
+            "collision": 4,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 56.55
         },
         {
-            "time": "Mon Apr 25 23:11:56 2022",
-            "iteration": 496,
-            "collision": 2,
-            "paths completed": 3,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:12:03 2022",
-            "iteration": 497,
-            "collision": 0,
-            "paths completed": 5,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:12:11 2022",
-            "iteration": 498,
-            "collision": 0,
-            "paths completed": 2,
-            "average path completed time": 119.94
-        },
-        {
-            "time": "Mon Apr 25 23:12:18 2022",
-            "iteration": 499,
+            "time": "Sun May  1 20:14:35 2022",
+            "iteration": 495,
             "collision": 1,
             "paths completed": 4,
-            "average path completed time": 119.94
+            "average path completed time": 57.36
         },
         {
-            "time": "Mon Apr 25 23:12:25 2022",
-            "iteration": 500,
-            "collision": 2,
+            "time": "Sun May  1 20:14:41 2022",
+            "iteration": 496,
+            "collision": 0,
             "paths completed": 3,
-            "average path completed time": 119.94
+            "average path completed time": 51.16
+        },
+        {
+            "time": "Sun May  1 20:14:47 2022",
+            "iteration": 497,
+            "collision": 1,
+            "paths completed": 6,
+            "average path completed time": 48.03
+        },
+        {
+            "time": "Sun May  1 20:14:53 2022",
+            "iteration": 498,
+            "collision": 1,
+            "paths completed": 1,
+            "average path completed time": 27.3
+        },
+        {
+            "time": "Sun May  1 20:14:59 2022",
+            "iteration": 499,
+            "collision": 3,
+            "paths completed": 3,
+            "average path completed time": 48.95
+        },
+        {
+            "time": "Sun May  1 20:15:05 2022",
+            "iteration": 500,
+            "collision": 1,
+            "paths completed": 5,
+            "average path completed time": 29.01
         }
     ]
 }
