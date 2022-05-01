@@ -264,7 +264,7 @@ class Epuck_controller:
                 print(str(self.robot.getTime()) + "end node blocked, waiting" + str(len(in_range_robots)))
             else:
                 self.state = 2
-                thread = Thread(target=self.timer_function, args=(1.5,))
+                thread = Thread(target=self.timer_function, args=(3.0,))
                 thread.start()
                 self.epuck_move.reset()
 

@@ -30,7 +30,7 @@ def collect_results(metric, path, num_epucks):
 path = "../final_results/8x4_map_size_basic_algo/results_epucks6.json"
 
 
-collect_results("collision", path, 6)
+collect_results("paths completed", path, 6)
 
 
 

@@ -264,7 +264,11 @@ class Bot_controller:
         self.supervisor.simulationResetPhysics()
         self.supervisor.getSelf().restartController()
 
+<<<<<<< Updated upstream
 bot_controller = Bot_controller(num_epucks=6, test_type="8x4_map_size_basic_algo")
+=======
+bot_controller = Bot_controller(num_epucks=6, test_type="8x8_map_size_none_algo")
+>>>>>>> Stashed changes
 bot_controller.supervisor = supervisor
 
 while supervisor.step(timestep) != -1:
