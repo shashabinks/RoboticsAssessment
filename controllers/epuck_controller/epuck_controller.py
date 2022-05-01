@@ -119,7 +119,7 @@ while robot.step(timestep) != -1:
         # print out the recieved message (in string format)
 
         # compare priorities
-        """if int(m) > robot_priority:
+        if int(m) > robot_priority:
 
             # perform low priority actions/sequence
             #print("I have low priority")
@@ -133,13 +133,13 @@ while robot.step(timestep) != -1:
             else:
                 
                 # calculate elapsed time
-                elapsed_pause = robot.getTime() - start_pause"""
+                elapsed_pause = robot.getTime() - start_pause
 
 
         
 
     
-    """else:
+    else:
         m = " "
 
         update_state(0)
@@ -149,7 +149,7 @@ while robot.step(timestep) != -1:
         # reset the pause timing
         
         start_pause = 0.0
-    """
+
 
 
     
@@ -164,8 +164,8 @@ while robot.step(timestep) != -1:
             robotPath.pop(0)
 
     if path_set and len(robotPath) == 0 and not path_completed:
-        robot.getSelf().getField("customData").setSFString(str(f"done|{robot.getTime()}"))
         path_completed = True
+        robot.getSelf().getField("customData").setSFString(str(f"done|{robot.getTime()}"))
 
         
 
